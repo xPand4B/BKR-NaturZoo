@@ -1,17 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
 using MySql.Data.MySqlClient;
-using MySql.Data.Common;
-using MySql.Data.Types;
 using System.Windows.Forms;
 
-namespace NaturZoo_Rheine {
-    class DatabaseConnectionHandler
+/*
+|-----------------------------------------------------------------------------
+| MySql Connector
+|-----------------------------------------------------------------------------
+|
+| //
+|
+*/
+namespace NaturZoo_Rheine.src.Database.Connection
+{
+    class MySqlConnector : IConnector
     {
         /**
          * @var MySqlConnection _conn
          **/
-        protected MySqlConnection _conn { get; private set; }
+        public MySqlConnection _conn { get; private set; }
 
         /**
          * Constructor
@@ -21,31 +27,45 @@ namespace NaturZoo_Rheine {
          * @param String uid
          * @param String password
          **/
-        public DatabaseConnectionHandler(String server, String database, String uid, String password)
+        public MySqlConnector(String server, String database, String uid, String password)
         {
             String connString = string.Format(
-                "SERVER={0};" +
-                "DATABASE={1};" +
-                "UID={2};" +
-                "PASSWORD={3}" 
-                , server, database, uid, password
+                "SERVER={0};DATABASE={1};UID={2};PASSWORD={3}",
+                server, database, uid, password
             );
 
             this._conn = new MySqlConnection(connString);
         }
 
         /**
-         * Create Database Connection+
+         * Check Connection at startup
          * 
          * @return Boolean
          **/
-        protected Boolean Connect()
+        public Boolean CheckConnection()
+        {
+            if (this.Connect()) {
+                this.Close();
+                return true;
+            }
+
+            MessageBox.Show("", "MySql Connection Error", MessageBoxButtons.OK);
+
+            return false;
+        }
+
+        /**
+         * Create Database Connection
+         * 
+         * @return Boolean
+         **/
+        public Boolean Connect()
         {
             try {
                 _conn.Open();
                 return true;
 
-            } catch(MySqlException ex) {
+            } catch (MySqlException ex) {
                 MessageBox.Show(ex.Message, "MySql Connection Error", MessageBoxButtons.OK);
                 return false;
             }
@@ -56,13 +76,13 @@ namespace NaturZoo_Rheine {
          * 
          * @return Boolean
          **/
-        protected Boolean Close()
+        public Boolean Close()
         {
             try {
                 _conn.Close();
                 return true;
 
-            } catch(MySqlException ex) {
+            } catch (MySqlException ex) {
                 MessageBox.Show(ex.Message, "MySql Connection Error", MessageBoxButtons.OK);
                 return false;
             }

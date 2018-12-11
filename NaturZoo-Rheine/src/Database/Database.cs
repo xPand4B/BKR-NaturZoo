@@ -1,34 +1,28 @@
 ﻿using System;
 using System.Data;
-using System.Collections.Generic;
 using MySql.Data.MySqlClient;
-using MySql.Data.Common;
-using MySql.Data.Types;
-using System.Windows.Forms;
+using NaturZoo_Rheine.src.Database.Query;
 
-namespace NaturZoo_Rheine {
-    class Database : DatabaseConnectionHandler
+/*
+|-----------------------------------------------------------------------------
+| Database management
+|-----------------------------------------------------------------------------
+|
+| //
+|
+*/
+namespace NaturZoo_Rheine.src.Database
+{
+    class Database : NaturZoo_Rheine.src.Database.Connection.Connection
     {
-        /**
-         * @var String credentials
-         **/
-        private static String server   = "localhost";
-        private static String database = "BKR_NaturZoo_Rheine";
-        private static String uid      = "root";
-        private static String password = "";
-        
 
         /**
          * Constructor
-         * 
-         * @param static String server
-         * @param static String database
-         * @param static String uid
-         * @param static String password
          **/
-        public Database() : base(server, database, uid, password)
+        public Database() : base()
         {
-            //
+            // Check connection
+            if (!this.CheckConnection()) { Environment.Exit(1); }
         }
 
         /**
@@ -37,14 +31,26 @@ namespace NaturZoo_Rheine {
          * @param DataGridView grid
          * @param String tableName
          * @param String query
-         * 
          * @return Datatable results
          **/
-        public DataTable FillGridData(String tableName, String query)
+        protected DataTable FillGridData(String tableName, String query)
         {
-            _conn.Open();
-            DataTable results = DatabaseQueryManager.GetGridData(this._conn, tableName, query);
-            _conn.Close();
+            DataTable results;
+            
+            if (this.Connect()) {
+                switch (this.Driver) {
+                    case "mysql":
+                        results = QueryManager.GetGridData(this._conn as MySqlConnection, tableName, query);
+                        break;
+
+                    default:
+                        results = null;
+                        break;
+                }
+                this.Close();
+            } else {
+                results = null;
+            }
 
             return results;
         }
@@ -53,14 +59,26 @@ namespace NaturZoo_Rheine {
          * Get Single Value from String
          * 
          * @param String query
-         * 
          * @return String result
          **/
-        public String GetSingleValue(String query)
+        protected String GetSingleValue(String query)
         {
-            _conn.Open();
-            String result = DatabaseQueryManager.GetSingleResult(this._conn, query);
-            _conn.Close();
+            String result;
+
+            if (this.Connect()) {
+                switch (this.Driver) {
+                    case "mysql":
+                        result = QueryManager.GetSingleResult(this._conn as MySqlConnection, query);
+                        break;
+
+                    default:
+                        result = null;
+                        break;
+                }
+                this.Close();
+            } else {
+                result = null;
+            }
 
             return result;
         }
@@ -69,14 +87,27 @@ namespace NaturZoo_Rheine {
          * Push Data inside database
          * 
          * @param String query
-         * 
          * @return Boolean
          **/
-        public Boolean PushData(String query)
+        protected Boolean PushData(String query)
         {
-            _conn.Open();
-            Boolean result = DatabaseQueryManager.PushData(this._conn, query);
-            _conn.Close();
+            Boolean result;
+
+            if (this.Connect()) {
+                switch (this.Driver) {
+                    case "mysql":
+                        result = QueryManager.PushData(this._conn as MySqlConnection, query);
+                        break;
+
+                    default:
+                        result = false;
+                        break;
+                }
+                this.Close();
+
+            } else {
+                result = false;
+            }
 
             return result;
         }

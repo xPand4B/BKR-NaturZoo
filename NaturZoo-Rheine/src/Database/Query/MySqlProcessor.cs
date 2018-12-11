@@ -1,13 +1,19 @@
 ﻿using System;
 using System.Data;
-using System.Collections.Generic;
-using MySql.Data.MySqlClient;
-using MySql.Data.Common;
-using MySql.Data.Types;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
-namespace NaturZoo_Rheine {
-    class DatabaseQueryManager
+/*
+|-----------------------------------------------------------------------------
+| MySql Query Processor
+|-----------------------------------------------------------------------------
+|
+| //
+|
+*/
+namespace NaturZoo_Rheine.src.Database.Query
+{
+    class MySqlProcessor
     {
         /**
          * Run query and return result
@@ -15,7 +21,6 @@ namespace NaturZoo_Rheine {
          * @param MySqlConnection conn
          * @param String tableName
          * @param String query
-         * 
          * @return DataTable results
          **/
         public static DataTable GetGridData(MySqlConnection conn, String tableName, String query)
@@ -27,7 +32,7 @@ namespace NaturZoo_Rheine {
 
                 return ds.Tables[tableName];
 
-            }catch(Exception ex) {
+            } catch (Exception ex) {
                 MessageBox.Show(ex.Message, "MySql Connection Error");
                 return null;
             }
@@ -39,7 +44,6 @@ namespace NaturZoo_Rheine {
          * 
          * @param MySqlConnection conn
          * @param String query
-         * 
          * @return String result
          **/
         public static String GetSingleResult(MySqlConnection conn, String query)
@@ -53,12 +57,12 @@ namespace NaturZoo_Rheine {
 
                 String result = "";
 
-                if(reader.Read()) {
+                if (reader.Read()) {
                     result = reader[0].ToString();
                 }
                 return result;
 
-            }catch(Exception ex) {
+            } catch (Exception ex) {
                 MessageBox.Show(ex.Message, "MySql Connection Error");
                 return null;
             }
@@ -69,7 +73,6 @@ namespace NaturZoo_Rheine {
          * 
          * @param MySqlConnection conn
          * @param String query
-         * 
          * @return Boolean
          **/
         public static Boolean PushData(MySqlConnection conn, String query)
@@ -83,7 +86,7 @@ namespace NaturZoo_Rheine {
 
                 return true;
 
-            } catch(Exception ex) {
+            } catch (Exception ex) {
                 MessageBox.Show(ex.Message, "MySql Connection Error");
                 return false;
             }

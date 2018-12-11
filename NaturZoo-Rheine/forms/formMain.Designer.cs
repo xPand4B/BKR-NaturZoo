@@ -32,20 +32,8 @@
             this.labelÜbersichtTiere = new System.Windows.Forms.Label();
             this.labelÜbersichtPfleger = new System.Windows.Forms.Label();
             this.tabPfleger = new System.Windows.Forms.TabPage();
-            this.tabControlPfleger = new System.Windows.Forms.TabControl();
-            this.tabPflegerAlle = new System.Windows.Forms.TabPage();
-            this.labelPflegerAlle_Value = new System.Windows.Forms.Label();
-            this.gridPflegerAlle = new System.Windows.Forms.DataGridView();
-            this.labelPflegerAlle_Pfleger = new System.Windows.Forms.Label();
-            this.tabPflegerHinzufügen = new System.Windows.Forms.TabPage();
             this.tabGehege = new System.Windows.Forms.TabPage();
-            this.tabControlGehege = new System.Windows.Forms.TabControl();
-            this.tabGehegeAlle = new System.Windows.Forms.TabPage();
-            this.tabGehegeHinzufügen = new System.Windows.Forms.TabPage();
             this.tabTiere = new System.Windows.Forms.TabPage();
-            this.tabControlTiere = new System.Windows.Forms.TabControl();
-            this.tabTiereAlle = new System.Windows.Forms.TabPage();
-            this.tabTiereHinzufügen = new System.Windows.Forms.TabPage();
             this.tabLieferanten = new System.Windows.Forms.TabPage();
             this.tabFütterung = new System.Windows.Forms.TabPage();
             this.tabSuchen = new System.Windows.Forms.TabPage();
@@ -63,6 +51,7 @@
             this.groupSearchLieferanten = new System.Windows.Forms.GroupBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.tabPflegerHinzufügen = new System.Windows.Forms.TabPage();
             this.groupPflegerAdd_Name = new System.Windows.Forms.GroupBox();
             this.textPflegerAdd_Name = new System.Windows.Forms.TextBox();
             this.groupPflegerAdd_Surname = new System.Windows.Forms.GroupBox();
@@ -70,17 +59,14 @@
             this.groupPflegerAdd_Geb = new System.Windows.Forms.GroupBox();
             this.dateTimePfleger_Add = new System.Windows.Forms.DateTimePicker();
             this.buttonPflegerAdd_Add = new System.Windows.Forms.Button();
+            this.tabPflegerAlle = new System.Windows.Forms.TabPage();
+            this.labelPflegerAlle_Pfleger = new System.Windows.Forms.Label();
+            this.gridPflegerAlle = new System.Windows.Forms.DataGridView();
+            this.labelPflegerAlle_Value = new System.Windows.Forms.Label();
+            this.tabControlPfleger = new System.Windows.Forms.TabControl();
             this.tabControlMain.SuspendLayout();
             this.tabÜbersicht.SuspendLayout();
             this.tabPfleger.SuspendLayout();
-            this.tabControlPfleger.SuspendLayout();
-            this.tabPflegerAlle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridPflegerAlle)).BeginInit();
-            this.tabPflegerHinzufügen.SuspendLayout();
-            this.tabGehege.SuspendLayout();
-            this.tabControlGehege.SuspendLayout();
-            this.tabTiere.SuspendLayout();
-            this.tabControlTiere.SuspendLayout();
             this.tabSuchen.SuspendLayout();
             this.groupSearchFutter.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -88,9 +74,13 @@
             this.groupSearchGehege.SuspendLayout();
             this.groupSearchPfleger.SuspendLayout();
             this.groupSearchLieferanten.SuspendLayout();
+            this.tabPflegerHinzufügen.SuspendLayout();
             this.groupPflegerAdd_Name.SuspendLayout();
             this.groupPflegerAdd_Surname.SuspendLayout();
             this.groupPflegerAdd_Geb.SuspendLayout();
+            this.tabPflegerAlle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPflegerAlle)).BeginInit();
+            this.tabControlPfleger.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -190,84 +180,8 @@
             this.tabPfleger.Text = "Pfleger";
             this.tabPfleger.UseVisualStyleBackColor = true;
             // 
-            // tabControlPfleger
-            // 
-            this.tabControlPfleger.Controls.Add(this.tabPflegerAlle);
-            this.tabControlPfleger.Controls.Add(this.tabPflegerHinzufügen);
-            this.tabControlPfleger.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlPfleger.Location = new System.Drawing.Point(-4, 5);
-            this.tabControlPfleger.Name = "tabControlPfleger";
-            this.tabControlPfleger.SelectedIndex = 0;
-            this.tabControlPfleger.Size = new System.Drawing.Size(961, 408);
-            this.tabControlPfleger.TabIndex = 0;
-            this.tabControlPfleger.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControlPfleger_Selected);
-            // 
-            // tabPflegerAlle
-            // 
-            this.tabPflegerAlle.Controls.Add(this.labelPflegerAlle_Value);
-            this.tabPflegerAlle.Controls.Add(this.gridPflegerAlle);
-            this.tabPflegerAlle.Controls.Add(this.labelPflegerAlle_Pfleger);
-            this.tabPflegerAlle.Location = new System.Drawing.Point(4, 26);
-            this.tabPflegerAlle.Name = "tabPflegerAlle";
-            this.tabPflegerAlle.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPflegerAlle.Size = new System.Drawing.Size(953, 378);
-            this.tabPflegerAlle.TabIndex = 0;
-            this.tabPflegerAlle.Text = "Alle Anzeigen";
-            this.tabPflegerAlle.UseVisualStyleBackColor = true;
-            // 
-            // labelPflegerAlle_Value
-            // 
-            this.labelPflegerAlle_Value.AutoSize = true;
-            this.labelPflegerAlle_Value.Location = new System.Drawing.Point(115, 21);
-            this.labelPflegerAlle_Value.Name = "labelPflegerAlle_Value";
-            this.labelPflegerAlle_Value.Size = new System.Drawing.Size(97, 17);
-            this.labelPflegerAlle_Value.TabIndex = 2;
-            this.labelPflegerAlle_Value.Text = "undefined";
-            // 
-            // gridPflegerAlle
-            // 
-            this.gridPflegerAlle.AllowUserToAddRows = false;
-            this.gridPflegerAlle.AllowUserToDeleteRows = false;
-            this.gridPflegerAlle.AllowUserToResizeColumns = false;
-            this.gridPflegerAlle.AllowUserToResizeRows = false;
-            this.gridPflegerAlle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridPflegerAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridPflegerAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridPflegerAlle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gridPflegerAlle.GridColor = System.Drawing.SystemColors.Window;
-            this.gridPflegerAlle.Location = new System.Drawing.Point(250, 0);
-            this.gridPflegerAlle.Name = "gridPflegerAlle";
-            this.gridPflegerAlle.ReadOnly = true;
-            this.gridPflegerAlle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridPflegerAlle.Size = new System.Drawing.Size(703, 378);
-            this.gridPflegerAlle.TabIndex = 1;
-            // 
-            // labelPflegerAlle_Pfleger
-            // 
-            this.labelPflegerAlle_Pfleger.AutoSize = true;
-            this.labelPflegerAlle_Pfleger.Location = new System.Drawing.Point(25, 21);
-            this.labelPflegerAlle_Pfleger.Name = "labelPflegerAlle_Pfleger";
-            this.labelPflegerAlle_Pfleger.Size = new System.Drawing.Size(84, 17);
-            this.labelPflegerAlle_Pfleger.TabIndex = 0;
-            this.labelPflegerAlle_Pfleger.Text = "Pfleger:";
-            // 
-            // tabPflegerHinzufügen
-            // 
-            this.tabPflegerHinzufügen.Controls.Add(this.buttonPflegerAdd_Add);
-            this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Geb);
-            this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Surname);
-            this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Name);
-            this.tabPflegerHinzufügen.Location = new System.Drawing.Point(4, 26);
-            this.tabPflegerHinzufügen.Name = "tabPflegerHinzufügen";
-            this.tabPflegerHinzufügen.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPflegerHinzufügen.Size = new System.Drawing.Size(953, 378);
-            this.tabPflegerHinzufügen.TabIndex = 1;
-            this.tabPflegerHinzufügen.Text = "Hinzufügen";
-            this.tabPflegerHinzufügen.UseVisualStyleBackColor = true;
-            // 
             // tabGehege
             // 
-            this.tabGehege.Controls.Add(this.tabControlGehege);
             this.tabGehege.Location = new System.Drawing.Point(4, 31);
             this.tabGehege.Name = "tabGehege";
             this.tabGehege.Size = new System.Drawing.Size(953, 409);
@@ -275,77 +189,14 @@
             this.tabGehege.Text = "Gehege";
             this.tabGehege.UseVisualStyleBackColor = true;
             // 
-            // tabControlGehege
-            // 
-            this.tabControlGehege.Controls.Add(this.tabGehegeAlle);
-            this.tabControlGehege.Controls.Add(this.tabGehegeHinzufügen);
-            this.tabControlGehege.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlGehege.Location = new System.Drawing.Point(-4, 5);
-            this.tabControlGehege.Name = "tabControlGehege";
-            this.tabControlGehege.SelectedIndex = 0;
-            this.tabControlGehege.Size = new System.Drawing.Size(961, 408);
-            this.tabControlGehege.TabIndex = 1;
-            // 
-            // tabGehegeAlle
-            // 
-            this.tabGehegeAlle.Location = new System.Drawing.Point(4, 26);
-            this.tabGehegeAlle.Name = "tabGehegeAlle";
-            this.tabGehegeAlle.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGehegeAlle.Size = new System.Drawing.Size(953, 378);
-            this.tabGehegeAlle.TabIndex = 0;
-            this.tabGehegeAlle.Text = "Alle Anzeigen";
-            this.tabGehegeAlle.UseVisualStyleBackColor = true;
-            // 
-            // tabGehegeHinzufügen
-            // 
-            this.tabGehegeHinzufügen.Location = new System.Drawing.Point(4, 26);
-            this.tabGehegeHinzufügen.Name = "tabGehegeHinzufügen";
-            this.tabGehegeHinzufügen.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGehegeHinzufügen.Size = new System.Drawing.Size(953, 378);
-            this.tabGehegeHinzufügen.TabIndex = 1;
-            this.tabGehegeHinzufügen.Text = "Hinzufügen";
-            this.tabGehegeHinzufügen.UseVisualStyleBackColor = true;
-            // 
             // tabTiere
             // 
-            this.tabTiere.Controls.Add(this.tabControlTiere);
             this.tabTiere.Location = new System.Drawing.Point(4, 31);
             this.tabTiere.Name = "tabTiere";
             this.tabTiere.Size = new System.Drawing.Size(953, 409);
             this.tabTiere.TabIndex = 5;
             this.tabTiere.Text = "Tiere";
             this.tabTiere.UseVisualStyleBackColor = true;
-            // 
-            // tabControlTiere
-            // 
-            this.tabControlTiere.Controls.Add(this.tabTiereAlle);
-            this.tabControlTiere.Controls.Add(this.tabTiereHinzufügen);
-            this.tabControlTiere.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlTiere.Location = new System.Drawing.Point(-4, 5);
-            this.tabControlTiere.Name = "tabControlTiere";
-            this.tabControlTiere.SelectedIndex = 0;
-            this.tabControlTiere.Size = new System.Drawing.Size(961, 408);
-            this.tabControlTiere.TabIndex = 1;
-            // 
-            // tabTiereAlle
-            // 
-            this.tabTiereAlle.Location = new System.Drawing.Point(4, 26);
-            this.tabTiereAlle.Name = "tabTiereAlle";
-            this.tabTiereAlle.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTiereAlle.Size = new System.Drawing.Size(953, 378);
-            this.tabTiereAlle.TabIndex = 0;
-            this.tabTiereAlle.Text = "Alle Anzeigen";
-            this.tabTiereAlle.UseVisualStyleBackColor = true;
-            // 
-            // tabTiereHinzufügen
-            // 
-            this.tabTiereHinzufügen.Location = new System.Drawing.Point(4, 26);
-            this.tabTiereHinzufügen.Name = "tabTiereHinzufügen";
-            this.tabTiereHinzufügen.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTiereHinzufügen.Size = new System.Drawing.Size(953, 378);
-            this.tabTiereHinzufügen.TabIndex = 1;
-            this.tabTiereHinzufügen.Text = "tabPage5";
-            this.tabTiereHinzufügen.UseVisualStyleBackColor = true;
             // 
             // tabLieferanten
             // 
@@ -572,6 +423,20 @@
             this.label7.Size = new System.Drawing.Size(0, 22);
             this.label7.TabIndex = 5;
             // 
+            // tabPflegerHinzufügen
+            // 
+            this.tabPflegerHinzufügen.Controls.Add(this.buttonPflegerAdd_Add);
+            this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Geb);
+            this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Surname);
+            this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Name);
+            this.tabPflegerHinzufügen.Location = new System.Drawing.Point(4, 26);
+            this.tabPflegerHinzufügen.Name = "tabPflegerHinzufügen";
+            this.tabPflegerHinzufügen.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPflegerHinzufügen.Size = new System.Drawing.Size(953, 378);
+            this.tabPflegerHinzufügen.TabIndex = 1;
+            this.tabPflegerHinzufügen.Text = "Hinzufügen";
+            this.tabPflegerHinzufügen.UseVisualStyleBackColor = true;
+            // 
             // groupPflegerAdd_Name
             // 
             this.groupPflegerAdd_Name.Controls.Add(this.textPflegerAdd_Name);
@@ -642,6 +507,67 @@
             this.buttonPflegerAdd_Add.Text = "Pfleger hinzufügen";
             this.buttonPflegerAdd_Add.UseVisualStyleBackColor = false;
             // 
+            // tabPflegerAlle
+            // 
+            this.tabPflegerAlle.Controls.Add(this.labelPflegerAlle_Value);
+            this.tabPflegerAlle.Controls.Add(this.gridPflegerAlle);
+            this.tabPflegerAlle.Controls.Add(this.labelPflegerAlle_Pfleger);
+            this.tabPflegerAlle.Location = new System.Drawing.Point(4, 26);
+            this.tabPflegerAlle.Name = "tabPflegerAlle";
+            this.tabPflegerAlle.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPflegerAlle.Size = new System.Drawing.Size(953, 378);
+            this.tabPflegerAlle.TabIndex = 0;
+            this.tabPflegerAlle.Text = "Alle Anzeigen";
+            this.tabPflegerAlle.UseVisualStyleBackColor = true;
+            // 
+            // labelPflegerAlle_Pfleger
+            // 
+            this.labelPflegerAlle_Pfleger.AutoSize = true;
+            this.labelPflegerAlle_Pfleger.Location = new System.Drawing.Point(25, 21);
+            this.labelPflegerAlle_Pfleger.Name = "labelPflegerAlle_Pfleger";
+            this.labelPflegerAlle_Pfleger.Size = new System.Drawing.Size(84, 17);
+            this.labelPflegerAlle_Pfleger.TabIndex = 0;
+            this.labelPflegerAlle_Pfleger.Text = "Pfleger:";
+            // 
+            // gridPflegerAlle
+            // 
+            this.gridPflegerAlle.AllowUserToAddRows = false;
+            this.gridPflegerAlle.AllowUserToDeleteRows = false;
+            this.gridPflegerAlle.AllowUserToResizeColumns = false;
+            this.gridPflegerAlle.AllowUserToResizeRows = false;
+            this.gridPflegerAlle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridPflegerAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridPflegerAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridPflegerAlle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gridPflegerAlle.GridColor = System.Drawing.SystemColors.Window;
+            this.gridPflegerAlle.Location = new System.Drawing.Point(250, 0);
+            this.gridPflegerAlle.Name = "gridPflegerAlle";
+            this.gridPflegerAlle.ReadOnly = true;
+            this.gridPflegerAlle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridPflegerAlle.Size = new System.Drawing.Size(703, 378);
+            this.gridPflegerAlle.TabIndex = 1;
+            // 
+            // labelPflegerAlle_Value
+            // 
+            this.labelPflegerAlle_Value.AutoSize = true;
+            this.labelPflegerAlle_Value.Location = new System.Drawing.Point(115, 21);
+            this.labelPflegerAlle_Value.Name = "labelPflegerAlle_Value";
+            this.labelPflegerAlle_Value.Size = new System.Drawing.Size(97, 17);
+            this.labelPflegerAlle_Value.TabIndex = 2;
+            this.labelPflegerAlle_Value.Text = "undefined";
+            // 
+            // tabControlPfleger
+            // 
+            this.tabControlPfleger.Controls.Add(this.tabPflegerAlle);
+            this.tabControlPfleger.Controls.Add(this.tabPflegerHinzufügen);
+            this.tabControlPfleger.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlPfleger.Location = new System.Drawing.Point(-4, 5);
+            this.tabControlPfleger.Name = "tabControlPfleger";
+            this.tabControlPfleger.SelectedIndex = 0;
+            this.tabControlPfleger.Size = new System.Drawing.Size(961, 408);
+            this.tabControlPfleger.TabIndex = 0;
+            this.tabControlPfleger.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControlPfleger_Selected);
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 12F);
@@ -658,15 +584,6 @@
             this.tabÜbersicht.ResumeLayout(false);
             this.tabÜbersicht.PerformLayout();
             this.tabPfleger.ResumeLayout(false);
-            this.tabControlPfleger.ResumeLayout(false);
-            this.tabPflegerAlle.ResumeLayout(false);
-            this.tabPflegerAlle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridPflegerAlle)).EndInit();
-            this.tabPflegerHinzufügen.ResumeLayout(false);
-            this.tabGehege.ResumeLayout(false);
-            this.tabControlGehege.ResumeLayout(false);
-            this.tabTiere.ResumeLayout(false);
-            this.tabControlTiere.ResumeLayout(false);
             this.tabSuchen.ResumeLayout(false);
             this.tabSuchen.PerformLayout();
             this.groupSearchFutter.ResumeLayout(false);
@@ -675,11 +592,16 @@
             this.groupSearchGehege.ResumeLayout(false);
             this.groupSearchPfleger.ResumeLayout(false);
             this.groupSearchLieferanten.ResumeLayout(false);
+            this.tabPflegerHinzufügen.ResumeLayout(false);
             this.groupPflegerAdd_Name.ResumeLayout(false);
             this.groupPflegerAdd_Name.PerformLayout();
             this.groupPflegerAdd_Surname.ResumeLayout(false);
             this.groupPflegerAdd_Surname.PerformLayout();
             this.groupPflegerAdd_Geb.ResumeLayout(false);
+            this.tabPflegerAlle.ResumeLayout(false);
+            this.tabPflegerAlle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPflegerAlle)).EndInit();
+            this.tabControlPfleger.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -713,26 +635,20 @@
         private System.Windows.Forms.Label labelÜbersichtTiere_Value;
         private System.Windows.Forms.Label labelÜbersichtNext_Value;
         private System.Windows.Forms.Label labelÜbersichtNext;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TabControl tabControlPfleger;
         private System.Windows.Forms.TabPage tabPflegerAlle;
-        private System.Windows.Forms.TabPage tabPflegerHinzufügen;
-        private System.Windows.Forms.TabControl tabControlGehege;
-        private System.Windows.Forms.TabPage tabGehegeAlle;
-        private System.Windows.Forms.TabPage tabGehegeHinzufügen;
-        private System.Windows.Forms.TabControl tabControlTiere;
-        private System.Windows.Forms.TabPage tabTiereAlle;
-        private System.Windows.Forms.TabPage tabTiereHinzufügen;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label labelPflegerAlle_Pfleger;
-        private System.Windows.Forms.DataGridView gridPflegerAlle;
         private System.Windows.Forms.Label labelPflegerAlle_Value;
+        private System.Windows.Forms.DataGridView gridPflegerAlle;
+        private System.Windows.Forms.Label labelPflegerAlle_Pfleger;
+        private System.Windows.Forms.TabPage tabPflegerHinzufügen;
+        private System.Windows.Forms.Button buttonPflegerAdd_Add;
+        private System.Windows.Forms.GroupBox groupPflegerAdd_Geb;
+        private System.Windows.Forms.DateTimePicker dateTimePfleger_Add;
         private System.Windows.Forms.GroupBox groupPflegerAdd_Surname;
         private System.Windows.Forms.TextBox textPflegerAdd_Surname;
         private System.Windows.Forms.GroupBox groupPflegerAdd_Name;
         private System.Windows.Forms.TextBox textPflegerAdd_Name;
-        private System.Windows.Forms.Button buttonPflegerAdd_Add;
-        private System.Windows.Forms.GroupBox groupPflegerAdd_Geb;
-        private System.Windows.Forms.DateTimePicker dateTimePfleger_Add;
     }
 }
 

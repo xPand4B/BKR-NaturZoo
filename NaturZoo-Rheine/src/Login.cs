@@ -1,38 +1,45 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Security.Cryptography;
 using System.Windows.Forms;
+using NaturZoo_Rheine.src.Hashing;
+using NaturZoo_Rheine.src.Database.Models;
 
-namespace NaturZoo_Rheine
+/*
+|-----------------------------------------------------------------------------
+| Login Management
+|-----------------------------------------------------------------------------
+|
+| Default User:
+|   E-Mail:     management@naturzoo-rheine.de
+|   Password:   NaturZoo
+*/
+namespace NaturZoo_Rheine.src
 {
-    class Login : Database
+    class Login : NaturZoo_Rheine.src.Database.Database
     {
+        /**
+         * @var ZooRheine Zoo
+         **/
+        private ZooRheine Zoo;
+
+
+        /**
+         * @var String defaultCredentials
+         **/
+        private const String defaultEmail    = "management@naturzoo-rheine.de";
+        private const String defaultPassword = "NaturZoo";
+
+
         /**
          * Constructor
          **/
         public Login()
         {
-            /*
-            |--------------------------------------------------------------------------
-            | Check if there is at least one record inside the "management" database table
-            |--------------------------------------------------------------------------
-            |
-            | If there are records:     Run as normal
-            | If there are no records:  Create Default user
-            |
-            | Default User:
-            |   E-Mail:     management@naturzoo-rheine.de
-            |   Password:   NaturZoo
-            */
-            Int32 userCount = Convert.ToInt32(this.GetSingleValue(
-                "SELECT count(*)" +
-                "FROM management"
-            ));
+            Zoo = new ZooRheine();
 
-            if(userCount == 0) {
+            String userCount       = Zoo.GetGuardianCount;
+            String managementCount = Zoo.GetManagementCount;
+
+            if (managementCount == "0" || (userCount == "0" && managementCount == "0")) {
                 CreateDefaultUser();
                 MessageBox.Show("No Management User found. Default User has been created.", "User Information", MessageBoxButtons.OK);
             }
@@ -44,62 +51,34 @@ namespace NaturZoo_Rheine
          * 
          * @return Boolean
          **/
-        public Boolean CreateDefaultUser()
+        private Boolean CreateDefaultUser()
         {
-            String email = "management@naturzoo-rheine.de";
-            String password = this.ComputeSha256Hash("NaturZoo");
-            
-            return this.PushData(string.Format(
-                "INSERT INTO management (email, password)" +
-                "VALUES ('{0}', '{1}')",
-                email, password
-            ));
+            return Zoo.CreateManagement(new Management {
+                email = defaultEmail,
+                password = Hashmanager.Hash(defaultPassword)
+            });
         }
 
         /**
          * Check if input is equal to DB-Data
          * 
-         * @param Strin user
-         * @param String password
-         * 
+         * @param String emailInput
+         * @param String passwordInput
          * @return Boolean
          **/
         public Boolean Check(String emailInput, String passwordInput)
         {
-            Int32 result = Convert.ToInt32(this.GetSingleValue(string.Format(
+            String result = this.GetSingleValue(string.Format(
                 "SELECT count(*) " +
                 "FROM management " +
                 "WHERE email='{0}' " +
                     "AND password='{1}'",
-                emailInput, ComputeSha256Hash(passwordInput)
-            )));
+                emailInput, Hashmanager.Hash(passwordInput)
+            ));
 
-            if(result == 1) { return true; }
+            if (result == "1") { return true; }
 
             return false;
-        }
-
-        /**
-         * Create Hash
-         * 
-         * @param String rawData
-         * 
-         * @return String HashValue
-         **/
-        private String ComputeSha256Hash(String rawData)
-        {
-            // Create a SHA256   
-            using(SHA256 sha256Hash = SHA256.Create()) {
-                // ComputeHash - returns byte array  
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
-
-                // Convert byte array to a string   
-                StringBuilder builder = new StringBuilder();
-                for(int i = 0; i < bytes.Length; i++) {
-                    builder.Append(bytes[i].ToString("x2"));
-                }
-                return builder.ToString();
-            }
         }
     }
 }
