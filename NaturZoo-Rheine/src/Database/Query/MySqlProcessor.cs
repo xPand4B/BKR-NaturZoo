@@ -3,26 +3,21 @@ using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-/*
-|-----------------------------------------------------------------------------
-| MySql Query Processor
-|-----------------------------------------------------------------------------
-|
-| //
-|
-*/
-namespace NaturZoo_Rheine.src.Database.Query
-{
-    class MySqlProcessor
+namespace NaturZoo_Rheine.src.Database.Query {
+    /// <summary>
+    ///     
+    /// </summary>
+    internal struct MySqlProcessor
     {
-        /**
-         * Run query and return result
-         * 
-         * @param MySqlConnection conn
-         * @param String tableName
-         * @param String query
-         * @return DataTable results
-         **/
+        /// <summary>
+        ///     Run query and return <seealso cref="DataTable"/> for datagrid.
+        /// </summary>
+        /// <param name="conn">The MySqlConnecion variable.</param>
+        /// <param name="tableName">The Tablename</param>
+        /// <param name="query">The query string.</param>
+        /// <returns name="DataTable">
+        ///     <seealso cref="DataTable"/> result based on the query.
+        /// </returns>
         public static DataTable GetGridData(MySqlConnection conn, String tableName, String query)
         {
             try {
@@ -38,14 +33,14 @@ namespace NaturZoo_Rheine.src.Database.Query
             }
         }
 
-        /**
-         * Run query and return a single result. 
-         * This Method only returns the first found value.
-         * 
-         * @param MySqlConnection conn
-         * @param String query
-         * @return String result
-         **/
+        /// <summary>
+        ///     Run query and return a single <seealso cref="String"/> as result.
+        /// </summary>
+        /// <param name="conn">The MySqlConnecion variable.</param>
+        /// <param name="query">The query string.</param> 
+        /// <returns name="String">
+        ///     <seealso cref="String"/> result based on the query.
+        /// </returns>
         public static String GetSingleResult(MySqlConnection conn, String query)
         {
             try {
@@ -68,13 +63,14 @@ namespace NaturZoo_Rheine.src.Database.Query
             }
         }
 
-        /**
-         * Push Data to the Database
-         * 
-         * @param MySqlConnection conn
-         * @param String query
-         * @return Boolean
-         **/
+        /// <summary>
+        ///     Push data to the database and return a <seealso cref="Boolean"/>.
+        /// </summary>
+        /// <param name="conn">The MySqlConnecion variable.</param>
+        /// <param name="query">The query string.</param> 
+        /// <returns name="Boolean">
+        ///     <c>true</c> if the data has been pushed successfully; otherwise, <c>false</c>.
+        /// </returns>
         public static Boolean PushData(MySqlConnection conn, String query)
         {
             try {

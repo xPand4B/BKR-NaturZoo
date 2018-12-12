@@ -2,31 +2,22 @@
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
-/*
-|-----------------------------------------------------------------------------
-| MySql Connector
-|-----------------------------------------------------------------------------
-|
-| //
-|
-*/
-namespace NaturZoo_Rheine.src.Database.Connection
-{
+namespace NaturZoo_Rheine.src.Database.Connection {
+    /// <summary>
+    ///     Provides the MySql Connection.
+    /// </summary>
     class MySqlConnector : IConnector
     {
-        /**
-         * @var MySqlConnection _conn
-         **/
-        public MySqlConnection _conn { get; private set; }
+        public MySqlConnection _conn{ get; private set; }
 
-        /**
-         * Constructor
-         * 
-         * @param String server
-         * @param String database
-         * @param String uid
-         * @param String password
-         **/
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="MySqlConnector"/> class.
+        /// </summary>
+        /// <param name="server">The MySql database server.</param>
+        /// <param name="database">The MySql database name.</param>
+        /// <param name="uid">The MySql database user.</param>
+        /// <param name="password">The MySql database password.</param>
         public MySqlConnector(String server, String database, String uid, String password)
         {
             String connString = string.Format(
@@ -37,11 +28,13 @@ namespace NaturZoo_Rheine.src.Database.Connection
             this._conn = new MySqlConnection(connString);
         }
 
-        /**
-         * Check Connection at startup
-         * 
-         * @return Boolean
-         **/
+
+        /// <summary>
+        ///     Check MySql connection at startup.
+        /// </summary>
+        /// <returns name="Boolean">
+        ///     <c>true</c> if the connection is available; otherwise, <c>false</c>.
+        /// </returns>
         public Boolean CheckConnection()
         {
             if (this.Connect()) {
@@ -54,11 +47,12 @@ namespace NaturZoo_Rheine.src.Database.Connection
             return false;
         }
 
-        /**
-         * Create Database Connection
-         * 
-         * @return Boolean
-         **/
+        /// <summary>
+        ///     Create MySql database connection.
+        /// </summary>
+        /// <returns name="Boolean">
+        ///     <c>true</c> if the connection has been opened successfully; otherwise, <c>false</c>.
+        /// </returns>
         public Boolean Connect()
         {
             try {
@@ -71,11 +65,12 @@ namespace NaturZoo_Rheine.src.Database.Connection
             }
         }
 
-        /**
-         * Close Database Connection
-         * 
-         * @return Boolean
-         **/
+        /// <summary>
+        ///     Close MySql database connection.
+        /// </summary>
+        /// <returns name="Boolean">
+        ///     <c>true</c> if the connection has been closed successfully; otherwise, <c>false</c>.
+        /// </returns> 
         public Boolean Close()
         {
             try {

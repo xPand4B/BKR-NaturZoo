@@ -1,25 +1,13 @@
 ﻿using System;
 
-/*
-|-----------------------------------------------------------------------------
-| Management Model
-|-----------------------------------------------------------------------------
-|
-| Contains Management User Data
-|
-*/
-namespace NaturZoo_Rheine.src.Database.Models
-{
-    class Management
+namespace NaturZoo_Rheine.src.Database.Models {
+    /// <summary>
+    ///     Provides <see cref="Management"/> Data.
+    /// </summary>
+    internal struct Management
     {
-        /**
-         * @var String email
-         **/
         public String email { get; set; }
 
-        /**
-         * @var String password
-         **/
         public String password { get; set; }
     }
 }

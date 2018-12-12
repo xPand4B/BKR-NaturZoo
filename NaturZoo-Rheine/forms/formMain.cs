@@ -8,19 +8,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NaturZoo_Rheine.src;
 
-namespace NaturZoo_Rheine
-{
+namespace NaturZoo_Rheine {
+    /// <summary>
+    ///     Provides the Main Form.
+    /// </summary>
     public partial class formMain : MetroFramework.Forms.MetroForm
     {
-        /**
-         * @var ZooRheine Zoo
-         **/
         private ZooRheine Zoo;
 
 
-        /**
-         * Constructor
-         **/
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="formMain"/> class.
+        /// </summary>
         public formMain()
         {
             // Load Login Form
@@ -38,14 +37,11 @@ namespace NaturZoo_Rheine
             //labelÜbersichtTiere_Value.Text      = ;
             labelÜbersichtPfleger_Value.Text    = Zoo.GetGuardianCount;
         }
+        
 
-        /**
-         * Set default view data for selected tab
-         * 
-         * @param objext sender
-         * @param TabControlEventArgs e
-         * @return void
-         **/
+        /// <summary>
+        ///     Set the default view data for the selected tab.
+        /// </summary>
         private void tabControlMain_Selected(object sender, TabControlEventArgs e)
         {
             switch (tabControlMain.SelectedTab.Name) {
@@ -93,6 +89,11 @@ namespace NaturZoo_Rheine
          * @param TabControlEventArgs e
          * @return void
          **/
+
+        /// <summary>
+        ///     <para>Guardian Tab</para>
+        ///     Set the view data depending on the selected tab.
+        /// </summary>
         private void tabControlPfleger_Selected(object sender, TabControlEventArgs e)
         {
             switch (tabControlPfleger.SelectedTab.Name) {
@@ -110,14 +111,10 @@ namespace NaturZoo_Rheine
                     break;
             }
         }
-
-        /**
-         * Close Application
-         * 
-         * @param object sender
-         * @param EventArgs e
-         * @return void
-         **/
+        
+        /// <summary>
+        ///     Close the application.
+        /// </summary>
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();

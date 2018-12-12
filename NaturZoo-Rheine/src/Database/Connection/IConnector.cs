@@ -1,42 +1,38 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 
-/*
-|-----------------------------------------------------------------------------
-| Connector interface
-|-----------------------------------------------------------------------------
-|
-| //
-|
-*/
 namespace NaturZoo_Rheine.src.Database.Connection
 {
+    /// <summary>
+    ///     Provides the Connector base structure.
+    /// </summary>
     interface IConnector
     {
-        /**
-         * @var MySqlConnection _conn
-         **/
         MySqlConnection _conn { get; }
 
-        /**
-         * Check Connection at startup
-         * 
-         * @return Boolean
-         **/
+
+        /// <summary>
+        ///     Check connection at startup.
+        /// </summary>
+        /// <returns name="Boolean">
+        ///     <c>true</c> if the connection is available; otherwise, <c>false</c>.
+        /// </returns>
         Boolean CheckConnection();
 
-        /**
-         * Create Database Connection
-         * 
-         * @return Boolean
-         **/
+        /// <summary>
+        ///     Create database connection.
+        /// </summary>
+        /// <returns name="Boolean">
+        ///     <c>true</c> if the connection has been opened successfully; otherwise, <c>false</c>.
+        /// </returns>
         Boolean Connect();
 
-        /**
-         * Close Database Connection
-         * 
-         * @return Boolean
-         **/
+        /// <summary>
+        ///     Close database connection.
+        /// </summary>
+        /// <returns name="Boolean">
+        ///     <c>true</c> if the connection has been closed successfully; otherwise, <c>false</c>.
+        /// </returns> 
         Boolean Close();
     }
 }

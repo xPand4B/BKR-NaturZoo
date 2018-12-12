@@ -2,24 +2,19 @@
 using System.Text;
 using System.Security.Cryptography;
 
-/*
-|-----------------------------------------------------------------------------
-| SHA256 Hasher
-|-----------------------------------------------------------------------------
-|
-| This class is creating a SHA256 hashed string.
-|
-*/
-namespace NaturZoo_Rheine.src.Hashing
-{
+namespace NaturZoo_Rheine.src.Hashing.Hasher {
+    /// <summary>
+    ///     Provides the algorithm for SHA256.
+    /// </summary>
     class Sha256Hasher
     {
-        /**
-         * Create Hash
-         * 
-         * @param String rawData
-         * @return String HashValue
-         **/
+        /// <summary>
+        ///     Created and get SHA256 hashed <see cref="String"/>.
+        /// </summary>
+        /// <param name="rawData">The <see cref="String"/> that should be hashed.</param>
+        /// <returns>
+        ///     SHA256 hashed <seealso cref="String"/>.
+        /// </returns>
         public static String Make(String rawData)
         {
             // Create a SHA256   

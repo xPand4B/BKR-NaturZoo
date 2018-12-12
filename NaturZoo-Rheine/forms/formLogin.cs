@@ -3,21 +3,19 @@ using System.Windows.Forms;
 using NaturZoo_Rheine.src;
 
 namespace NaturZoo_Rheine {
+    /// <summary>
+    ///     Provides the Login form.
+    /// </summary>
     public partial class formLogin : MetroFramework.Forms.MetroForm
     {
-        /**
-         * @var Login Login
-         **/
         private Login Login;
-        /**
-         * @var Boolean loginSuccess
-         **/
+        
         public Boolean loginSuccess { get; private set; }
 
 
-        /**
-         * Constructor
-         **/
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="formLogin"/> class.
+        /// </summary>
         public formLogin()
         {
             InitializeComponent();
@@ -25,14 +23,10 @@ namespace NaturZoo_Rheine {
             Login = new Login();
         }
 
-        
-        /**
-         * Login Click
-         * 
-         * @param object sender
-         * @param EventArgs e
-         * @return void
-         **/
+
+        /// <summary>
+        ///     Login button click
+        /// </summary>
         private void btnLogin_Click(object sender, EventArgs e)
         {
             String email    = textLoginEmail.Text;
@@ -50,14 +44,10 @@ namespace NaturZoo_Rheine {
             }
             
         }
-
-        /**
-         * Exit Click
-         * 
-         * @param object sender
-         * @param EventArgs e
-         * @return void
-         */ 
+        
+        /// <summary>
+        ///     Exit button click
+        /// </summary>
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();

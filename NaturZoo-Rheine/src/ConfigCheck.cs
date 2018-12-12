@@ -3,27 +3,18 @@ using System.Collections.Generic;
 using NaturZoo_Rheine.config;
 using System.Windows.Forms;
 
-/*
-|-----------------------------------------------------------------------------
-| Config Checker
-|-----------------------------------------------------------------------------
-|
-| Checks if the config files are filled correctly.
-|
-*/
-namespace NaturZoo_Rheine.src
-{
+namespace NaturZoo_Rheine.src {
+    /// <summary>
+    ///     Provides a check for a correctly filled in config.
+    /// </summary>
     class ConfigCheck
     {
-        /**
-         * @var List<string> Errors
-         **/
         private List<string> Errors = new List<string>();
 
 
-        /**
-         * Constructor
-         **/
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="ConfigCheck"/> class.
+        /// </summary>
         public ConfigCheck()
         {
             DatabaseCheck();
@@ -39,12 +30,10 @@ namespace NaturZoo_Rheine.src
                 Environment.Exit(1);
             }
         }
-
-        /**
-         * Check Databaseconfig
-         * 
-         * @return void
-         **/
+        
+        /// <summary>
+        ///     Check the <seealso cref="DatabaseConfig"/>.
+        /// </summary>
         private void DatabaseCheck()
         {
             var DB = new DatabaseConfig();
@@ -61,12 +50,10 @@ namespace NaturZoo_Rheine.src
             if (DB.Uid == "")
                 Errors.Add("Database UID can't be empty");
         }
-
-        /**
-         * Check HashConfig
-         * 
-         * @return void
-         **/
+        
+        /// <summary>
+        ///     Check the <seealso cref="HashConfig"/>.
+        /// </summary>
         private void HashCheck()
         {
             var Hash = new HashConfig();

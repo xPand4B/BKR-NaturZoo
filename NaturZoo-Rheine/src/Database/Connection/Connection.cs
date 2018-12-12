@@ -1,43 +1,28 @@
 ﻿using System;
-using MySql.Data.MySqlClient;
-using System.Data;
+using NaturZoo_Rheine.config;
 
-/*
-|-----------------------------------------------------------------------------
-| Connection management
-|-----------------------------------------------------------------------------
-|
-| //
-|
-*/
-namespace NaturZoo_Rheine.src.Database.Connection
-{
-    class Connection : NaturZoo_Rheine.config.DatabaseConfig
+namespace NaturZoo_Rheine.src.Database.Connection {
+    /// <summary>
+    ///     Provides a dynamic database connection, based on the selected driver inside the <see cref="DatabaseConfig"/>.
+    /// </summary>
+    class Connection
     {
-        /**
-         * @var MySqlConnection MySql
-         **/
         private MySqlConnector MySql;
-        /**
-         * @var Object _conn
-         **/
         protected Object _conn { get; private set; }
-        
-        /**
-         * @var String driver
-         **/
         protected String dbDriver { get; private set; }
 
-        /*
-         * Constructor
-         **/
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="Connection"/> class.
+        /// </summary>
         public Connection()
         {
-            dbDriver = this.Driver;
+            var Config = new DatabaseConfig();
+            dbDriver = Config.Driver;
 
-            switch (driver) {
+            switch (dbDriver) {
                 case "mysql":
-                    MySql = new MySqlConnector(this.Server, this.Database, this.Uid, this.Password);
+                    MySql = new MySqlConnector(Config.Server, Config.Database, Config.Uid, Config.Password);
                     _conn = MySql._conn;
                     break;
 
@@ -46,11 +31,13 @@ namespace NaturZoo_Rheine.src.Database.Connection
             }
         }
 
-        /**
-         * Check Connection at startup
-         * 
-         * @return Boolean
-         **/
+
+        /// <summary>
+        ///     Check connection at startup, based on the selected driver inside the <seealso cref="DatabaseConfig"/>.
+        /// </summary>
+        /// <returns name="Boolean">
+        ///     <c>true</c> if the connection is available; otherwise, <c>false</c>.
+        /// </returns>
         protected Boolean CheckConnection()
         {
             switch (dbDriver) {
@@ -62,11 +49,12 @@ namespace NaturZoo_Rheine.src.Database.Connection
             }
         }
 
-        /**
-         * Create Database Connection
-         * 
-         * @return Boolean
-         **/
+        /// <summary>
+        ///     Create database connection, based on the selected driver inside the <seealso cref="DatabaseConfig"/>.
+        /// </summary>
+        /// <returns name="Boolean">
+        ///     <c>true</c> if the connection has been opened successfully; otherwise, <c>false</c>.
+        /// </returns>
         public Boolean Connect()
         {
             switch (dbDriver) {
@@ -78,11 +66,12 @@ namespace NaturZoo_Rheine.src.Database.Connection
             }
         }
 
-        /**
-         * Close Database Connection
-         * 
-         * @return Boolean
-         **/
+        /// <summary>
+        ///     Close database connection, based on the selected driver inside the <seealso cref="DatabaseConfig"/>.
+        /// </summary>
+        /// <returns name="Boolean">
+        ///     <c>true</c> if the connection has been closed successfully; otherwise, <c>false</c>.
+        /// </returns> 
         public Boolean Close()
         {
             switch (dbDriver) {

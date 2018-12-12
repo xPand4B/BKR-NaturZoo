@@ -2,9 +2,9 @@
 
 namespace NaturZoo_Rheine.src.Database.Models {
     /// <summary>
-    ///     Provides <see cref="Animal"/> Data.
+    ///     Provides <see cref="Supplier"/> Data.
     /// </summary>
-    internal struct Animal
+    internal struct Supplier
     {
     }
 }

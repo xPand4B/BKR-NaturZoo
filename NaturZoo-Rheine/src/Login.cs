@@ -16,22 +16,15 @@ namespace NaturZoo_Rheine.src
 {
     class Login : NaturZoo_Rheine.src.Database.Database
     {
-        /**
-         * @var ZooRheine Zoo
-         **/
         private ZooRheine Zoo;
 
-
-        /**
-         * @var String defaultCredentials
-         **/
         private const String defaultEmail    = "management@naturzoo-rheine.de";
         private const String defaultPassword = "NaturZoo";
 
 
-        /**
-         * Constructor
-         **/
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="Login"/> class.
+        /// </summary>
         public Login()
         {
             Zoo = new ZooRheine();
@@ -51,6 +44,13 @@ namespace NaturZoo_Rheine.src
          * 
          * @return Boolean
          **/
+
+        /// <summary>
+        ///     Create the default <seealso cref="Management"/> user.
+        /// </summary>
+        /// <returns name="Boolean">
+        ///     <c>true</c> if the user has been created successfully; otherwise, <c>false</c>.
+        /// </returns>
         private Boolean CreateDefaultUser()
         {
             return Zoo.CreateManagement(new Management {
@@ -66,6 +66,13 @@ namespace NaturZoo_Rheine.src
          * @param String passwordInput
          * @return Boolean
          **/
+
+        /// <summary>
+        ///     Check if the input is contains valid credentials.
+        /// </summary>
+        /// <returns name="Boolean">
+        ///     <c>true</c> if the login was successfully; otherwise, <c>false</c>.
+        /// </returns>
         public Boolean Check(String emailInput, String passwordInput)
         {
             String result = this.GetSingleValue(string.Format(
