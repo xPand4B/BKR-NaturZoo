@@ -3,20 +3,13 @@ using System.Data;
 using NaturZoo_Rheine.src.Database.Models;
 using NaturZoo_Rheine.src.Hashing;
 
-/*
-|-----------------------------------------------------------------------------
-| Zoo management
-|-----------------------------------------------------------------------------
-|
-| Every request for returning/pushing data to/from the database is managed here.
-|
-*/
-namespace NaturZoo_Rheine.src
-{
+namespace NaturZoo_Rheine.src {
+    /// <summary>
+    ///     Every request for returning/pushing data to/from the database is managed here.
+    /// </summary>
     class ZooRheine : Database.Database
     {
         #region "Management"
-
             /// <summary>
             ///     Gets the <seealso cref="Management"/> count as <seealso cref="String"/>.
             /// </summary>
