@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using NaturZoo_Rheine.src;
 
-namespace NaturZoo_Rheine {
+namespace NaturZoo_Rheine
+{
     static class Program {
         /// <summary>
         ///     The main entry point for the application.
@@ -15,10 +12,23 @@ namespace NaturZoo_Rheine {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Check if config is set up correctly
-            var Checker = new ConfigCheck();
+            #region ConfigCheck
+            var configChecker = new Queries.Repositories.ConfigRepository();
+            var config = configChecker.GetConfig();
+            #endregion
 
-            Application.Run(new formMain());
+            #region Run Login Form
+            var loginView = new View.LoginForm();
+            //Application.Run(loginView);
+            #endregion
+
+            #region Run Main 
+            if (loginView.LoginSuccess) {
+                NaturZoo_Rheine.Database.Database DbContext = new Database.Database(config);
+                var mainView = new View.MainForm(DbContext, loginView.Permission, config.Start_Password);
+                Application.Run(mainView);
+            }
+            #endregion
         }
     }
 }

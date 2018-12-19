@@ -68,48 +68,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="config\DatabaseConfig.cs" />
-    <Compile Include="config\HashConfig.cs" />
-    <Compile Include="src\ConfigCheck.cs" />
-    <Compile Include="src\Database\Connection\Connection.cs" />
-    <Compile Include="src\Database\Connection\IConnector.cs" />
-    <Compile Include="src\Database\Connection\MySqlConnector.cs" />
-    <Compile Include="src\Database\Database.cs" />
-    <Compile Include="src\Database\Models\Supplier.cs" />
-    <Compile Include="src\Database\Models\Animal.cs" />
-    <Compile Include="src\Database\Models\Guardian.cs" />
-    <Compile Include="src\Database\Models\Management.cs" />
-    <Compile Include="src\Database\Query\MySqlProcessor.cs" />
-    <Compile Include="src\Database\Query\QueryManager.cs" />
-    <Compile Include="src\Hashing\Hashmanager.cs" />
-    <Compile Include="src\Hashing\Hasher\Sha256Hasher.cs" />
-    <Compile Include="src\Login.cs" />
-    <Compile Include="src\ZooRheine.cs" />
-    <Compile Include="forms\formDisplayResults.cs">
+    <Compile Include="Database\Database.cs" />
+    <Compile Include="Database\MySqlConnector.cs" />
+    <Compile Include="Hashing\HashManager.cs" />
+    <Compile Include="Hashing\Hasher\Sha256Hasher.cs" />
+    <Compile Include="Models\Animal.cs" />
+    <Compile Include="Models\Building.cs" />
+    <Compile Include="Models\Config.cs" />
+    <Compile Include="Models\Enclosure.cs" />
+    <Compile Include="Models\EntityBase.cs" />
+    <Compile Include="Models\Guardian.cs" />
+    <Compile Include="Models\Log.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\Territory.cs" />
+    <Compile Include="Queries\Core\Repositories\GenericRepository.cs" />
+    <Compile Include="Queries\Repositories\AnimalRepository.cs" />
+    <Compile Include="Queries\Repositories\BuildingRepository.cs" />
+    <Compile Include="Queries\Repositories\ConfigRepository.cs" />
+    <Compile Include="Queries\Core\Repositories\IRepository.cs" />
+    <Compile Include="Queries\Repositories\EnclosureRepository.cs" />
+    <Compile Include="Queries\Repositories\GuardianRepository.cs" />
+    <Compile Include="Queries\Repositories\LogRepository.cs" />
+    <Compile Include="Queries\Repositories\SupplierRepository.cs" />
+    <Compile Include="Queries\Repositories\TerritoryRepository.cs" />
+    <Compile Include="Queries\Repositories\ZooRepository.cs" />
+    <Compile Include="View\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\formDisplayResults.Designer.cs">
-      <DependentUpon>formDisplayResults.cs</DependentUpon>
+    <Compile Include="View\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\formLogin.cs">
+    <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\formLogin.Designer.cs">
-      <DependentUpon>formLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forms\formMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\formMain.Designer.cs">
-      <DependentUpon>formMain.cs</DependentUpon>
+    <Compile Include="View\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="forms\formLogin.resx">
-      <DependentUpon>formLogin.cs</DependentUpon>
+    <Compile Include="View\UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UpdateForm.Designer.cs">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\formMain.resx">
-      <DependentUpon>formMain.cs</DependentUpon>
+    <EmbeddedResource Include="View\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
