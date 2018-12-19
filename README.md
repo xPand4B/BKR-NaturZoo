@@ -5,9 +5,6 @@ Die Datenbank läuft unter MySql, damit eine einfache Anbindung an eine Website 
 
 Dabei wurde versucht das Projekt nach dem vereinfachten __[Repository Design Pattern](https://www.norberteder.com/das-repository-pattern-anhand-eines-beispiels-inkl-tests/)__ zu erstellen.
 
-## Inhalt
-* [ToDo] (#todo)
-
 ## ToDo
 * Create Log Services + Event
 	* Push Log to DB and file
