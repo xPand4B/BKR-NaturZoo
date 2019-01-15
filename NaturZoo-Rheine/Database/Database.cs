@@ -28,7 +28,7 @@ namespace NaturZoo_Rheine.Database
                 /// TODO: Add Event for file log.
                 /*
                 CreateLog(new Log() {
-                    Status = Log.status.FatalError,
+                    Status = Log.status.Error,
                     Message = "Database connection could not be established. Application has been closed."
                 });
                 */
@@ -43,7 +43,6 @@ namespace NaturZoo_Rheine.Database
                 });
             }
         }
-
 
         /// <summary>
         /// Adds the specified entity
@@ -91,6 +90,8 @@ namespace NaturZoo_Rheine.Database
 
                 query += ")";
 
+                Console.WriteLine(tableName + " :: Database.Add query:\n" + query + Environment.NewLine);
+
                 this.Connect();
                 // Set Query
                 cmd.CommandText = query;
@@ -130,6 +131,8 @@ namespace NaturZoo_Rheine.Database
 
             try {
                 String query = "SELECT * FROM " + tableName + " ORDER BY created_at desc";
+
+                Console.WriteLine(tableName + " :: Database.GetAll query:\n" + query + Environment.NewLine);
 
                 this.Connect();
 
@@ -176,6 +179,8 @@ namespace NaturZoo_Rheine.Database
                 query += " FROM " + tableName +
                          " ORDER BY created_at desc";
 
+                Console.WriteLine(tableName + " :: Database.GetAll query:\n" + query + Environment.NewLine);
+
                 this.Connect();
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(query, this._conn);
@@ -187,6 +192,77 @@ namespace NaturZoo_Rheine.Database
                 return ds.Tables[tableName];
 
             } catch (Exception ex) {
+                MessageBox.Show(ex.Message, "MySql Connection Error");
+                this.Close();
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Get all data as <seealso cref="DataTable"/> for the specified entity.
+        /// </summary>
+        /// <param name="showable">The fields to show</param>
+        /// <param name="tableName">The tablename</param>
+        /// <param name="foreignTable">The tablename</param>
+        /// <exception cref="ArgumentNullException"> if <paramref name="showable"/> is null</exception>
+        /// <exception cref="ArgumentNullException"> if <paramref name="tableName"/> is null</exception>
+        /// <exception cref="ArgumentNullException"> if <paramref name="foreignTable"/> is null</exception>
+        public DataTable GetAll(List<string> showable, String tableName, List<string> foreignTable)
+        {
+            if(showable.Count == 0)
+                throw new ArgumentNullException("showable");
+
+            if(string.IsNullOrEmpty(tableName))
+                throw new ArgumentNullException("tableName");
+
+            if(foreignTable.Count == 0)
+                throw new ArgumentNullException("foreignTable");
+
+            try
+            {
+                String query = "SELECT ";
+
+                for(int i = 0; i < showable.Count; i++)
+                {
+                    query += showable[i];
+
+                    if(i != showable.Count - 1)
+                        query += ", ";
+                }
+
+                query += " FROM " + tableName;
+
+                if(foreignTable.Count != 0) {
+                    foreach(String table in foreignTable) {
+                        query += ", " + table;
+                    }
+
+                    query += " WHERE " + tableName + ".fk_" + foreignTable[0] + "Id = " + foreignTable[0] + ".Id ";
+
+                    if(foreignTable.Count > 1){
+                        for(int i = 1; i < foreignTable.Count; i++){
+                            query += "AND " + tableName + ".fk_" + foreignTable[i] + "Id = " + foreignTable[i] + ".Id ";
+                        }
+                    }
+                }
+
+                query += " ORDER BY " + tableName + ".created_at desc";
+
+                Console.WriteLine(tableName + " :: Database.GetAll query:\n" + query + Environment.NewLine);
+
+                this.Connect();
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, this._conn);
+                DataSet ds = new DataSet();
+                adapter.FillAsync(ds, tableName);
+
+                this.Close();
+
+                return ds.Tables[tableName];
+
+            }
+            catch(Exception ex)
+            {
                 MessageBox.Show(ex.Message, "MySql Connection Error");
                 this.Close();
                 return null;
@@ -207,11 +283,46 @@ namespace NaturZoo_Rheine.Database
         }
 
         /// <summary>
+        /// Get dropdown items.
+        /// </summary>
+        /// <param name="tableName">The tablename</param>
+        /// <exception cref="ArgumentNullException"> if <paramref name="tableName"/> is null</exception>
+        public DataTable GetDropdown(String tableName)
+        {
+            if(string.IsNullOrEmpty(tableName))
+                throw new ArgumentNullException("tableName");
+
+            try
+            {
+                String query = "SELECT * FROM " + tableName + " ORDER BY created_at desc";
+
+                Console.WriteLine(tableName + " :: Database.GetDropdown query:\n" + query + Environment.NewLine);
+
+                this.Connect();
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, this._conn);
+                DataSet ds = new DataSet();
+                adapter.FillAsync(ds, tableName);
+
+                this.Close();
+
+                return ds.Tables[tableName];
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "MySql Connection Error");
+                this.Close();
+                return null;
+            }
+        }
+
+        /// <summary>
         /// Get a the last changed value.
         /// </summary>
         /// <param name="tableName">The table name</param>
         /// <exception cref="ArgumentNullException"> if <paramref name="tableName"/> is null</exception>
-        public String LastUpdate(string tableName)
+        public String LastUpdate(String tableName)
         {
             if(string.IsNullOrEmpty(tableName))
                 throw new ArgumentNullException("tableName");
@@ -225,6 +336,8 @@ namespace NaturZoo_Rheine.Database
                     "LIMIT 1",
                     DB_Database, tableName
                 );
+
+                Console.WriteLine(tableName + " :: Database.LastUpdate query:\n" + query + Environment.NewLine);
 
                 this.Connect();
 
@@ -276,6 +389,8 @@ namespace NaturZoo_Rheine.Database
                 String query  = "SELECT count(*) FROM " + tableName;
                 String result = "";
 
+                Console.WriteLine(tableName + " :: Database.Count query:\n" + query + Environment.NewLine);
+
                 this.Connect();
 
                 // Set Query
@@ -310,6 +425,8 @@ namespace NaturZoo_Rheine.Database
                     "VALUES ('{0}', '{1}')",
                     log.Status.ToString(), log.Message
                 );
+
+                Console.WriteLine("log :: Database.CreateLog query:\n" + query + Environment.NewLine);
 
                 this.Connect();
                 // Set Query

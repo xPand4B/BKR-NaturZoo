@@ -12,10 +12,12 @@ namespace NaturZoo_Rheine.Models
         /// </summary>
         public Building()
         {
-            showable.Add("name as Gebäude");
-            showable.Add("fk_territoryID as Revier");
-            showable.Add("created_at as Erstelldatum");
-            showable.Add("updated_at as Geändert");
+            showable.Add("building.name as Gebäude");
+            showable.Add("territory.name as Revier");
+            showable.Add("building.created_at as Erstelldatum");
+            showable.Add("building.updated_at as Geändert");
+
+            foreignTable.Add("territory");
         }
 
         public String Name { get; set; }

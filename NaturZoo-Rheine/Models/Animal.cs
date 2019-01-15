@@ -12,11 +12,16 @@ namespace NaturZoo_Rheine.Models
         /// </summary>
         public Animal()
         {
-            showable.Add("name as Name");
-            showable.Add("species as Art");
-            showable.Add("gender as Geschlecht");
-            showable.Add("birthday as 'Geb.'");
-            showable.Add("away_since as 'Weg seit'");
+            showable.Add("animal.name as Name");
+            showable.Add("animal.species as Art");
+            showable.Add("animal.gender as Geschlecht");
+            showable.Add("territory.name as Revier");
+            showable.Add("enclosure.name as Gehege");
+            showable.Add("animal.birthday as 'Geb.'");
+            showable.Add("animal.away_since as 'Weg seit'");
+
+            foreignTable.Add("territory");
+            foreignTable.Add("enclosure");
         }
 
         public String Name { get; set; }

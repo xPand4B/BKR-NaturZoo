@@ -28,7 +28,7 @@ namespace NaturZoo_Rheine.Queries.Repositories
         /// </summary>
         public override DataTable GetAll()
         {
-            return base.GetAll(_animal.Showable);
+            return base.GetAll(_animal.Showable, _animal.ForeignTable);
         }
     }
 }

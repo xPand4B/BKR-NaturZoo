@@ -13,10 +13,15 @@ namespace NaturZoo_Rheine.Models
         /// </summary>
         public Supplier()
         {
-            showable.Add("name as Name");
-            showable.Add("telephone as 'Tel.:'");
-            showable.Add("contact_person_name as 'Ansprechpartner (Name)'");
-            showable.Add("contact_person_surname as 'Ansprechpartner (Nachname)'");
+            showable.Add("supplier.name as Name");
+            showable.Add("supplier.telephone as 'Tel.:'");
+            showable.Add("supplier.contact_person_name as 'Ansprechpartner (Name)'");
+            showable.Add("supplier.contact_person_surname as 'Ansprechpartner (Nachname)'");
+            showable.Add("supplier.street as Straße");
+            showable.Add("address.city as Stadt");
+            showable.Add("address.postcode as PLZ");
+
+            foreignTable.Add("address");
         }
 
         public String Name { get; set; }
@@ -30,7 +35,5 @@ namespace NaturZoo_Rheine.Models
         public String Contact_Person_Name { get; set; }
 
         public String Contact_Person_Surname { get; set; }
-
-        public String updated_at { get; set; }
     }
 }

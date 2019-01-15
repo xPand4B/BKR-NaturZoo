@@ -12,10 +12,12 @@ namespace NaturZoo_Rheine.Models
         /// </summary>
         public Enclosure()
         {
-            showable.Add("name as Gehege");
-            showable.Add("fk_buildingid as Gebäude");
-            showable.Add("created_at as Erstelldatum");
-            showable.Add("updated_at as Geändert");
+            showable.Add("enclosure.name as Gehege");
+            showable.Add("building.name as Gebäude");
+            showable.Add("enclosure.created_at as Erstelldatum");
+            showable.Add("enclosure.updated_at as Geändert");
+
+            foreignTable.Add("building");
         }
 
         public String Name { get; set; }

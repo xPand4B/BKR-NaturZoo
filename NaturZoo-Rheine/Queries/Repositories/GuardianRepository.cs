@@ -2,6 +2,7 @@
 using System.Data;
 using NaturZoo_Rheine.Models;
 using NaturZoo_Rheine.Queries.Core.Repositories;
+using System.Windows.Forms;
 
 namespace NaturZoo_Rheine.Queries.Repositories
 {
@@ -28,7 +29,7 @@ namespace NaturZoo_Rheine.Queries.Repositories
         /// </summary>
         public override DataTable GetAll()
         {
-            return base.GetAll(_guardian.Showable);
+            return base.GetAll(_guardian.Showable, _guardian.ForeignTable);
         }
     }
 }

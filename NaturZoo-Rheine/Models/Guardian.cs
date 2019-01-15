@@ -13,12 +13,18 @@ namespace NaturZoo_Rheine.Models
         /// </summary>
         public Guardian()
         {
-            showable.Add("name as Name");
-            showable.Add("surname as Nachname");
-            showable.Add("email as 'E-Mail'");
-            showable.Add("telephone as 'Tel.:'");
-            showable.Add("birthday as 'Geb.'");
-            showable.Add("created_at as Erstelldatum");
+            showable.Add("guardian.name as Name");
+            showable.Add("guardian.surname as Nachname");
+            showable.Add("guardian.email as 'E-Mail'");
+            showable.Add("guardian.telephone as 'Tel.:'");
+            showable.Add("address.city as Stadt");
+            showable.Add("address.postcode as PLZ");
+            showable.Add("guardian.street as Straße");
+            showable.Add("territory.name as Revier");
+            showable.Add("guardian.birthday as 'Geb.'");
+
+            foreignTable.Add("address");
+            foreignTable.Add("territory");
         }
 
         public String Name { get; set; }
