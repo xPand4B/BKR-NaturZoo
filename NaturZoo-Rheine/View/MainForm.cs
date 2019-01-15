@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using NaturZoo_Rheine.Models;
@@ -133,7 +134,7 @@ namespace NaturZoo_Rheine.View {
                || textPflegerAdd_Street.Text == ""
                || textPflegerAdd_Phone.Text == ""
                || comboPflegerAdd_Revier.Text == ""
-               || comboPflegerAdd_Permission.Text == ""
+               //|| comboPflegerAdd_Permission.Text == ""
                ) {
                 buttonPflegerAdd_Add.BackColor = Color.FromArgb(158, 158, 158);
             } else {
@@ -155,11 +156,11 @@ namespace NaturZoo_Rheine.View {
                     Surname        = textPflegerAdd_Surname.Text,
                     Email          = textPflegerAdd_Email.Text,
                     Password       = _defaultPassword,
-                    fk_addressID   = 0,
+                    fk_addressID   = 1,
                     Street         = textPflegerAdd_Street.Text,
                     Telephone      = textPflegerAdd_Phone.Text,
                     Birthday       = Convert.ToDateTime(dateTimePflegerAdd_Birthday.Value).ToString("yyyy-MM-dd").ToString(),
-                    fk_territoryID = 0,
+                    fk_territoryID = (int)comboPflegerAdd_Revier.SelectedValue,
                     Permission     = 1
                 });
                 MessageBox.Show("Pfleger wurde hinzugefügt.", "Application update", MessageBoxButtons.OK);
@@ -176,12 +177,27 @@ namespace NaturZoo_Rheine.View {
         /// </summary>
         private void RefreshTerritory()
         {
-            // Card
+            // Territory Card
             labelÜbersichtReviere_Count.Text       = Zoo.GetTerritoryCount;
             labelÜbersichtReviere_LastChanged.Text = Zoo.GetTerritoryLastChange;
-            // Tab
+            // Territory Tab
             labelReviereAlle_Count.Text = Zoo.GetTerritoryCount;
             gridReviereAlle.DataSource  = Zoo.GetTerritoryGrid;
+            // Guardian Tab
+            comboPflegerAdd_Revier.DataSource = Zoo.GetTerritoryDropdown;
+            comboPflegerAdd_Revier.DisplayMember = "name";
+            comboPflegerAdd_Revier.ValueMember = "Id";
+            comboPflegerAdd_Revier.SelectedIndex = -1;
+            // Building Tab
+            comboGebäudeAdd_Revier.DataSource = Zoo.GetTerritoryDropdown;
+            comboGebäudeAdd_Revier.DisplayMember = "name";
+            comboGebäudeAdd_Revier.ValueMember = "Id";
+            comboGebäudeAdd_Revier.SelectedIndex = -1;
+            // Animal Tab
+            comboTiereAdd_Revier.DataSource = Zoo.GetTerritoryDropdown;
+            comboTiereAdd_Revier.DisplayMember = "name";
+            comboTiereAdd_Revier.ValueMember = "Id";
+            comboTiereAdd_Revier.SelectedIndex = -1;
         }
 
         /// <summary>
@@ -223,12 +239,17 @@ namespace NaturZoo_Rheine.View {
         /// </summary>
         private void RefreshBuilding()
         {
-            // Card
+            // Building Card
             labelÜbersichtGebäude_Count.Text       = Zoo.GetBuildingCount;
             labelÜbersichtGebäude_LastChanged.Text = Zoo.GetBuildingLastChange;
-            // Tab
+            // Building Tab
             labelGebäudeAlle_Count.Text = Zoo.GetBuildingCount;
             gridGebäudeAlle.DataSource  = Zoo.GetBuildingGrid;
+            // Enslosure Tab
+            comboGehegeAdd_Gebäude.DataSource = Zoo.GetBuildingDropdown;
+            comboGehegeAdd_Gebäude.DisplayMember = "name";
+            comboGehegeAdd_Gebäude.ValueMember = "Id";
+            comboGehegeAdd_Gebäude.SelectedIndex = -1;
         }
 
         /// <summary>
@@ -257,7 +278,7 @@ namespace NaturZoo_Rheine.View {
             } else {
                 Zoo.CreateBuilding(new Building {
                     Name           = textGebäudeAdd_Name.Text,
-                    fk_territoryID = 0
+                    fk_territoryID = (int)comboGebäudeAdd_Revier.SelectedValue
                 });
                 MessageBox.Show("Gebäude wurde hinzugefügt.", "Application update", MessageBoxButtons.OK);
 
@@ -267,18 +288,23 @@ namespace NaturZoo_Rheine.View {
         #endregion
 
 
-        #region tabControlGehege
+        #region tabControl Gehege
         /// <summary>
         /// Refresh Enclosure Data.
         /// </summary>
         private void RefreshEnclosure()
         {
-            // Card
+            // Enclosure Card
             labelÜbersichtGehege_Count.Text       = Zoo.GetEnclosureCount;
             labelÜbersichtGehege_LastChanged.Text = Zoo.GetEnclosureLastChange;
-            // Tab
+            // Enclosure Tab
             labelGehegeAlle_Count.Text = Zoo.GetEnclosureCount;
             gridGehegeAlle.DataSource  = Zoo.GetEnclosureGrid;
+            // Animal Tab
+            comboTiereAdd_Gehege.DataSource = Zoo.GetEnclosureDropdown;
+            comboTiereAdd_Gehege.DisplayMember = "name";
+            comboTiereAdd_Gehege.ValueMember = "Id";
+            comboTiereAdd_Gehege.SelectedIndex = -1;
         }
 
         /// <summary>
@@ -288,7 +314,7 @@ namespace NaturZoo_Rheine.View {
         private void GehegeInput_TextChanged(object sender, EventArgs e)
         {
             if (textGehegeAdd_Name.Text == ""
-                //|| comboGehegeAdd_Gebäude.Text == ""
+                || comboGehegeAdd_Gebäude.Text == ""
                 ) {
                 buttonGehegeAdd_Add.BackColor = Color.FromArgb(158, 158, 158);
             } else {
@@ -307,7 +333,7 @@ namespace NaturZoo_Rheine.View {
             } else {
                 Zoo.CreateEnclosure(new Enclosure {
                     Name          = textGehegeAdd_Name.Text,
-                    fk_buildingID = 0
+                    fk_buildingID = (int)comboGebäudeAdd_Revier.SelectedValue
                 });
                 MessageBox.Show("Gehege wurde hinzugefügt.", "Application update", MessageBoxButtons.OK);
 
@@ -340,7 +366,7 @@ namespace NaturZoo_Rheine.View {
         {
             if (textTiereAdd_Name.Text == ""
                 || comboTiereAdd_Species.Text == ""
-                || comboTiereAdd_Gender.Text == ""
+                || textTiereAdd_Gender.Text == ""
                 || comboTiereAdd_Revier.Text == ""
                 || comboTiereAdd_Gehege.Text == ""
                 ) {
@@ -362,10 +388,10 @@ namespace NaturZoo_Rheine.View {
                 Zoo.CreateAnimal(new Animal {
                     Name            = textTiereAdd_Name.Text,
                     Species         = comboTiereAdd_Species.Text,
-                    Gender          = comboTiereAdd_Gender.Text,
+                    Gender          = textTiereAdd_Gender.Text,
                     Birthday        = Convert.ToDateTime(dateTimeTiereAdd_Birthday.Value).ToString("yyyy-MM-dd").ToString(),
-                    fk_territoryID  = 0,
-                    fk_enclosureID  = 0,
+                    fk_territoryID  = (int)comboTiereAdd_Revier.SelectedValue,
+                    fk_enclosureID  = (int)comboTiereAdd_Gehege.SelectedValue,
                     away_since      = null
                 });
                 MessageBox.Show("Tier wurde hinzugefügt.", "Application update", MessageBoxButtons.OK);
@@ -422,7 +448,7 @@ namespace NaturZoo_Rheine.View {
             } else {
                 Zoo.CreateSupplier(new Supplier {
                     Name                    = textLieferantenAdd_Name.Text,
-                    fk_addressID            = 0,
+                    fk_addressID            = 1,
                     Street                  = textLieferantenAdd_Street.Text,
                     telephone               = textLieferantenAdd_Phone.Text,
                     Contact_Person_Name     = textLieferantenAdd_ContactName.Text,
@@ -434,6 +460,7 @@ namespace NaturZoo_Rheine.View {
             }
         }
         #endregion
+
 
         #region tabControl Fütterung
         #endregion

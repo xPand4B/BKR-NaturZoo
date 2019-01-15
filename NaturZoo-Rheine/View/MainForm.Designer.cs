@@ -24,26 +24,29 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabÜbersicht = new System.Windows.Forms.TabPage();
+            this.groupÜbersichtGehege = new System.Windows.Forms.GroupBox();
+            this.labelÜbersichtGehege_LastChanged = new System.Windows.Forms.Label();
+            this.labelÜbersichtGehege_Count = new System.Windows.Forms.Label();
+            this.labelÜbersichtGehegeLastChanged = new System.Windows.Forms.Label();
+            this.labelÜbersichtGehege = new System.Windows.Forms.Label();
+            this.groupÜbersichtGebäude = new System.Windows.Forms.GroupBox();
+            this.labelÜbersichtGebäude_LastChanged = new System.Windows.Forms.Label();
+            this.labelÜbersichtGebäude_Count = new System.Windows.Forms.Label();
+            this.labelÜbersichtGebäudeLastChanged = new System.Windows.Forms.Label();
+            this.labelÜbersichtGebäude = new System.Windows.Forms.Label();
+            this.groupÜbersichtReviere = new System.Windows.Forms.GroupBox();
+            this.labelÜbersichtReviere_LastChanged = new System.Windows.Forms.Label();
+            this.labelÜbersichtReviere_Count = new System.Windows.Forms.Label();
+            this.labelÜbersichtReviereLastChange = new System.Windows.Forms.Label();
+            this.labelÜbersichtReviere = new System.Windows.Forms.Label();
             this.groupÜbersichtLieferanten = new System.Windows.Forms.GroupBox();
             this.labelÜbersichtLieferanten_Count = new System.Windows.Forms.Label();
             this.labelÜbersichtLieferantenLastChange_Value = new System.Windows.Forms.Label();
@@ -89,7 +92,7 @@
             this.textPflegerAdd_Surname = new System.Windows.Forms.TextBox();
             this.groupPflegerAdd_Name = new System.Windows.Forms.GroupBox();
             this.textPflegerAdd_Name = new System.Windows.Forms.TextBox();
-            this.tabRevier = new System.Windows.Forms.TabPage();
+            this.tabReviere = new System.Windows.Forms.TabPage();
             this.tabControlReviere = new System.Windows.Forms.TabControl();
             this.tabReviereAlle = new System.Windows.Forms.TabPage();
             this.labelReviereAlle_Count = new System.Windows.Forms.Label();
@@ -130,6 +133,7 @@
             this.gridTiereAlle = new System.Windows.Forms.DataGridView();
             this.labelTiereAlle = new System.Windows.Forms.Label();
             this.tabTiereHinzufügen = new System.Windows.Forms.TabPage();
+            this.buttonTiereAdd_Add = new System.Windows.Forms.Button();
             this.groupTiereAdd_Gehege = new System.Windows.Forms.GroupBox();
             this.comboTiereAdd_Gehege = new System.Windows.Forms.ComboBox();
             this.groupTiereAdd_Revier = new System.Windows.Forms.GroupBox();
@@ -137,7 +141,6 @@
             this.groupTiereAdd_Birthday = new System.Windows.Forms.GroupBox();
             this.dateTimeTiereAdd_Birthday = new System.Windows.Forms.DateTimePicker();
             this.groupTiereAdd_Gender = new System.Windows.Forms.GroupBox();
-            this.comboTiereAdd_Gender = new System.Windows.Forms.ComboBox();
             this.groupTiereAdd_Species = new System.Windows.Forms.GroupBox();
             this.comboTiereAdd_Species = new System.Windows.Forms.ComboBox();
             this.groupTiereAdd_Name = new System.Windows.Forms.GroupBox();
@@ -149,6 +152,18 @@
             this.gridLieferantenAlle = new System.Windows.Forms.DataGridView();
             this.labelLieferantenAlle = new System.Windows.Forms.Label();
             this.tabLieferantenHinzufügen = new System.Windows.Forms.TabPage();
+            this.groupLieferantenAdd_ContactSurname = new System.Windows.Forms.GroupBox();
+            this.textLieferantenAdd_ContactSurname = new System.Windows.Forms.TextBox();
+            this.groupLieferantenAdd_ContactName = new System.Windows.Forms.GroupBox();
+            this.textLieferantenAdd_ContactName = new System.Windows.Forms.TextBox();
+            this.groupLieferantenAdd_Phone = new System.Windows.Forms.GroupBox();
+            this.textLieferantenAdd_Phone = new System.Windows.Forms.TextBox();
+            this.groupLieferantenAdd_Street = new System.Windows.Forms.GroupBox();
+            this.textLieferantenAdd_Street = new System.Windows.Forms.TextBox();
+            this.groupLieferantenAdd_Stadt = new System.Windows.Forms.GroupBox();
+            this.comboLieferantenAdd_Stadt = new System.Windows.Forms.ComboBox();
+            this.groupLieferantenAdd_PLZ = new System.Windows.Forms.GroupBox();
+            this.comboLieferantenAdd_PLZ = new System.Windows.Forms.ComboBox();
             this.buttonLieferantenAdd_Add = new System.Windows.Forms.Button();
             this.groupLieferantenAdd_Name = new System.Windows.Forms.GroupBox();
             this.textLieferantenAdd_Name = new System.Windows.Forms.TextBox();
@@ -156,36 +171,12 @@
             this.tabLog = new System.Windows.Forms.TabPage();
             this.listBoxLog = new System.Windows.Forms.ListBox();
             this.buttonChangePassword = new System.Windows.Forms.Button();
-            this.buttonTiereAdd_Add = new System.Windows.Forms.Button();
-            this.groupLieferantenAdd_Street = new System.Windows.Forms.GroupBox();
-            this.textLieferantenAdd_Street = new System.Windows.Forms.TextBox();
-            this.groupLieferantenAdd_Stadt = new System.Windows.Forms.GroupBox();
-            this.comboLieferantenAdd_Stadt = new System.Windows.Forms.ComboBox();
-            this.groupLieferantenAdd_PLZ = new System.Windows.Forms.GroupBox();
-            this.comboLieferantenAdd_PLZ = new System.Windows.Forms.ComboBox();
-            this.groupLieferantenAdd_Phone = new System.Windows.Forms.GroupBox();
-            this.textLieferantenAdd_Phone = new System.Windows.Forms.TextBox();
-            this.groupLieferantenAdd_ContactName = new System.Windows.Forms.GroupBox();
-            this.textLieferantenAdd_ContactName = new System.Windows.Forms.TextBox();
-            this.groupLieferantenAdd_ContactSurname = new System.Windows.Forms.GroupBox();
-            this.textLieferantenAdd_ContactSurname = new System.Windows.Forms.TextBox();
-            this.groupÜbersichtReviere = new System.Windows.Forms.GroupBox();
-            this.labelÜbersichtReviere_LastChanged = new System.Windows.Forms.Label();
-            this.labelÜbersichtReviere_Count = new System.Windows.Forms.Label();
-            this.labelÜbersichtReviereLastChange = new System.Windows.Forms.Label();
-            this.labelÜbersichtReviere = new System.Windows.Forms.Label();
-            this.groupÜbersichtGebäude = new System.Windows.Forms.GroupBox();
-            this.labelÜbersichtGebäude_LastChanged = new System.Windows.Forms.Label();
-            this.labelÜbersichtGebäude_Count = new System.Windows.Forms.Label();
-            this.labelÜbersichtGebäudeLastChanged = new System.Windows.Forms.Label();
-            this.labelÜbersichtGebäude = new System.Windows.Forms.Label();
-            this.groupÜbersichtGehege = new System.Windows.Forms.GroupBox();
-            this.labelÜbersichtGehege_LastChanged = new System.Windows.Forms.Label();
-            this.labelÜbersichtGehege_Count = new System.Windows.Forms.Label();
-            this.labelÜbersichtGehegeLastChanged = new System.Windows.Forms.Label();
-            this.labelÜbersichtGehege = new System.Windows.Forms.Label();
+            this.textTiereAdd_Gender = new System.Windows.Forms.TextBox();
             this.tabControlMain.SuspendLayout();
             this.tabÜbersicht.SuspendLayout();
+            this.groupÜbersichtGehege.SuspendLayout();
+            this.groupÜbersichtGebäude.SuspendLayout();
+            this.groupÜbersichtReviere.SuspendLayout();
             this.groupÜbersichtLieferanten.SuspendLayout();
             this.groupÜbersichtPfleger.SuspendLayout();
             this.groupÜbersichtTiere.SuspendLayout();
@@ -205,7 +196,7 @@
             this.groupPflegerAdd_Geb.SuspendLayout();
             this.groupPflegerAdd_Surname.SuspendLayout();
             this.groupPflegerAdd_Name.SuspendLayout();
-            this.tabRevier.SuspendLayout();
+            this.tabReviere.SuspendLayout();
             this.tabControlReviere.SuspendLayout();
             this.tabReviereAlle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridReviereAlle)).BeginInit();
@@ -241,24 +232,21 @@
             this.tabLieferantenAlle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLieferantenAlle)).BeginInit();
             this.tabLieferantenHinzufügen.SuspendLayout();
-            this.groupLieferantenAdd_Name.SuspendLayout();
-            this.tabLog.SuspendLayout();
+            this.groupLieferantenAdd_ContactSurname.SuspendLayout();
+            this.groupLieferantenAdd_ContactName.SuspendLayout();
+            this.groupLieferantenAdd_Phone.SuspendLayout();
             this.groupLieferantenAdd_Street.SuspendLayout();
             this.groupLieferantenAdd_Stadt.SuspendLayout();
             this.groupLieferantenAdd_PLZ.SuspendLayout();
-            this.groupLieferantenAdd_Phone.SuspendLayout();
-            this.groupLieferantenAdd_ContactName.SuspendLayout();
-            this.groupLieferantenAdd_ContactSurname.SuspendLayout();
-            this.groupÜbersichtReviere.SuspendLayout();
-            this.groupÜbersichtGebäude.SuspendLayout();
-            this.groupÜbersichtGehege.SuspendLayout();
+            this.groupLieferantenAdd_Name.SuspendLayout();
+            this.tabLog.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
             // 
             this.tabControlMain.Controls.Add(this.tabÜbersicht);
             this.tabControlMain.Controls.Add(this.tabPfleger);
-            this.tabControlMain.Controls.Add(this.tabRevier);
+            this.tabControlMain.Controls.Add(this.tabReviere);
             this.tabControlMain.Controls.Add(this.tabGebäude);
             this.tabControlMain.Controls.Add(this.tabGehege);
             this.tabControlMain.Controls.Add(this.tabTiere);
@@ -266,7 +254,7 @@
             this.tabControlMain.Controls.Add(this.tabFütterung);
             this.tabControlMain.Controls.Add(this.tabLog);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tabControlMain.Font = new System.Drawing.Font("BankGothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlMain.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlMain.Location = new System.Drawing.Point(-1, 26);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
@@ -283,11 +271,173 @@
             this.tabÜbersicht.Controls.Add(this.groupÜbersichtLieferanten);
             this.tabÜbersicht.Controls.Add(this.groupÜbersichtPfleger);
             this.tabÜbersicht.Controls.Add(this.groupÜbersichtTiere);
-            this.tabÜbersicht.Location = new System.Drawing.Point(4, 31);
+            this.tabÜbersicht.Location = new System.Drawing.Point(4, 35);
             this.tabÜbersicht.Name = "tabÜbersicht";
-            this.tabÜbersicht.Size = new System.Drawing.Size(1129, 403);
+            this.tabÜbersicht.Size = new System.Drawing.Size(1129, 399);
             this.tabÜbersicht.TabIndex = 2;
             this.tabÜbersicht.Text = "Übersicht";
+            // 
+            // groupÜbersichtGehege
+            // 
+            this.groupÜbersichtGehege.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(179)))));
+            this.groupÜbersichtGehege.Controls.Add(this.labelÜbersichtGehege_LastChanged);
+            this.groupÜbersichtGehege.Controls.Add(this.labelÜbersichtGehege_Count);
+            this.groupÜbersichtGehege.Controls.Add(this.labelÜbersichtGehegeLastChanged);
+            this.groupÜbersichtGehege.Controls.Add(this.labelÜbersichtGehege);
+            this.groupÜbersichtGehege.Location = new System.Drawing.Point(772, 161);
+            this.groupÜbersichtGehege.Name = "groupÜbersichtGehege";
+            this.groupÜbersichtGehege.Size = new System.Drawing.Size(335, 94);
+            this.groupÜbersichtGehege.TabIndex = 13;
+            this.groupÜbersichtGehege.TabStop = false;
+            this.groupÜbersichtGehege.Text = "Gehege";
+            // 
+            // labelÜbersichtGehege_LastChanged
+            // 
+            this.labelÜbersichtGehege_LastChanged.AutoSize = true;
+            this.labelÜbersichtGehege_LastChanged.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtGehege_LastChanged.Location = new System.Drawing.Point(110, 63);
+            this.labelÜbersichtGehege_LastChanged.Name = "labelÜbersichtGehege_LastChanged";
+            this.labelÜbersichtGehege_LastChanged.Size = new System.Drawing.Size(97, 17);
+            this.labelÜbersichtGehege_LastChanged.TabIndex = 8;
+            this.labelÜbersichtGehege_LastChanged.Text = "undefined";
+            // 
+            // labelÜbersichtGehege_Count
+            // 
+            this.labelÜbersichtGehege_Count.AutoSize = true;
+            this.labelÜbersichtGehege_Count.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtGehege_Count.Location = new System.Drawing.Point(110, 36);
+            this.labelÜbersichtGehege_Count.Name = "labelÜbersichtGehege_Count";
+            this.labelÜbersichtGehege_Count.Size = new System.Drawing.Size(97, 17);
+            this.labelÜbersichtGehege_Count.TabIndex = 7;
+            this.labelÜbersichtGehege_Count.Text = "undefined";
+            // 
+            // labelÜbersichtGehegeLastChanged
+            // 
+            this.labelÜbersichtGehegeLastChanged.AutoSize = true;
+            this.labelÜbersichtGehegeLastChanged.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtGehegeLastChanged.Location = new System.Drawing.Point(6, 63);
+            this.labelÜbersichtGehegeLastChanged.Name = "labelÜbersichtGehegeLastChanged";
+            this.labelÜbersichtGehegeLastChanged.Size = new System.Drawing.Size(98, 17);
+            this.labelÜbersichtGehegeLastChanged.TabIndex = 6;
+            this.labelÜbersichtGehegeLastChanged.Text = "Geändert:";
+            // 
+            // labelÜbersichtGehege
+            // 
+            this.labelÜbersichtGehege.AutoSize = true;
+            this.labelÜbersichtGehege.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtGehege.Location = new System.Drawing.Point(6, 36);
+            this.labelÜbersichtGehege.Name = "labelÜbersichtGehege";
+            this.labelÜbersichtGehege.Size = new System.Drawing.Size(76, 17);
+            this.labelÜbersichtGehege.TabIndex = 2;
+            this.labelÜbersichtGehege.Text = "Anzahl:";
+            // 
+            // groupÜbersichtGebäude
+            // 
+            this.groupÜbersichtGebäude.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
+            this.groupÜbersichtGebäude.Controls.Add(this.labelÜbersichtGebäude_LastChanged);
+            this.groupÜbersichtGebäude.Controls.Add(this.labelÜbersichtGebäude_Count);
+            this.groupÜbersichtGebäude.Controls.Add(this.labelÜbersichtGebäudeLastChanged);
+            this.groupÜbersichtGebäude.Controls.Add(this.labelÜbersichtGebäude);
+            this.groupÜbersichtGebäude.Location = new System.Drawing.Point(396, 161);
+            this.groupÜbersichtGebäude.Name = "groupÜbersichtGebäude";
+            this.groupÜbersichtGebäude.Size = new System.Drawing.Size(335, 94);
+            this.groupÜbersichtGebäude.TabIndex = 12;
+            this.groupÜbersichtGebäude.TabStop = false;
+            this.groupÜbersichtGebäude.Text = "Gebäude";
+            // 
+            // labelÜbersichtGebäude_LastChanged
+            // 
+            this.labelÜbersichtGebäude_LastChanged.AutoSize = true;
+            this.labelÜbersichtGebäude_LastChanged.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtGebäude_LastChanged.Location = new System.Drawing.Point(110, 63);
+            this.labelÜbersichtGebäude_LastChanged.Name = "labelÜbersichtGebäude_LastChanged";
+            this.labelÜbersichtGebäude_LastChanged.Size = new System.Drawing.Size(97, 17);
+            this.labelÜbersichtGebäude_LastChanged.TabIndex = 8;
+            this.labelÜbersichtGebäude_LastChanged.Text = "undefined";
+            // 
+            // labelÜbersichtGebäude_Count
+            // 
+            this.labelÜbersichtGebäude_Count.AutoSize = true;
+            this.labelÜbersichtGebäude_Count.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtGebäude_Count.Location = new System.Drawing.Point(110, 36);
+            this.labelÜbersichtGebäude_Count.Name = "labelÜbersichtGebäude_Count";
+            this.labelÜbersichtGebäude_Count.Size = new System.Drawing.Size(97, 17);
+            this.labelÜbersichtGebäude_Count.TabIndex = 7;
+            this.labelÜbersichtGebäude_Count.Text = "undefined";
+            // 
+            // labelÜbersichtGebäudeLastChanged
+            // 
+            this.labelÜbersichtGebäudeLastChanged.AutoSize = true;
+            this.labelÜbersichtGebäudeLastChanged.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtGebäudeLastChanged.Location = new System.Drawing.Point(6, 63);
+            this.labelÜbersichtGebäudeLastChanged.Name = "labelÜbersichtGebäudeLastChanged";
+            this.labelÜbersichtGebäudeLastChanged.Size = new System.Drawing.Size(98, 17);
+            this.labelÜbersichtGebäudeLastChanged.TabIndex = 6;
+            this.labelÜbersichtGebäudeLastChanged.Text = "Geändert:";
+            // 
+            // labelÜbersichtGebäude
+            // 
+            this.labelÜbersichtGebäude.AutoSize = true;
+            this.labelÜbersichtGebäude.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtGebäude.Location = new System.Drawing.Point(6, 36);
+            this.labelÜbersichtGebäude.Name = "labelÜbersichtGebäude";
+            this.labelÜbersichtGebäude.Size = new System.Drawing.Size(76, 17);
+            this.labelÜbersichtGebäude.TabIndex = 2;
+            this.labelÜbersichtGebäude.Text = "Anzahl:";
+            // 
+            // groupÜbersichtReviere
+            // 
+            this.groupÜbersichtReviere.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(229)))), ((int)(((byte)(252)))));
+            this.groupÜbersichtReviere.Controls.Add(this.labelÜbersichtReviere_LastChanged);
+            this.groupÜbersichtReviere.Controls.Add(this.labelÜbersichtReviere_Count);
+            this.groupÜbersichtReviere.Controls.Add(this.labelÜbersichtReviereLastChange);
+            this.groupÜbersichtReviere.Controls.Add(this.labelÜbersichtReviere);
+            this.groupÜbersichtReviere.Location = new System.Drawing.Point(20, 161);
+            this.groupÜbersichtReviere.Name = "groupÜbersichtReviere";
+            this.groupÜbersichtReviere.Size = new System.Drawing.Size(335, 94);
+            this.groupÜbersichtReviere.TabIndex = 11;
+            this.groupÜbersichtReviere.TabStop = false;
+            this.groupÜbersichtReviere.Text = "Reviere";
+            // 
+            // labelÜbersichtReviere_LastChanged
+            // 
+            this.labelÜbersichtReviere_LastChanged.AutoSize = true;
+            this.labelÜbersichtReviere_LastChanged.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtReviere_LastChanged.Location = new System.Drawing.Point(110, 63);
+            this.labelÜbersichtReviere_LastChanged.Name = "labelÜbersichtReviere_LastChanged";
+            this.labelÜbersichtReviere_LastChanged.Size = new System.Drawing.Size(97, 17);
+            this.labelÜbersichtReviere_LastChanged.TabIndex = 8;
+            this.labelÜbersichtReviere_LastChanged.Text = "undefined";
+            // 
+            // labelÜbersichtReviere_Count
+            // 
+            this.labelÜbersichtReviere_Count.AutoSize = true;
+            this.labelÜbersichtReviere_Count.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtReviere_Count.Location = new System.Drawing.Point(110, 36);
+            this.labelÜbersichtReviere_Count.Name = "labelÜbersichtReviere_Count";
+            this.labelÜbersichtReviere_Count.Size = new System.Drawing.Size(97, 17);
+            this.labelÜbersichtReviere_Count.TabIndex = 7;
+            this.labelÜbersichtReviere_Count.Text = "undefined";
+            // 
+            // labelÜbersichtReviereLastChange
+            // 
+            this.labelÜbersichtReviereLastChange.AutoSize = true;
+            this.labelÜbersichtReviereLastChange.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtReviereLastChange.Location = new System.Drawing.Point(6, 63);
+            this.labelÜbersichtReviereLastChange.Name = "labelÜbersichtReviereLastChange";
+            this.labelÜbersichtReviereLastChange.Size = new System.Drawing.Size(98, 17);
+            this.labelÜbersichtReviereLastChange.TabIndex = 6;
+            this.labelÜbersichtReviereLastChange.Text = "Geändert:";
+            // 
+            // labelÜbersichtReviere
+            // 
+            this.labelÜbersichtReviere.AutoSize = true;
+            this.labelÜbersichtReviere.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtReviere.Location = new System.Drawing.Point(6, 36);
+            this.labelÜbersichtReviere.Name = "labelÜbersichtReviere";
+            this.labelÜbersichtReviere.Size = new System.Drawing.Size(76, 17);
+            this.labelÜbersichtReviere.TabIndex = 2;
+            this.labelÜbersichtReviere.Text = "Anzahl:";
             // 
             // groupÜbersichtLieferanten
             // 
@@ -454,9 +604,9 @@
             // tabPfleger
             // 
             this.tabPfleger.Controls.Add(this.tabControlPfleger);
-            this.tabPfleger.Location = new System.Drawing.Point(4, 31);
+            this.tabPfleger.Location = new System.Drawing.Point(4, 35);
             this.tabPfleger.Name = "tabPfleger";
-            this.tabPfleger.Size = new System.Drawing.Size(1129, 403);
+            this.tabPfleger.Size = new System.Drawing.Size(1129, 399);
             this.tabPfleger.TabIndex = 3;
             this.tabPfleger.Text = "Pfleger";
             this.tabPfleger.UseVisualStyleBackColor = true;
@@ -465,7 +615,7 @@
             // 
             this.tabControlPfleger.Controls.Add(this.tabPflegerAlle);
             this.tabControlPfleger.Controls.Add(this.tabPflegerHinzufügen);
-            this.tabControlPfleger.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlPfleger.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlPfleger.Location = new System.Drawing.Point(-4, 5);
             this.tabControlPfleger.Name = "tabControlPfleger";
             this.tabControlPfleger.SelectedIndex = 0;
@@ -477,10 +627,11 @@
             this.tabPflegerAlle.Controls.Add(this.labelPflegerAlle_Count);
             this.tabPflegerAlle.Controls.Add(this.gridPflegerAlle);
             this.tabPflegerAlle.Controls.Add(this.labelPflegerAlle_Pfleger);
-            this.tabPflegerAlle.Location = new System.Drawing.Point(4, 26);
+            this.tabPflegerAlle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPflegerAlle.Location = new System.Drawing.Point(4, 28);
             this.tabPflegerAlle.Name = "tabPflegerAlle";
             this.tabPflegerAlle.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPflegerAlle.Size = new System.Drawing.Size(1129, 378);
+            this.tabPflegerAlle.Size = new System.Drawing.Size(1129, 376);
             this.tabPflegerAlle.TabIndex = 0;
             this.tabPflegerAlle.Text = "Alle Anzeigen";
             this.tabPflegerAlle.UseVisualStyleBackColor = true;
@@ -490,7 +641,7 @@
             this.labelPflegerAlle_Count.AutoSize = true;
             this.labelPflegerAlle_Count.Location = new System.Drawing.Point(131, 21);
             this.labelPflegerAlle_Count.Name = "labelPflegerAlle_Count";
-            this.labelPflegerAlle_Count.Size = new System.Drawing.Size(97, 17);
+            this.labelPflegerAlle_Count.Size = new System.Drawing.Size(79, 19);
             this.labelPflegerAlle_Count.TabIndex = 2;
             this.labelPflegerAlle_Count.Text = "undefined";
             // 
@@ -498,42 +649,25 @@
             // 
             this.gridPflegerAlle.AllowUserToAddRows = false;
             this.gridPflegerAlle.AllowUserToDeleteRows = false;
-            this.gridPflegerAlle.AllowUserToResizeColumns = false;
             this.gridPflegerAlle.AllowUserToResizeRows = false;
             this.gridPflegerAlle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridPflegerAlle.BackgroundColor = System.Drawing.SystemColors.Window;
             this.gridPflegerAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPflegerAlle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.gridPflegerAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPflegerAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridPflegerAlle.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPflegerAlle.DefaultCellStyle = dataGridViewCellStyle1;
             this.gridPflegerAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridPflegerAlle.Location = new System.Drawing.Point(218, 0);
             this.gridPflegerAlle.Margin = new System.Windows.Forms.Padding(0);
             this.gridPflegerAlle.Name = "gridPflegerAlle";
             this.gridPflegerAlle.ReadOnly = true;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPflegerAlle.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.gridPflegerAlle.RowHeadersVisible = false;
             this.gridPflegerAlle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridPflegerAlle.Size = new System.Drawing.Size(911, 375);
@@ -544,7 +678,7 @@
             this.labelPflegerAlle_Pfleger.AutoSize = true;
             this.labelPflegerAlle_Pfleger.Location = new System.Drawing.Point(6, 21);
             this.labelPflegerAlle_Pfleger.Name = "labelPflegerAlle_Pfleger";
-            this.labelPflegerAlle_Pfleger.Size = new System.Drawing.Size(84, 17);
+            this.labelPflegerAlle_Pfleger.Size = new System.Drawing.Size(61, 19);
             this.labelPflegerAlle_Pfleger.TabIndex = 0;
             this.labelPflegerAlle_Pfleger.Text = "Pfleger:";
             // 
@@ -562,10 +696,10 @@
             this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Geb);
             this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Surname);
             this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Name);
-            this.tabPflegerHinzufügen.Location = new System.Drawing.Point(4, 26);
+            this.tabPflegerHinzufügen.Location = new System.Drawing.Point(4, 28);
             this.tabPflegerHinzufügen.Name = "tabPflegerHinzufügen";
             this.tabPflegerHinzufügen.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPflegerHinzufügen.Size = new System.Drawing.Size(1129, 378);
+            this.tabPflegerHinzufügen.Size = new System.Drawing.Size(1129, 376);
             this.tabPflegerHinzufügen.TabIndex = 1;
             this.tabPflegerHinzufügen.Text = "Hinzufügen";
             this.tabPflegerHinzufügen.UseVisualStyleBackColor = true;
@@ -829,21 +963,21 @@
             this.textPflegerAdd_Name.TabIndex = 1;
             this.textPflegerAdd_Name.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
             // 
-            // tabRevier
+            // tabReviere
             // 
-            this.tabRevier.Controls.Add(this.tabControlReviere);
-            this.tabRevier.Location = new System.Drawing.Point(4, 31);
-            this.tabRevier.Name = "tabRevier";
-            this.tabRevier.Size = new System.Drawing.Size(1129, 403);
-            this.tabRevier.TabIndex = 10;
-            this.tabRevier.Text = "Reviere";
-            this.tabRevier.UseVisualStyleBackColor = true;
+            this.tabReviere.Controls.Add(this.tabControlReviere);
+            this.tabReviere.Location = new System.Drawing.Point(4, 35);
+            this.tabReviere.Name = "tabReviere";
+            this.tabReviere.Size = new System.Drawing.Size(1129, 399);
+            this.tabReviere.TabIndex = 10;
+            this.tabReviere.Text = "Reviere";
+            this.tabReviere.UseVisualStyleBackColor = true;
             // 
             // tabControlReviere
             // 
             this.tabControlReviere.Controls.Add(this.tabReviereAlle);
             this.tabControlReviere.Controls.Add(this.tabReviereHinzufügen);
-            this.tabControlReviere.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlReviere.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlReviere.Location = new System.Drawing.Point(-4, 5);
             this.tabControlReviere.Name = "tabControlReviere";
             this.tabControlReviere.SelectedIndex = 0;
@@ -855,10 +989,11 @@
             this.tabReviereAlle.Controls.Add(this.labelReviereAlle_Count);
             this.tabReviereAlle.Controls.Add(this.gridReviereAlle);
             this.tabReviereAlle.Controls.Add(this.labelReviereAlle);
-            this.tabReviereAlle.Location = new System.Drawing.Point(4, 26);
+            this.tabReviereAlle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabReviereAlle.Location = new System.Drawing.Point(4, 28);
             this.tabReviereAlle.Name = "tabReviereAlle";
             this.tabReviereAlle.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReviereAlle.Size = new System.Drawing.Size(1129, 378);
+            this.tabReviereAlle.Size = new System.Drawing.Size(1129, 376);
             this.tabReviereAlle.TabIndex = 0;
             this.tabReviereAlle.Text = "Alle Anzeigen";
             this.tabReviereAlle.UseVisualStyleBackColor = true;
@@ -868,7 +1003,7 @@
             this.labelReviereAlle_Count.AutoSize = true;
             this.labelReviereAlle_Count.Location = new System.Drawing.Point(131, 21);
             this.labelReviereAlle_Count.Name = "labelReviereAlle_Count";
-            this.labelReviereAlle_Count.Size = new System.Drawing.Size(97, 17);
+            this.labelReviereAlle_Count.Size = new System.Drawing.Size(79, 19);
             this.labelReviereAlle_Count.TabIndex = 2;
             this.labelReviereAlle_Count.Text = "undefined";
             // 
@@ -876,42 +1011,25 @@
             // 
             this.gridReviereAlle.AllowUserToAddRows = false;
             this.gridReviereAlle.AllowUserToDeleteRows = false;
-            this.gridReviereAlle.AllowUserToResizeColumns = false;
             this.gridReviereAlle.AllowUserToResizeRows = false;
             this.gridReviereAlle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridReviereAlle.BackgroundColor = System.Drawing.SystemColors.Window;
             this.gridReviereAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridReviereAlle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.gridReviereAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridReviereAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridReviereAlle.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridReviereAlle.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridReviereAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridReviereAlle.Location = new System.Drawing.Point(218, 0);
             this.gridReviereAlle.Margin = new System.Windows.Forms.Padding(0);
             this.gridReviereAlle.Name = "gridReviereAlle";
             this.gridReviereAlle.ReadOnly = true;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridReviereAlle.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.gridReviereAlle.RowHeadersVisible = false;
             this.gridReviereAlle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridReviereAlle.Size = new System.Drawing.Size(911, 375);
@@ -922,7 +1040,7 @@
             this.labelReviereAlle.AutoSize = true;
             this.labelReviereAlle.Location = new System.Drawing.Point(6, 21);
             this.labelReviereAlle.Name = "labelReviereAlle";
-            this.labelReviereAlle.Size = new System.Drawing.Size(81, 17);
+            this.labelReviereAlle.Size = new System.Drawing.Size(64, 19);
             this.labelReviereAlle.TabIndex = 0;
             this.labelReviereAlle.Text = "Reviere:";
             // 
@@ -930,10 +1048,10 @@
             // 
             this.tabReviereHinzufügen.Controls.Add(this.buttonReviereAdd_Add);
             this.tabReviereHinzufügen.Controls.Add(this.groupReviereAdd_Name);
-            this.tabReviereHinzufügen.Location = new System.Drawing.Point(4, 26);
+            this.tabReviereHinzufügen.Location = new System.Drawing.Point(4, 28);
             this.tabReviereHinzufügen.Name = "tabReviereHinzufügen";
             this.tabReviereHinzufügen.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReviereHinzufügen.Size = new System.Drawing.Size(1129, 378);
+            this.tabReviereHinzufügen.Size = new System.Drawing.Size(1129, 376);
             this.tabReviereHinzufügen.TabIndex = 1;
             this.tabReviereHinzufügen.Text = "Hinzufügen";
             this.tabReviereHinzufügen.UseVisualStyleBackColor = true;
@@ -976,9 +1094,9 @@
             // tabGebäude
             // 
             this.tabGebäude.Controls.Add(this.tabControlGebäude);
-            this.tabGebäude.Location = new System.Drawing.Point(4, 31);
+            this.tabGebäude.Location = new System.Drawing.Point(4, 35);
             this.tabGebäude.Name = "tabGebäude";
-            this.tabGebäude.Size = new System.Drawing.Size(1129, 403);
+            this.tabGebäude.Size = new System.Drawing.Size(1129, 399);
             this.tabGebäude.TabIndex = 9;
             this.tabGebäude.Text = "Gebäude";
             this.tabGebäude.UseVisualStyleBackColor = true;
@@ -987,7 +1105,7 @@
             // 
             this.tabControlGebäude.Controls.Add(this.tabGebäudeAlle);
             this.tabControlGebäude.Controls.Add(this.tabGebäudeHinzufügen);
-            this.tabControlGebäude.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlGebäude.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlGebäude.Location = new System.Drawing.Point(-4, 5);
             this.tabControlGebäude.Name = "tabControlGebäude";
             this.tabControlGebäude.SelectedIndex = 0;
@@ -999,10 +1117,11 @@
             this.tabGebäudeAlle.Controls.Add(this.labelGebäudeAlle_Count);
             this.tabGebäudeAlle.Controls.Add(this.gridGebäudeAlle);
             this.tabGebäudeAlle.Controls.Add(this.labelGebäudeAlle);
-            this.tabGebäudeAlle.Location = new System.Drawing.Point(4, 26);
+            this.tabGebäudeAlle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabGebäudeAlle.Location = new System.Drawing.Point(4, 28);
             this.tabGebäudeAlle.Name = "tabGebäudeAlle";
             this.tabGebäudeAlle.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGebäudeAlle.Size = new System.Drawing.Size(1129, 378);
+            this.tabGebäudeAlle.Size = new System.Drawing.Size(1129, 376);
             this.tabGebäudeAlle.TabIndex = 0;
             this.tabGebäudeAlle.Text = "Alle Anzeigen";
             this.tabGebäudeAlle.UseVisualStyleBackColor = true;
@@ -1012,7 +1131,7 @@
             this.labelGebäudeAlle_Count.AutoSize = true;
             this.labelGebäudeAlle_Count.Location = new System.Drawing.Point(131, 21);
             this.labelGebäudeAlle_Count.Name = "labelGebäudeAlle_Count";
-            this.labelGebäudeAlle_Count.Size = new System.Drawing.Size(97, 17);
+            this.labelGebäudeAlle_Count.Size = new System.Drawing.Size(79, 19);
             this.labelGebäudeAlle_Count.TabIndex = 2;
             this.labelGebäudeAlle_Count.Text = "undefined";
             // 
@@ -1020,42 +1139,25 @@
             // 
             this.gridGebäudeAlle.AllowUserToAddRows = false;
             this.gridGebäudeAlle.AllowUserToDeleteRows = false;
-            this.gridGebäudeAlle.AllowUserToResizeColumns = false;
             this.gridGebäudeAlle.AllowUserToResizeRows = false;
             this.gridGebäudeAlle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridGebäudeAlle.BackgroundColor = System.Drawing.SystemColors.Window;
             this.gridGebäudeAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridGebäudeAlle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.gridGebäudeAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridGebäudeAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridGebäudeAlle.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridGebäudeAlle.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridGebäudeAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridGebäudeAlle.Location = new System.Drawing.Point(218, 0);
             this.gridGebäudeAlle.Margin = new System.Windows.Forms.Padding(0);
             this.gridGebäudeAlle.Name = "gridGebäudeAlle";
             this.gridGebäudeAlle.ReadOnly = true;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridGebäudeAlle.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.gridGebäudeAlle.RowHeadersVisible = false;
             this.gridGebäudeAlle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridGebäudeAlle.Size = new System.Drawing.Size(911, 375);
@@ -1066,7 +1168,7 @@
             this.labelGebäudeAlle.AutoSize = true;
             this.labelGebäudeAlle.Location = new System.Drawing.Point(6, 21);
             this.labelGebäudeAlle.Name = "labelGebäudeAlle";
-            this.labelGebäudeAlle.Size = new System.Drawing.Size(90, 17);
+            this.labelGebäudeAlle.Size = new System.Drawing.Size(74, 19);
             this.labelGebäudeAlle.TabIndex = 0;
             this.labelGebäudeAlle.Text = "Gebäude:";
             // 
@@ -1075,10 +1177,10 @@
             this.tabGebäudeHinzufügen.Controls.Add(this.groupGebäudeAdd_Revier);
             this.tabGebäudeHinzufügen.Controls.Add(this.buttonGebäudeAdd_Add);
             this.tabGebäudeHinzufügen.Controls.Add(this.groupGebäudeAdd_Name);
-            this.tabGebäudeHinzufügen.Location = new System.Drawing.Point(4, 26);
+            this.tabGebäudeHinzufügen.Location = new System.Drawing.Point(4, 28);
             this.tabGebäudeHinzufügen.Name = "tabGebäudeHinzufügen";
             this.tabGebäudeHinzufügen.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGebäudeHinzufügen.Size = new System.Drawing.Size(1129, 378);
+            this.tabGebäudeHinzufügen.Size = new System.Drawing.Size(1129, 376);
             this.tabGebäudeHinzufügen.TabIndex = 1;
             this.tabGebäudeHinzufügen.Text = "Hinzufügen";
             this.tabGebäudeHinzufügen.UseVisualStyleBackColor = true;
@@ -1145,9 +1247,9 @@
             // tabGehege
             // 
             this.tabGehege.Controls.Add(this.tabControlGehege);
-            this.tabGehege.Location = new System.Drawing.Point(4, 31);
+            this.tabGehege.Location = new System.Drawing.Point(4, 35);
             this.tabGehege.Name = "tabGehege";
-            this.tabGehege.Size = new System.Drawing.Size(1129, 403);
+            this.tabGehege.Size = new System.Drawing.Size(1129, 399);
             this.tabGehege.TabIndex = 4;
             this.tabGehege.Text = "Gehege";
             this.tabGehege.UseVisualStyleBackColor = true;
@@ -1156,7 +1258,7 @@
             // 
             this.tabControlGehege.Controls.Add(this.tabGehegeAlle);
             this.tabControlGehege.Controls.Add(this.tabGehegeHinzufügen);
-            this.tabControlGehege.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlGehege.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlGehege.Location = new System.Drawing.Point(-4, 5);
             this.tabControlGehege.Name = "tabControlGehege";
             this.tabControlGehege.SelectedIndex = 0;
@@ -1168,10 +1270,11 @@
             this.tabGehegeAlle.Controls.Add(this.labelGehegeAlle_Count);
             this.tabGehegeAlle.Controls.Add(this.gridGehegeAlle);
             this.tabGehegeAlle.Controls.Add(this.labelGehegeAlle);
-            this.tabGehegeAlle.Location = new System.Drawing.Point(4, 26);
+            this.tabGehegeAlle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabGehegeAlle.Location = new System.Drawing.Point(4, 28);
             this.tabGehegeAlle.Name = "tabGehegeAlle";
             this.tabGehegeAlle.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGehegeAlle.Size = new System.Drawing.Size(1129, 378);
+            this.tabGehegeAlle.Size = new System.Drawing.Size(1129, 376);
             this.tabGehegeAlle.TabIndex = 0;
             this.tabGehegeAlle.Text = "Alle Anzeigen";
             this.tabGehegeAlle.UseVisualStyleBackColor = true;
@@ -1181,7 +1284,7 @@
             this.labelGehegeAlle_Count.AutoSize = true;
             this.labelGehegeAlle_Count.Location = new System.Drawing.Point(131, 21);
             this.labelGehegeAlle_Count.Name = "labelGehegeAlle_Count";
-            this.labelGehegeAlle_Count.Size = new System.Drawing.Size(97, 17);
+            this.labelGehegeAlle_Count.Size = new System.Drawing.Size(79, 19);
             this.labelGehegeAlle_Count.TabIndex = 2;
             this.labelGehegeAlle_Count.Text = "undefined";
             // 
@@ -1189,42 +1292,25 @@
             // 
             this.gridGehegeAlle.AllowUserToAddRows = false;
             this.gridGehegeAlle.AllowUserToDeleteRows = false;
-            this.gridGehegeAlle.AllowUserToResizeColumns = false;
             this.gridGehegeAlle.AllowUserToResizeRows = false;
             this.gridGehegeAlle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridGehegeAlle.BackgroundColor = System.Drawing.SystemColors.Window;
             this.gridGehegeAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridGehegeAlle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.gridGehegeAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridGehegeAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridGehegeAlle.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridGehegeAlle.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridGehegeAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridGehegeAlle.Location = new System.Drawing.Point(218, 0);
             this.gridGehegeAlle.Margin = new System.Windows.Forms.Padding(0);
             this.gridGehegeAlle.Name = "gridGehegeAlle";
             this.gridGehegeAlle.ReadOnly = true;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridGehegeAlle.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.gridGehegeAlle.RowHeadersVisible = false;
             this.gridGehegeAlle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridGehegeAlle.Size = new System.Drawing.Size(911, 375);
@@ -1235,7 +1321,7 @@
             this.labelGehegeAlle.AutoSize = true;
             this.labelGehegeAlle.Location = new System.Drawing.Point(6, 21);
             this.labelGehegeAlle.Name = "labelGehegeAlle";
-            this.labelGehegeAlle.Size = new System.Drawing.Size(79, 17);
+            this.labelGehegeAlle.Size = new System.Drawing.Size(64, 19);
             this.labelGehegeAlle.TabIndex = 0;
             this.labelGehegeAlle.Text = "Gehege:";
             // 
@@ -1244,10 +1330,10 @@
             this.tabGehegeHinzufügen.Controls.Add(this.groupGehegeAdd_Gebäude);
             this.tabGehegeHinzufügen.Controls.Add(this.buttonGehegeAdd_Add);
             this.tabGehegeHinzufügen.Controls.Add(this.groupGehegeAdd_Name);
-            this.tabGehegeHinzufügen.Location = new System.Drawing.Point(4, 26);
+            this.tabGehegeHinzufügen.Location = new System.Drawing.Point(4, 28);
             this.tabGehegeHinzufügen.Name = "tabGehegeHinzufügen";
             this.tabGehegeHinzufügen.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGehegeHinzufügen.Size = new System.Drawing.Size(1129, 378);
+            this.tabGehegeHinzufügen.Size = new System.Drawing.Size(1129, 376);
             this.tabGehegeHinzufügen.TabIndex = 1;
             this.tabGehegeHinzufügen.Text = "Hinzufügen";
             this.tabGehegeHinzufügen.UseVisualStyleBackColor = true;
@@ -1314,9 +1400,9 @@
             // tabTiere
             // 
             this.tabTiere.Controls.Add(this.tabControlTiere);
-            this.tabTiere.Location = new System.Drawing.Point(4, 31);
+            this.tabTiere.Location = new System.Drawing.Point(4, 35);
             this.tabTiere.Name = "tabTiere";
-            this.tabTiere.Size = new System.Drawing.Size(1129, 403);
+            this.tabTiere.Size = new System.Drawing.Size(1129, 399);
             this.tabTiere.TabIndex = 5;
             this.tabTiere.Text = "Tiere";
             this.tabTiere.UseVisualStyleBackColor = true;
@@ -1325,7 +1411,7 @@
             // 
             this.tabControlTiere.Controls.Add(this.tabTiereAlle);
             this.tabControlTiere.Controls.Add(this.tabTiereHinzufügen);
-            this.tabControlTiere.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlTiere.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlTiere.Location = new System.Drawing.Point(-4, 5);
             this.tabControlTiere.Name = "tabControlTiere";
             this.tabControlTiere.SelectedIndex = 0;
@@ -1337,10 +1423,11 @@
             this.tabTiereAlle.Controls.Add(this.labelTiereAlle_Count);
             this.tabTiereAlle.Controls.Add(this.gridTiereAlle);
             this.tabTiereAlle.Controls.Add(this.labelTiereAlle);
-            this.tabTiereAlle.Location = new System.Drawing.Point(4, 26);
+            this.tabTiereAlle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabTiereAlle.Location = new System.Drawing.Point(4, 28);
             this.tabTiereAlle.Name = "tabTiereAlle";
             this.tabTiereAlle.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTiereAlle.Size = new System.Drawing.Size(1129, 378);
+            this.tabTiereAlle.Size = new System.Drawing.Size(1129, 376);
             this.tabTiereAlle.TabIndex = 0;
             this.tabTiereAlle.Text = "Alle Anzeigen";
             this.tabTiereAlle.UseVisualStyleBackColor = true;
@@ -1350,7 +1437,7 @@
             this.labelTiereAlle_Count.AutoSize = true;
             this.labelTiereAlle_Count.Location = new System.Drawing.Point(131, 21);
             this.labelTiereAlle_Count.Name = "labelTiereAlle_Count";
-            this.labelTiereAlle_Count.Size = new System.Drawing.Size(97, 17);
+            this.labelTiereAlle_Count.Size = new System.Drawing.Size(79, 19);
             this.labelTiereAlle_Count.TabIndex = 2;
             this.labelTiereAlle_Count.Text = "undefined";
             // 
@@ -1358,42 +1445,25 @@
             // 
             this.gridTiereAlle.AllowUserToAddRows = false;
             this.gridTiereAlle.AllowUserToDeleteRows = false;
-            this.gridTiereAlle.AllowUserToResizeColumns = false;
             this.gridTiereAlle.AllowUserToResizeRows = false;
             this.gridTiereAlle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridTiereAlle.BackgroundColor = System.Drawing.SystemColors.Window;
             this.gridTiereAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridTiereAlle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.gridTiereAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridTiereAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridTiereAlle.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridTiereAlle.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridTiereAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridTiereAlle.Location = new System.Drawing.Point(218, 0);
             this.gridTiereAlle.Margin = new System.Windows.Forms.Padding(0);
             this.gridTiereAlle.Name = "gridTiereAlle";
             this.gridTiereAlle.ReadOnly = true;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridTiereAlle.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.gridTiereAlle.RowHeadersVisible = false;
             this.gridTiereAlle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridTiereAlle.Size = new System.Drawing.Size(911, 375);
@@ -1404,7 +1474,7 @@
             this.labelTiereAlle.AutoSize = true;
             this.labelTiereAlle.Location = new System.Drawing.Point(6, 21);
             this.labelTiereAlle.Name = "labelTiereAlle";
-            this.labelTiereAlle.Size = new System.Drawing.Size(58, 17);
+            this.labelTiereAlle.Size = new System.Drawing.Size(47, 19);
             this.labelTiereAlle.TabIndex = 0;
             this.labelTiereAlle.Text = "Tiere:";
             // 
@@ -1417,13 +1487,27 @@
             this.tabTiereHinzufügen.Controls.Add(this.groupTiereAdd_Gender);
             this.tabTiereHinzufügen.Controls.Add(this.groupTiereAdd_Species);
             this.tabTiereHinzufügen.Controls.Add(this.groupTiereAdd_Name);
-            this.tabTiereHinzufügen.Location = new System.Drawing.Point(4, 26);
+            this.tabTiereHinzufügen.Location = new System.Drawing.Point(4, 28);
             this.tabTiereHinzufügen.Name = "tabTiereHinzufügen";
             this.tabTiereHinzufügen.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTiereHinzufügen.Size = new System.Drawing.Size(1129, 378);
+            this.tabTiereHinzufügen.Size = new System.Drawing.Size(1129, 376);
             this.tabTiereHinzufügen.TabIndex = 1;
             this.tabTiereHinzufügen.Text = "Hinzufügen";
             this.tabTiereHinzufügen.UseVisualStyleBackColor = true;
+            // 
+            // buttonTiereAdd_Add
+            // 
+            this.buttonTiereAdd_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            this.buttonTiereAdd_Add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonTiereAdd_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTiereAdd_Add.Font = new System.Drawing.Font("BankGothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTiereAdd_Add.Location = new System.Drawing.Point(818, 289);
+            this.buttonTiereAdd_Add.Name = "buttonTiereAdd_Add";
+            this.buttonTiereAdd_Add.Size = new System.Drawing.Size(278, 33);
+            this.buttonTiereAdd_Add.TabIndex = 18;
+            this.buttonTiereAdd_Add.Text = "Tier hinzufügen";
+            this.buttonTiereAdd_Add.UseVisualStyleBackColor = false;
+            this.buttonTiereAdd_Add.Click += new System.EventHandler(this.buttonTiereAdd_Add_Click);
             // 
             // groupTiereAdd_Gehege
             // 
@@ -1499,7 +1583,7 @@
             // 
             // groupTiereAdd_Gender
             // 
-            this.groupTiereAdd_Gender.Controls.Add(this.comboTiereAdd_Gender);
+            this.groupTiereAdd_Gender.Controls.Add(this.textTiereAdd_Gender);
             this.groupTiereAdd_Gender.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupTiereAdd_Gender.Location = new System.Drawing.Point(20, 178);
             this.groupTiereAdd_Gender.Name = "groupTiereAdd_Gender";
@@ -1507,18 +1591,6 @@
             this.groupTiereAdd_Gender.TabIndex = 25;
             this.groupTiereAdd_Gender.TabStop = false;
             this.groupTiereAdd_Gender.Text = "Geschlecht";
-            // 
-            // comboTiereAdd_Gender
-            // 
-            this.comboTiereAdd_Gender.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboTiereAdd_Gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboTiereAdd_Gender.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboTiereAdd_Gender.FormattingEnabled = true;
-            this.comboTiereAdd_Gender.Location = new System.Drawing.Point(6, 22);
-            this.comboTiereAdd_Gender.Name = "comboTiereAdd_Gender";
-            this.comboTiereAdd_Gender.Size = new System.Drawing.Size(266, 26);
-            this.comboTiereAdd_Gender.TabIndex = 1;
-            this.comboTiereAdd_Gender.TextChanged += new System.EventHandler(this.TierInput_TextChanged);
             // 
             // groupTiereAdd_Species
             // 
@@ -1564,9 +1636,9 @@
             // tabLieferanten
             // 
             this.tabLieferanten.Controls.Add(this.tabControlLieferanten);
-            this.tabLieferanten.Location = new System.Drawing.Point(4, 31);
+            this.tabLieferanten.Location = new System.Drawing.Point(4, 35);
             this.tabLieferanten.Name = "tabLieferanten";
-            this.tabLieferanten.Size = new System.Drawing.Size(1129, 403);
+            this.tabLieferanten.Size = new System.Drawing.Size(1129, 399);
             this.tabLieferanten.TabIndex = 6;
             this.tabLieferanten.Text = "Lieferanten";
             this.tabLieferanten.UseVisualStyleBackColor = true;
@@ -1575,7 +1647,7 @@
             // 
             this.tabControlLieferanten.Controls.Add(this.tabLieferantenAlle);
             this.tabControlLieferanten.Controls.Add(this.tabLieferantenHinzufügen);
-            this.tabControlLieferanten.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlLieferanten.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlLieferanten.Location = new System.Drawing.Point(-4, 5);
             this.tabControlLieferanten.Name = "tabControlLieferanten";
             this.tabControlLieferanten.SelectedIndex = 0;
@@ -1587,10 +1659,10 @@
             this.tabLieferantenAlle.Controls.Add(this.labelLieferantenAlle_Count);
             this.tabLieferantenAlle.Controls.Add(this.gridLieferantenAlle);
             this.tabLieferantenAlle.Controls.Add(this.labelLieferantenAlle);
-            this.tabLieferantenAlle.Location = new System.Drawing.Point(4, 26);
+            this.tabLieferantenAlle.Location = new System.Drawing.Point(4, 28);
             this.tabLieferantenAlle.Name = "tabLieferantenAlle";
             this.tabLieferantenAlle.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLieferantenAlle.Size = new System.Drawing.Size(1129, 372);
+            this.tabLieferantenAlle.Size = new System.Drawing.Size(1129, 370);
             this.tabLieferantenAlle.TabIndex = 0;
             this.tabLieferantenAlle.Text = "Alle Anzeigen";
             this.tabLieferantenAlle.UseVisualStyleBackColor = true;
@@ -1600,7 +1672,7 @@
             this.labelLieferantenAlle_Count.AutoSize = true;
             this.labelLieferantenAlle_Count.Location = new System.Drawing.Point(131, 21);
             this.labelLieferantenAlle_Count.Name = "labelLieferantenAlle_Count";
-            this.labelLieferantenAlle_Count.Size = new System.Drawing.Size(97, 17);
+            this.labelLieferantenAlle_Count.Size = new System.Drawing.Size(79, 19);
             this.labelLieferantenAlle_Count.TabIndex = 2;
             this.labelLieferantenAlle_Count.Text = "undefined";
             // 
@@ -1608,42 +1680,25 @@
             // 
             this.gridLieferantenAlle.AllowUserToAddRows = false;
             this.gridLieferantenAlle.AllowUserToDeleteRows = false;
-            this.gridLieferantenAlle.AllowUserToResizeColumns = false;
             this.gridLieferantenAlle.AllowUserToResizeRows = false;
             this.gridLieferantenAlle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridLieferantenAlle.BackgroundColor = System.Drawing.SystemColors.Window;
             this.gridLieferantenAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridLieferantenAlle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.gridLieferantenAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridLieferantenAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridLieferantenAlle.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridLieferantenAlle.DefaultCellStyle = dataGridViewCellStyle6;
             this.gridLieferantenAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridLieferantenAlle.Location = new System.Drawing.Point(218, 0);
             this.gridLieferantenAlle.Margin = new System.Windows.Forms.Padding(0);
             this.gridLieferantenAlle.Name = "gridLieferantenAlle";
             this.gridLieferantenAlle.ReadOnly = true;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridLieferantenAlle.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.gridLieferantenAlle.RowHeadersVisible = false;
             this.gridLieferantenAlle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridLieferantenAlle.Size = new System.Drawing.Size(911, 375);
@@ -1654,7 +1709,7 @@
             this.labelLieferantenAlle.AutoSize = true;
             this.labelLieferantenAlle.Location = new System.Drawing.Point(6, 21);
             this.labelLieferantenAlle.Name = "labelLieferantenAlle";
-            this.labelLieferantenAlle.Size = new System.Drawing.Size(119, 17);
+            this.labelLieferantenAlle.Size = new System.Drawing.Size(91, 19);
             this.labelLieferantenAlle.TabIndex = 0;
             this.labelLieferantenAlle.Text = "Lieferanten:";
             // 
@@ -1668,106 +1723,76 @@
             this.tabLieferantenHinzufügen.Controls.Add(this.groupLieferantenAdd_PLZ);
             this.tabLieferantenHinzufügen.Controls.Add(this.buttonLieferantenAdd_Add);
             this.tabLieferantenHinzufügen.Controls.Add(this.groupLieferantenAdd_Name);
-            this.tabLieferantenHinzufügen.Location = new System.Drawing.Point(4, 26);
+            this.tabLieferantenHinzufügen.Location = new System.Drawing.Point(4, 28);
             this.tabLieferantenHinzufügen.Name = "tabLieferantenHinzufügen";
             this.tabLieferantenHinzufügen.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLieferantenHinzufügen.Size = new System.Drawing.Size(1129, 372);
+            this.tabLieferantenHinzufügen.Size = new System.Drawing.Size(1129, 370);
             this.tabLieferantenHinzufügen.TabIndex = 1;
             this.tabLieferantenHinzufügen.Text = "Hinzufügen";
             this.tabLieferantenHinzufügen.UseVisualStyleBackColor = true;
             // 
-            // buttonLieferantenAdd_Add
+            // groupLieferantenAdd_ContactSurname
             // 
-            this.buttonLieferantenAdd_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.buttonLieferantenAdd_Add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonLieferantenAdd_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLieferantenAdd_Add.Font = new System.Drawing.Font("BankGothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLieferantenAdd_Add.Location = new System.Drawing.Point(818, 289);
-            this.buttonLieferantenAdd_Add.Name = "buttonLieferantenAdd_Add";
-            this.buttonLieferantenAdd_Add.Size = new System.Drawing.Size(278, 33);
-            this.buttonLieferantenAdd_Add.TabIndex = 17;
-            this.buttonLieferantenAdd_Add.Text = "Lieferant hinzufügen";
-            this.buttonLieferantenAdd_Add.UseVisualStyleBackColor = false;
-            this.buttonLieferantenAdd_Add.Click += new System.EventHandler(this.buttonLieferantenAdd_add_Click);
+            this.groupLieferantenAdd_ContactSurname.Controls.Add(this.textLieferantenAdd_ContactSurname);
+            this.groupLieferantenAdd_ContactSurname.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupLieferantenAdd_ContactSurname.Location = new System.Drawing.Point(435, 169);
+            this.groupLieferantenAdd_ContactSurname.Name = "groupLieferantenAdd_ContactSurname";
+            this.groupLieferantenAdd_ContactSurname.Size = new System.Drawing.Size(278, 66);
+            this.groupLieferantenAdd_ContactSurname.TabIndex = 29;
+            this.groupLieferantenAdd_ContactSurname.TabStop = false;
+            this.groupLieferantenAdd_ContactSurname.Text = "Ansprechpartner (Nachname)";
             // 
-            // groupLieferantenAdd_Name
+            // textLieferantenAdd_ContactSurname
             // 
-            this.groupLieferantenAdd_Name.Controls.Add(this.textLieferantenAdd_Name);
-            this.groupLieferantenAdd_Name.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupLieferantenAdd_Name.Location = new System.Drawing.Point(20, 10);
-            this.groupLieferantenAdd_Name.Name = "groupLieferantenAdd_Name";
-            this.groupLieferantenAdd_Name.Size = new System.Drawing.Size(278, 66);
-            this.groupLieferantenAdd_Name.TabIndex = 1;
-            this.groupLieferantenAdd_Name.TabStop = false;
-            this.groupLieferantenAdd_Name.Text = "Name";
+            this.textLieferantenAdd_ContactSurname.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textLieferantenAdd_ContactSurname.Location = new System.Drawing.Point(6, 20);
+            this.textLieferantenAdd_ContactSurname.MaxLength = 11;
+            this.textLieferantenAdd_ContactSurname.Name = "textLieferantenAdd_ContactSurname";
+            this.textLieferantenAdd_ContactSurname.Size = new System.Drawing.Size(266, 26);
+            this.textLieferantenAdd_ContactSurname.TabIndex = 2;
+            this.textLieferantenAdd_ContactSurname.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
             // 
-            // textLieferantenAdd_Name
+            // groupLieferantenAdd_ContactName
             // 
-            this.textLieferantenAdd_Name.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textLieferantenAdd_Name.Location = new System.Drawing.Point(6, 23);
-            this.textLieferantenAdd_Name.Name = "textLieferantenAdd_Name";
-            this.textLieferantenAdd_Name.Size = new System.Drawing.Size(266, 26);
-            this.textLieferantenAdd_Name.TabIndex = 1;
-            this.textLieferantenAdd_Name.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
+            this.groupLieferantenAdd_ContactName.Controls.Add(this.textLieferantenAdd_ContactName);
+            this.groupLieferantenAdd_ContactName.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupLieferantenAdd_ContactName.Location = new System.Drawing.Point(435, 88);
+            this.groupLieferantenAdd_ContactName.Name = "groupLieferantenAdd_ContactName";
+            this.groupLieferantenAdd_ContactName.Size = new System.Drawing.Size(278, 66);
+            this.groupLieferantenAdd_ContactName.TabIndex = 29;
+            this.groupLieferantenAdd_ContactName.TabStop = false;
+            this.groupLieferantenAdd_ContactName.Text = "Ansprechpartner (Vorname)";
             // 
-            // tabFütterung
+            // textLieferantenAdd_ContactName
             // 
-            this.tabFütterung.Location = new System.Drawing.Point(4, 31);
-            this.tabFütterung.Name = "tabFütterung";
-            this.tabFütterung.Size = new System.Drawing.Size(1129, 403);
-            this.tabFütterung.TabIndex = 1;
-            this.tabFütterung.Text = "Fütterung";
-            this.tabFütterung.UseVisualStyleBackColor = true;
+            this.textLieferantenAdd_ContactName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textLieferantenAdd_ContactName.Location = new System.Drawing.Point(6, 20);
+            this.textLieferantenAdd_ContactName.MaxLength = 11;
+            this.textLieferantenAdd_ContactName.Name = "textLieferantenAdd_ContactName";
+            this.textLieferantenAdd_ContactName.Size = new System.Drawing.Size(266, 26);
+            this.textLieferantenAdd_ContactName.TabIndex = 2;
+            this.textLieferantenAdd_ContactName.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
             // 
-            // tabLog
+            // groupLieferantenAdd_Phone
             // 
-            this.tabLog.Controls.Add(this.listBoxLog);
-            this.tabLog.Location = new System.Drawing.Point(4, 31);
-            this.tabLog.Name = "tabLog";
-            this.tabLog.Size = new System.Drawing.Size(1129, 403);
-            this.tabLog.TabIndex = 8;
-            this.tabLog.Text = "Aktivitäten";
-            this.tabLog.UseVisualStyleBackColor = true;
+            this.groupLieferantenAdd_Phone.Controls.Add(this.textLieferantenAdd_Phone);
+            this.groupLieferantenAdd_Phone.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupLieferantenAdd_Phone.Location = new System.Drawing.Point(435, 10);
+            this.groupLieferantenAdd_Phone.Name = "groupLieferantenAdd_Phone";
+            this.groupLieferantenAdd_Phone.Size = new System.Drawing.Size(278, 66);
+            this.groupLieferantenAdd_Phone.TabIndex = 28;
+            this.groupLieferantenAdd_Phone.TabStop = false;
+            this.groupLieferantenAdd_Phone.Text = "Tel.:";
             // 
-            // listBoxLog
+            // textLieferantenAdd_Phone
             // 
-            this.listBoxLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBoxLog.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxLog.FormattingEnabled = true;
-            this.listBoxLog.ItemHeight = 19;
-            this.listBoxLog.Location = new System.Drawing.Point(0, 2);
-            this.listBoxLog.Margin = new System.Windows.Forms.Padding(0);
-            this.listBoxLog.Name = "listBoxLog";
-            this.listBoxLog.Size = new System.Drawing.Size(1129, 399);
-            this.listBoxLog.TabIndex = 0;
-            // 
-            // buttonChangePassword
-            // 
-            this.buttonChangePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.buttonChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChangePassword.Font = new System.Drawing.Font("BankGothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonChangePassword.Location = new System.Drawing.Point(23, 476);
-            this.buttonChangePassword.Name = "buttonChangePassword";
-            this.buttonChangePassword.Size = new System.Drawing.Size(231, 33);
-            this.buttonChangePassword.TabIndex = 17;
-            this.buttonChangePassword.Text = "Passwort ändern";
-            this.buttonChangePassword.UseVisualStyleBackColor = false;
-            this.buttonChangePassword.Click += new System.EventHandler(this.buttonChangePassword_Click);
-            // 
-            // buttonTiereAdd_Add
-            // 
-            this.buttonTiereAdd_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.buttonTiereAdd_Add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonTiereAdd_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTiereAdd_Add.Font = new System.Drawing.Font("BankGothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTiereAdd_Add.Location = new System.Drawing.Point(818, 289);
-            this.buttonTiereAdd_Add.Name = "buttonTiereAdd_Add";
-            this.buttonTiereAdd_Add.Size = new System.Drawing.Size(278, 33);
-            this.buttonTiereAdd_Add.TabIndex = 18;
-            this.buttonTiereAdd_Add.Text = "Tier hinzufügen";
-            this.buttonTiereAdd_Add.UseVisualStyleBackColor = false;
-            this.buttonTiereAdd_Add.Click += new System.EventHandler(this.buttonTiereAdd_Add_Click);
+            this.textLieferantenAdd_Phone.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textLieferantenAdd_Phone.Location = new System.Drawing.Point(6, 20);
+            this.textLieferantenAdd_Phone.MaxLength = 11;
+            this.textLieferantenAdd_Phone.Name = "textLieferantenAdd_Phone";
+            this.textLieferantenAdd_Phone.Size = new System.Drawing.Size(266, 26);
+            this.textLieferantenAdd_Phone.TabIndex = 2;
+            this.textLieferantenAdd_Phone.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
             // 
             // groupLieferantenAdd_Street
             // 
@@ -1834,230 +1859,92 @@
             this.comboLieferantenAdd_PLZ.TabIndex = 1;
             this.comboLieferantenAdd_PLZ.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
             // 
-            // groupLieferantenAdd_Phone
+            // buttonLieferantenAdd_Add
             // 
-            this.groupLieferantenAdd_Phone.Controls.Add(this.textLieferantenAdd_Phone);
-            this.groupLieferantenAdd_Phone.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupLieferantenAdd_Phone.Location = new System.Drawing.Point(435, 10);
-            this.groupLieferantenAdd_Phone.Name = "groupLieferantenAdd_Phone";
-            this.groupLieferantenAdd_Phone.Size = new System.Drawing.Size(278, 66);
-            this.groupLieferantenAdd_Phone.TabIndex = 28;
-            this.groupLieferantenAdd_Phone.TabStop = false;
-            this.groupLieferantenAdd_Phone.Text = "Tel.:";
+            this.buttonLieferantenAdd_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            this.buttonLieferantenAdd_Add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLieferantenAdd_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLieferantenAdd_Add.Font = new System.Drawing.Font("BankGothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLieferantenAdd_Add.Location = new System.Drawing.Point(818, 289);
+            this.buttonLieferantenAdd_Add.Name = "buttonLieferantenAdd_Add";
+            this.buttonLieferantenAdd_Add.Size = new System.Drawing.Size(278, 33);
+            this.buttonLieferantenAdd_Add.TabIndex = 17;
+            this.buttonLieferantenAdd_Add.Text = "Lieferant hinzufügen";
+            this.buttonLieferantenAdd_Add.UseVisualStyleBackColor = false;
+            this.buttonLieferantenAdd_Add.Click += new System.EventHandler(this.buttonLieferantenAdd_add_Click);
             // 
-            // textLieferantenAdd_Phone
+            // groupLieferantenAdd_Name
             // 
-            this.textLieferantenAdd_Phone.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textLieferantenAdd_Phone.Location = new System.Drawing.Point(6, 20);
-            this.textLieferantenAdd_Phone.MaxLength = 11;
-            this.textLieferantenAdd_Phone.Name = "textLieferantenAdd_Phone";
-            this.textLieferantenAdd_Phone.Size = new System.Drawing.Size(266, 26);
-            this.textLieferantenAdd_Phone.TabIndex = 2;
-            this.textLieferantenAdd_Phone.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
+            this.groupLieferantenAdd_Name.Controls.Add(this.textLieferantenAdd_Name);
+            this.groupLieferantenAdd_Name.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupLieferantenAdd_Name.Location = new System.Drawing.Point(20, 10);
+            this.groupLieferantenAdd_Name.Name = "groupLieferantenAdd_Name";
+            this.groupLieferantenAdd_Name.Size = new System.Drawing.Size(278, 66);
+            this.groupLieferantenAdd_Name.TabIndex = 1;
+            this.groupLieferantenAdd_Name.TabStop = false;
+            this.groupLieferantenAdd_Name.Text = "Name";
             // 
-            // groupLieferantenAdd_ContactName
+            // textLieferantenAdd_Name
             // 
-            this.groupLieferantenAdd_ContactName.Controls.Add(this.textLieferantenAdd_ContactName);
-            this.groupLieferantenAdd_ContactName.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupLieferantenAdd_ContactName.Location = new System.Drawing.Point(435, 88);
-            this.groupLieferantenAdd_ContactName.Name = "groupLieferantenAdd_ContactName";
-            this.groupLieferantenAdd_ContactName.Size = new System.Drawing.Size(278, 66);
-            this.groupLieferantenAdd_ContactName.TabIndex = 29;
-            this.groupLieferantenAdd_ContactName.TabStop = false;
-            this.groupLieferantenAdd_ContactName.Text = "Ansprechpartner (Vorname)";
+            this.textLieferantenAdd_Name.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textLieferantenAdd_Name.Location = new System.Drawing.Point(6, 23);
+            this.textLieferantenAdd_Name.Name = "textLieferantenAdd_Name";
+            this.textLieferantenAdd_Name.Size = new System.Drawing.Size(266, 26);
+            this.textLieferantenAdd_Name.TabIndex = 1;
+            this.textLieferantenAdd_Name.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
             // 
-            // textLieferantenAdd_ContactName
+            // tabFütterung
             // 
-            this.textLieferantenAdd_ContactName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textLieferantenAdd_ContactName.Location = new System.Drawing.Point(6, 20);
-            this.textLieferantenAdd_ContactName.MaxLength = 11;
-            this.textLieferantenAdd_ContactName.Name = "textLieferantenAdd_ContactName";
-            this.textLieferantenAdd_ContactName.Size = new System.Drawing.Size(266, 26);
-            this.textLieferantenAdd_ContactName.TabIndex = 2;
-            this.textLieferantenAdd_ContactName.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
+            this.tabFütterung.Location = new System.Drawing.Point(4, 35);
+            this.tabFütterung.Name = "tabFütterung";
+            this.tabFütterung.Size = new System.Drawing.Size(1129, 399);
+            this.tabFütterung.TabIndex = 1;
+            this.tabFütterung.Text = "Fütterung";
+            this.tabFütterung.UseVisualStyleBackColor = true;
             // 
-            // groupLieferantenAdd_ContactSurname
+            // tabLog
             // 
-            this.groupLieferantenAdd_ContactSurname.Controls.Add(this.textLieferantenAdd_ContactSurname);
-            this.groupLieferantenAdd_ContactSurname.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupLieferantenAdd_ContactSurname.Location = new System.Drawing.Point(435, 169);
-            this.groupLieferantenAdd_ContactSurname.Name = "groupLieferantenAdd_ContactSurname";
-            this.groupLieferantenAdd_ContactSurname.Size = new System.Drawing.Size(278, 66);
-            this.groupLieferantenAdd_ContactSurname.TabIndex = 29;
-            this.groupLieferantenAdd_ContactSurname.TabStop = false;
-            this.groupLieferantenAdd_ContactSurname.Text = "Ansprechpartner (Nachname)";
+            this.tabLog.Controls.Add(this.listBoxLog);
+            this.tabLog.Location = new System.Drawing.Point(4, 35);
+            this.tabLog.Name = "tabLog";
+            this.tabLog.Size = new System.Drawing.Size(1129, 399);
+            this.tabLog.TabIndex = 8;
+            this.tabLog.Text = "Aktivitäten";
+            this.tabLog.UseVisualStyleBackColor = true;
             // 
-            // textLieferantenAdd_ContactSurname
+            // listBoxLog
             // 
-            this.textLieferantenAdd_ContactSurname.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textLieferantenAdd_ContactSurname.Location = new System.Drawing.Point(6, 20);
-            this.textLieferantenAdd_ContactSurname.MaxLength = 11;
-            this.textLieferantenAdd_ContactSurname.Name = "textLieferantenAdd_ContactSurname";
-            this.textLieferantenAdd_ContactSurname.Size = new System.Drawing.Size(266, 26);
-            this.textLieferantenAdd_ContactSurname.TabIndex = 2;
-            this.textLieferantenAdd_ContactSurname.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
+            this.listBoxLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBoxLog.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxLog.FormattingEnabled = true;
+            this.listBoxLog.ItemHeight = 19;
+            this.listBoxLog.Location = new System.Drawing.Point(0, 2);
+            this.listBoxLog.Margin = new System.Windows.Forms.Padding(0);
+            this.listBoxLog.Name = "listBoxLog";
+            this.listBoxLog.Size = new System.Drawing.Size(1129, 399);
+            this.listBoxLog.TabIndex = 0;
             // 
-            // groupÜbersichtReviere
+            // buttonChangePassword
             // 
-            this.groupÜbersichtReviere.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(229)))), ((int)(((byte)(252)))));
-            this.groupÜbersichtReviere.Controls.Add(this.labelÜbersichtReviere_LastChanged);
-            this.groupÜbersichtReviere.Controls.Add(this.labelÜbersichtReviere_Count);
-            this.groupÜbersichtReviere.Controls.Add(this.labelÜbersichtReviereLastChange);
-            this.groupÜbersichtReviere.Controls.Add(this.labelÜbersichtReviere);
-            this.groupÜbersichtReviere.Location = new System.Drawing.Point(20, 161);
-            this.groupÜbersichtReviere.Name = "groupÜbersichtReviere";
-            this.groupÜbersichtReviere.Size = new System.Drawing.Size(335, 94);
-            this.groupÜbersichtReviere.TabIndex = 11;
-            this.groupÜbersichtReviere.TabStop = false;
-            this.groupÜbersichtReviere.Text = "Reviere";
+            this.buttonChangePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
+            this.buttonChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChangePassword.Font = new System.Drawing.Font("BankGothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChangePassword.Location = new System.Drawing.Point(23, 476);
+            this.buttonChangePassword.Name = "buttonChangePassword";
+            this.buttonChangePassword.Size = new System.Drawing.Size(238, 33);
+            this.buttonChangePassword.TabIndex = 17;
+            this.buttonChangePassword.Text = "Kennwort ändern";
+            this.buttonChangePassword.UseVisualStyleBackColor = false;
+            this.buttonChangePassword.Click += new System.EventHandler(this.buttonChangePassword_Click);
             // 
-            // labelÜbersichtReviere_LastChanged
+            // textTiereAdd_Gender
             // 
-            this.labelÜbersichtReviere_LastChanged.AutoSize = true;
-            this.labelÜbersichtReviere_LastChanged.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelÜbersichtReviere_LastChanged.Location = new System.Drawing.Point(110, 63);
-            this.labelÜbersichtReviere_LastChanged.Name = "labelÜbersichtReviere_LastChanged";
-            this.labelÜbersichtReviere_LastChanged.Size = new System.Drawing.Size(97, 17);
-            this.labelÜbersichtReviere_LastChanged.TabIndex = 8;
-            this.labelÜbersichtReviere_LastChanged.Text = "undefined";
-            // 
-            // labelÜbersichtReviere_Count
-            // 
-            this.labelÜbersichtReviere_Count.AutoSize = true;
-            this.labelÜbersichtReviere_Count.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelÜbersichtReviere_Count.Location = new System.Drawing.Point(110, 36);
-            this.labelÜbersichtReviere_Count.Name = "labelÜbersichtReviere_Count";
-            this.labelÜbersichtReviere_Count.Size = new System.Drawing.Size(97, 17);
-            this.labelÜbersichtReviere_Count.TabIndex = 7;
-            this.labelÜbersichtReviere_Count.Text = "undefined";
-            // 
-            // labelÜbersichtReviereLastChange
-            // 
-            this.labelÜbersichtReviereLastChange.AutoSize = true;
-            this.labelÜbersichtReviereLastChange.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelÜbersichtReviereLastChange.Location = new System.Drawing.Point(6, 63);
-            this.labelÜbersichtReviereLastChange.Name = "labelÜbersichtReviereLastChange";
-            this.labelÜbersichtReviereLastChange.Size = new System.Drawing.Size(98, 17);
-            this.labelÜbersichtReviereLastChange.TabIndex = 6;
-            this.labelÜbersichtReviereLastChange.Text = "Geändert:";
-            // 
-            // labelÜbersichtReviere
-            // 
-            this.labelÜbersichtReviere.AutoSize = true;
-            this.labelÜbersichtReviere.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelÜbersichtReviere.Location = new System.Drawing.Point(6, 36);
-            this.labelÜbersichtReviere.Name = "labelÜbersichtReviere";
-            this.labelÜbersichtReviere.Size = new System.Drawing.Size(76, 17);
-            this.labelÜbersichtReviere.TabIndex = 2;
-            this.labelÜbersichtReviere.Text = "Anzahl:";
-            // 
-            // groupÜbersichtGebäude
-            // 
-            this.groupÜbersichtGebäude.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
-            this.groupÜbersichtGebäude.Controls.Add(this.labelÜbersichtGebäude_LastChanged);
-            this.groupÜbersichtGebäude.Controls.Add(this.labelÜbersichtGebäude_Count);
-            this.groupÜbersichtGebäude.Controls.Add(this.labelÜbersichtGebäudeLastChanged);
-            this.groupÜbersichtGebäude.Controls.Add(this.labelÜbersichtGebäude);
-            this.groupÜbersichtGebäude.Location = new System.Drawing.Point(396, 161);
-            this.groupÜbersichtGebäude.Name = "groupÜbersichtGebäude";
-            this.groupÜbersichtGebäude.Size = new System.Drawing.Size(335, 94);
-            this.groupÜbersichtGebäude.TabIndex = 12;
-            this.groupÜbersichtGebäude.TabStop = false;
-            this.groupÜbersichtGebäude.Text = "Gebäude";
-            // 
-            // labelÜbersichtGebäude_LastChanged
-            // 
-            this.labelÜbersichtGebäude_LastChanged.AutoSize = true;
-            this.labelÜbersichtGebäude_LastChanged.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelÜbersichtGebäude_LastChanged.Location = new System.Drawing.Point(110, 63);
-            this.labelÜbersichtGebäude_LastChanged.Name = "labelÜbersichtGebäude_LastChanged";
-            this.labelÜbersichtGebäude_LastChanged.Size = new System.Drawing.Size(97, 17);
-            this.labelÜbersichtGebäude_LastChanged.TabIndex = 8;
-            this.labelÜbersichtGebäude_LastChanged.Text = "undefined";
-            // 
-            // labelÜbersichtGebäude_Count
-            // 
-            this.labelÜbersichtGebäude_Count.AutoSize = true;
-            this.labelÜbersichtGebäude_Count.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelÜbersichtGebäude_Count.Location = new System.Drawing.Point(110, 36);
-            this.labelÜbersichtGebäude_Count.Name = "labelÜbersichtGebäude_Count";
-            this.labelÜbersichtGebäude_Count.Size = new System.Drawing.Size(97, 17);
-            this.labelÜbersichtGebäude_Count.TabIndex = 7;
-            this.labelÜbersichtGebäude_Count.Text = "undefined";
-            // 
-            // labelÜbersichtGebäudeLastChanged
-            // 
-            this.labelÜbersichtGebäudeLastChanged.AutoSize = true;
-            this.labelÜbersichtGebäudeLastChanged.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelÜbersichtGebäudeLastChanged.Location = new System.Drawing.Point(6, 63);
-            this.labelÜbersichtGebäudeLastChanged.Name = "labelÜbersichtGebäudeLastChanged";
-            this.labelÜbersichtGebäudeLastChanged.Size = new System.Drawing.Size(98, 17);
-            this.labelÜbersichtGebäudeLastChanged.TabIndex = 6;
-            this.labelÜbersichtGebäudeLastChanged.Text = "Geändert:";
-            // 
-            // labelÜbersichtGebäude
-            // 
-            this.labelÜbersichtGebäude.AutoSize = true;
-            this.labelÜbersichtGebäude.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelÜbersichtGebäude.Location = new System.Drawing.Point(6, 36);
-            this.labelÜbersichtGebäude.Name = "labelÜbersichtGebäude";
-            this.labelÜbersichtGebäude.Size = new System.Drawing.Size(76, 17);
-            this.labelÜbersichtGebäude.TabIndex = 2;
-            this.labelÜbersichtGebäude.Text = "Anzahl:";
-            // 
-            // groupÜbersichtGehege
-            // 
-            this.groupÜbersichtGehege.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(179)))));
-            this.groupÜbersichtGehege.Controls.Add(this.labelÜbersichtGehege_LastChanged);
-            this.groupÜbersichtGehege.Controls.Add(this.labelÜbersichtGehege_Count);
-            this.groupÜbersichtGehege.Controls.Add(this.labelÜbersichtGehegeLastChanged);
-            this.groupÜbersichtGehege.Controls.Add(this.labelÜbersichtGehege);
-            this.groupÜbersichtGehege.Location = new System.Drawing.Point(772, 161);
-            this.groupÜbersichtGehege.Name = "groupÜbersichtGehege";
-            this.groupÜbersichtGehege.Size = new System.Drawing.Size(335, 94);
-            this.groupÜbersichtGehege.TabIndex = 13;
-            this.groupÜbersichtGehege.TabStop = false;
-            this.groupÜbersichtGehege.Text = "Gehege";
-            // 
-            // labelÜbersichtGehege_LastChanged
-            // 
-            this.labelÜbersichtGehege_LastChanged.AutoSize = true;
-            this.labelÜbersichtGehege_LastChanged.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelÜbersichtGehege_LastChanged.Location = new System.Drawing.Point(110, 63);
-            this.labelÜbersichtGehege_LastChanged.Name = "labelÜbersichtGehege_LastChanged";
-            this.labelÜbersichtGehege_LastChanged.Size = new System.Drawing.Size(97, 17);
-            this.labelÜbersichtGehege_LastChanged.TabIndex = 8;
-            this.labelÜbersichtGehege_LastChanged.Text = "undefined";
-            // 
-            // labelÜbersichtGehege_Count
-            // 
-            this.labelÜbersichtGehege_Count.AutoSize = true;
-            this.labelÜbersichtGehege_Count.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelÜbersichtGehege_Count.Location = new System.Drawing.Point(110, 36);
-            this.labelÜbersichtGehege_Count.Name = "labelÜbersichtGehege_Count";
-            this.labelÜbersichtGehege_Count.Size = new System.Drawing.Size(97, 17);
-            this.labelÜbersichtGehege_Count.TabIndex = 7;
-            this.labelÜbersichtGehege_Count.Text = "undefined";
-            // 
-            // labelÜbersichtGehegeLastChanged
-            // 
-            this.labelÜbersichtGehegeLastChanged.AutoSize = true;
-            this.labelÜbersichtGehegeLastChanged.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelÜbersichtGehegeLastChanged.Location = new System.Drawing.Point(6, 63);
-            this.labelÜbersichtGehegeLastChanged.Name = "labelÜbersichtGehegeLastChanged";
-            this.labelÜbersichtGehegeLastChanged.Size = new System.Drawing.Size(98, 17);
-            this.labelÜbersichtGehegeLastChanged.TabIndex = 6;
-            this.labelÜbersichtGehegeLastChanged.Text = "Geändert:";
-            // 
-            // labelÜbersichtGehege
-            // 
-            this.labelÜbersichtGehege.AutoSize = true;
-            this.labelÜbersichtGehege.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelÜbersichtGehege.Location = new System.Drawing.Point(6, 36);
-            this.labelÜbersichtGehege.Name = "labelÜbersichtGehege";
-            this.labelÜbersichtGehege.Size = new System.Drawing.Size(76, 17);
-            this.labelÜbersichtGehege.TabIndex = 2;
-            this.labelÜbersichtGehege.Text = "Anzahl:";
+            this.textTiereAdd_Gender.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textTiereAdd_Gender.Location = new System.Drawing.Point(6, 22);
+            this.textTiereAdd_Gender.Name = "textTiereAdd_Gender";
+            this.textTiereAdd_Gender.Size = new System.Drawing.Size(266, 26);
+            this.textTiereAdd_Gender.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -2078,6 +1965,12 @@
             this.Text = "NaturZoo Rheine";
             this.tabControlMain.ResumeLayout(false);
             this.tabÜbersicht.ResumeLayout(false);
+            this.groupÜbersichtGehege.ResumeLayout(false);
+            this.groupÜbersichtGehege.PerformLayout();
+            this.groupÜbersichtGebäude.ResumeLayout(false);
+            this.groupÜbersichtGebäude.PerformLayout();
+            this.groupÜbersichtReviere.ResumeLayout(false);
+            this.groupÜbersichtReviere.PerformLayout();
             this.groupÜbersichtLieferanten.ResumeLayout(false);
             this.groupÜbersichtLieferanten.PerformLayout();
             this.groupÜbersichtPfleger.ResumeLayout(false);
@@ -2107,7 +2000,7 @@
             this.groupPflegerAdd_Surname.PerformLayout();
             this.groupPflegerAdd_Name.ResumeLayout(false);
             this.groupPflegerAdd_Name.PerformLayout();
-            this.tabRevier.ResumeLayout(false);
+            this.tabReviere.ResumeLayout(false);
             this.tabControlReviere.ResumeLayout(false);
             this.tabReviereAlle.ResumeLayout(false);
             this.tabReviereAlle.PerformLayout();
@@ -2143,6 +2036,7 @@
             this.groupTiereAdd_Revier.ResumeLayout(false);
             this.groupTiereAdd_Birthday.ResumeLayout(false);
             this.groupTiereAdd_Gender.ResumeLayout(false);
+            this.groupTiereAdd_Gender.PerformLayout();
             this.groupTiereAdd_Species.ResumeLayout(false);
             this.groupTiereAdd_Name.ResumeLayout(false);
             this.groupTiereAdd_Name.PerformLayout();
@@ -2152,25 +2046,19 @@
             this.tabLieferantenAlle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLieferantenAlle)).EndInit();
             this.tabLieferantenHinzufügen.ResumeLayout(false);
-            this.groupLieferantenAdd_Name.ResumeLayout(false);
-            this.groupLieferantenAdd_Name.PerformLayout();
-            this.tabLog.ResumeLayout(false);
+            this.groupLieferantenAdd_ContactSurname.ResumeLayout(false);
+            this.groupLieferantenAdd_ContactSurname.PerformLayout();
+            this.groupLieferantenAdd_ContactName.ResumeLayout(false);
+            this.groupLieferantenAdd_ContactName.PerformLayout();
+            this.groupLieferantenAdd_Phone.ResumeLayout(false);
+            this.groupLieferantenAdd_Phone.PerformLayout();
             this.groupLieferantenAdd_Street.ResumeLayout(false);
             this.groupLieferantenAdd_Street.PerformLayout();
             this.groupLieferantenAdd_Stadt.ResumeLayout(false);
             this.groupLieferantenAdd_PLZ.ResumeLayout(false);
-            this.groupLieferantenAdd_Phone.ResumeLayout(false);
-            this.groupLieferantenAdd_Phone.PerformLayout();
-            this.groupLieferantenAdd_ContactName.ResumeLayout(false);
-            this.groupLieferantenAdd_ContactName.PerformLayout();
-            this.groupLieferantenAdd_ContactSurname.ResumeLayout(false);
-            this.groupLieferantenAdd_ContactSurname.PerformLayout();
-            this.groupÜbersichtReviere.ResumeLayout(false);
-            this.groupÜbersichtReviere.PerformLayout();
-            this.groupÜbersichtGebäude.ResumeLayout(false);
-            this.groupÜbersichtGebäude.PerformLayout();
-            this.groupÜbersichtGehege.ResumeLayout(false);
-            this.groupÜbersichtGehege.PerformLayout();
+            this.groupLieferantenAdd_Name.ResumeLayout(false);
+            this.groupLieferantenAdd_Name.PerformLayout();
+            this.tabLog.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2224,7 +2112,6 @@
         private System.Windows.Forms.GroupBox groupTiereAdd_Birthday;
         private System.Windows.Forms.DateTimePicker dateTimeTiereAdd_Birthday;
         private System.Windows.Forms.GroupBox groupTiereAdd_Gender;
-        private System.Windows.Forms.ComboBox comboTiereAdd_Gender;
         private System.Windows.Forms.GroupBox groupTiereAdd_Gehege;
         private System.Windows.Forms.ComboBox comboTiereAdd_Gehege;
         private System.Windows.Forms.GroupBox groupTiereAdd_Revier;
@@ -2258,7 +2145,7 @@
         private System.Windows.Forms.Label labelÜbersichtPfleger_Count;
         private System.Windows.Forms.Label labelÜbersichtPflegerLastChange;
         private System.Windows.Forms.Label labelÜbersichtPfleger;
-        private System.Windows.Forms.TabPage tabRevier;
+        private System.Windows.Forms.TabPage tabReviere;
         private System.Windows.Forms.TabControl tabControlReviere;
         private System.Windows.Forms.TabPage tabReviereAlle;
         private System.Windows.Forms.Label labelReviereAlle_Count;
@@ -2319,6 +2206,7 @@
         private System.Windows.Forms.Label labelÜbersichtReviere_Count;
         private System.Windows.Forms.Label labelÜbersichtReviereLastChange;
         private System.Windows.Forms.Label labelÜbersichtReviere;
+        private System.Windows.Forms.TextBox textTiereAdd_Gender;
     }
 }
 
