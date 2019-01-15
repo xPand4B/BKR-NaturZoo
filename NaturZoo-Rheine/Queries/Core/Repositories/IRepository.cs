@@ -27,6 +27,15 @@ namespace NaturZoo_Rheine.Queries.Core.Repositories
         DataTable GetAll(List<string> showable);
 
         /// <summary>
+        /// Get all data as <seealso cref="DataTable"/> for the specified entity.
+        /// </summary>
+        /// <param name="showable">Showable fields.</param>
+        /// <param name="foreignTable">Showable fields.</param>
+        /// <exception cref="ArgumentNullException"> if <paramref name="showable"/> is null</exception>
+        /// <exception cref="ArgumentNullException"> if <paramref name="foreignTable"/> is null</exception>
+        DataTable GetAll(List<string> showable, List<string> foreignTable);
+
+        /// <summary>
         /// Get a entity matching an id.
         /// </summary>
         /// <param name="id">Entity id.</param>
@@ -49,5 +58,10 @@ namespace NaturZoo_Rheine.Queries.Core.Repositories
         /// Get a the last changed value.
         /// </summary>
         String LastUpdate();
+
+        /// <summary>
+        /// Get dropdown items.
+        /// </summary>
+        DataTable GetDropdown();
     }
 }

@@ -96,10 +96,28 @@ namespace NaturZoo_Rheine.Queries.Core.Repositories
         /// <exception cref="ArgumentNullException"> if <paramref name="showable"/> is null</exception>
         public DataTable GetAll(List<string> showable)
         {
-            if (showable.Count == 0)
+            if(showable.Count == 0)
                 throw new ArgumentNullException("showable");
 
             return _context.GetAll(showable, _tableName);
+        }
+
+        /// <summary>
+        /// Get all data as <seealso cref="DataTable"/> for the specified entity.
+        /// </summary>
+        /// <param name="showable">Showable fields.</param>
+        /// <param name="foreignTable">Showable fields.</param>
+        /// <exception cref="ArgumentNullException"> if <paramref name="showable"/> is null</exception>
+        /// <exception cref="ArgumentNullException"> if <paramref name="foreignTable"/> is null</exception>
+        public DataTable GetAll(List<string> showable, List<string> foreignTable)
+        {
+            if(showable.Count == 0)
+                throw new ArgumentNullException("showable");
+
+            if(foreignTable.Count == 0)
+                throw new ArgumentNullException("foreignTable");
+
+            return _context.GetAll(showable, _tableName, foreignTable);
         }
 
         /// <summary>
@@ -114,8 +132,6 @@ namespace NaturZoo_Rheine.Queries.Core.Repositories
 
             throw new NotImplementedException();
         }
-
-
 
         /// <summary>
         /// Update data for the specified entity.
@@ -144,6 +160,14 @@ namespace NaturZoo_Rheine.Queries.Core.Repositories
         public String LastUpdate()
         {
             return _context.LastUpdate(_tableName);
+        }
+
+        /// <summary>
+        /// Get dropdown items.
+        /// </summary>
+        public DataTable GetDropdown()
+        {
+            return _context.GetDropdown(_tableName);
         }
     }
 }
