@@ -72,6 +72,7 @@
     <Compile Include="Database\MySqlConnector.cs" />
     <Compile Include="Hashing\HashManager.cs" />
     <Compile Include="Hashing\Hasher\Sha256Hasher.cs" />
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Animal.cs" />
     <Compile Include="Models\Building.cs" />
     <Compile Include="Models\Config.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\Territory.cs" />
     <Compile Include="Queries\Core\Repositories\GenericRepository.cs" />
+    <Compile Include="Queries\Repositories\AddressRepository.cs" />
     <Compile Include="Queries\Repositories\AnimalRepository.cs" />
     <Compile Include="Queries\Repositories\BuildingRepository.cs" />
     <Compile Include="Queries\Repositories\ConfigRepository.cs" />
