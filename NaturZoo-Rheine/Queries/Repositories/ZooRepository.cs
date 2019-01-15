@@ -92,6 +92,13 @@ namespace NaturZoo_Rheine.Queries.Repositories
         }
 
         /// <summary>
+        /// Get building dropdown data.
+        /// </summary>
+        public DataTable GetBuildingDropdown {
+            get { return buildingRepository.GetDropdown(); }
+        }
+
+        /// <summary>
         /// Creates a <see cref="Building"/> entity.
         /// </summary>
         /// <param name="animal"></param>
@@ -126,6 +133,13 @@ namespace NaturZoo_Rheine.Queries.Repositories
         /// </summary>
         public DataTable GetEnclosureGrid {
             get { return enclosureRepository.GetAll(); }
+        }
+
+        /// <summary>
+        /// Get enclosure dropdown data.
+        /// </summary>
+        public DataTable GetEnclosureDropdown {
+            get { return enclosureRepository.GetDropdown(); }
         }
 
         /// <summary>
@@ -248,6 +262,14 @@ namespace NaturZoo_Rheine.Queries.Repositories
         /// </summary>
         public DataTable GetTerritoryGrid {
             get { return territoryRepository.GetAll(); }
+        }
+
+        /// <summary>
+        /// Get territory dropdown data.
+        /// </summary>
+        public DataTable GetTerritoryDropdown
+        {
+            get { return territoryRepository.GetDropdown(); }
         }
 
         /// <summary>
