@@ -10,13 +10,15 @@ namespace NaturZoo_Rheine.Queries.Repositories
     /// </summary>
     class ZooRepository
     {
-        private readonly AnimalRepository animalRepository;
-        private readonly BuildingRepository buildingRepository;
-        private readonly EnclosureRepository enclosureRepository;
-        private readonly GuardianRepository guardianRepository;
-        private readonly LogRepository logRepository;
-        private readonly SupplierRepository supplierRepository;
-        private readonly TerritoryRepository territoryRepository;
+        private readonly AnimalRepository       animalRepository;
+        private readonly BuildingRepository     buildingRepository;
+        private readonly EnclosureRepository    enclosureRepository;
+        private readonly FoodplanRepository     foodplanRepository;
+        private readonly FoodRepository         foodRepository;
+        private readonly GuardianRepository     guardianRepository;
+        private readonly LogRepository          logRepository;
+        private readonly SupplierRepository     supplierRepository;
+        private readonly TerritoryRepository    territoryRepository;
 
 
         /// <summary>
@@ -32,6 +34,8 @@ namespace NaturZoo_Rheine.Queries.Repositories
             animalRepository    = new AnimalRepository(context);
             buildingRepository  = new BuildingRepository(context);
             enclosureRepository = new EnclosureRepository(context);
+            foodplanRepository  = new FoodplanRepository(context);
+            foodRepository      = new FoodRepository(context);
             guardianRepository  = new GuardianRepository(context);
             logRepository       = new LogRepository(context);
             supplierRepository  = new SupplierRepository(context);
@@ -52,6 +56,13 @@ namespace NaturZoo_Rheine.Queries.Repositories
         /// </summary>
         public DataTable GetAnimalGrid {
             get { return animalRepository.GetAll(); }
+        }
+
+        /// <summary>
+        /// Get animal dropdown data.
+        /// </summary>
+        public DataTable GetAnimalDropdown {
+            get { return animalRepository.GetDropdown(); }
         }
 
         /// <summary>
@@ -145,7 +156,7 @@ namespace NaturZoo_Rheine.Queries.Repositories
         /// <summary>
         /// Creates a <see cref="Enclosure"/> entity.
         /// </summary>
-        /// <param name="animal"></param>
+        /// <param name="enclosure"></param>
         /// <exception cref="ArgumentNullException"> if <paramref name="enclosure"/> is null</exception>
         public void CreateEnclosure(Enclosure enclosure)
         {
@@ -160,6 +171,87 @@ namespace NaturZoo_Rheine.Queries.Repositories
         /// </summary>
         public String GetEnclosureLastChange {
             get { return enclosureRepository.LastUpdate(); }
+        }
+        #endregion
+
+
+        #region Foodplan
+        /// <summary>
+        /// Get a count <seealso cref="String"/> from the <see cref="Foodplan"/> entity.
+        /// </summary>
+        public String GetFoodplanCount {
+            get { return foodplanRepository.Count(); }
+        }
+
+        /// <summary>
+        /// Get all data as <seealso cref="DataTable"/> for the <see cref="Foodplan"/> entity.
+        /// </summary>
+        public DataTable GetFoodplanGrid {
+            get { return foodplanRepository.GetAll(); }
+        }
+
+        /// <summary>
+        /// Creates a <see cref="Foodplan"/> entity.
+        /// </summary>
+        /// <param name="foodplan"></param>
+        /// <exception cref="ArgumentNullException"> if <paramref name="foodplan"/> is null</exception>
+        public void CreateFoodplan(Foodplan foodplan)
+        {
+            if(foodplan == null)
+                throw new ArgumentNullException("foodplan");
+
+            foodplanRepository.Add(foodplan);
+        }
+
+        /// <summary>
+        /// Get a the last changed value.
+        /// </summary>
+        public String GetFoodplanLastChange {
+            get { return foodplanRepository.LastUpdate(); }
+        }
+        #endregion
+
+
+        #region Food
+        /// <summary>
+        /// Get a count <seealso cref="String"/> from the <see cref="Food"/> entity.
+        /// </summary>
+        public String GetFoodCount {
+            get { return foodRepository.Count(); }
+        }
+
+        /// <summary>
+        /// Get all data as <seealso cref="DataTable"/> for the <see cref="Food"/> entity.
+        /// </summary>
+        public DataTable GetFoodGrid {
+            get { return foodRepository.GetAll(); }
+        }
+
+        /// <summary>
+        /// Get food dropdown data.
+        /// </summary>
+        public DataTable GetFoodDropdown {
+            get { return foodRepository.GetDropdown(); }
+        }
+
+        /// <summary>
+        /// Creates a <see cref="Food"/> entity.
+        /// </summary>
+        /// <param name="food"></param>
+        /// <exception cref="ArgumentNullException"> if <paramref name="food"/> is null</exception>
+        public void CreateFood(Food food)
+        {
+            if(food == null)
+                throw new ArgumentNullException("food");
+
+            foodRepository.Add(food);
+        }
+
+        /// <summary>
+        /// Get a the last changed value.
+        /// </summary>
+        public String GetFoodLastChange {
+            get { return foodRepository.LastUpdate(); }
         }
         #endregion
 
@@ -225,6 +317,13 @@ namespace NaturZoo_Rheine.Queries.Repositories
         /// </summary>
         public DataTable GetSupplierGrid {
             get { return supplierRepository.GetAll(); }
+        }
+
+        /// <summary>
+        /// Get supplier dropdown data.
+        /// </summary>
+        public DataTable GetSupplierDropdown {
+            get { return supplierRepository.GetDropdown(); }
         }
 
         /// <summary>

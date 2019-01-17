@@ -78,6 +78,8 @@
     <Compile Include="Models\Config.cs" />
     <Compile Include="Models\Enclosure.cs" />
     <Compile Include="Models\EntityBase.cs" />
+    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\Foodplan.cs" />
     <Compile Include="Models\Guardian.cs" />
     <Compile Include="Models\Log.cs" />
     <Compile Include="Models\Supplier.cs" />
@@ -89,6 +91,8 @@
     <Compile Include="Queries\Repositories\ConfigRepository.cs" />
     <Compile Include="Queries\Core\Repositories\IRepository.cs" />
     <Compile Include="Queries\Repositories\EnclosureRepository.cs" />
+    <Compile Include="Queries\Repositories\FoodplanRepository.cs" />
+    <Compile Include="Queries\Repositories\FoodRepository.cs" />
     <Compile Include="Queries\Repositories\GuardianRepository.cs" />
     <Compile Include="Queries\Repositories\LogRepository.cs" />
     <Compile Include="Queries\Repositories\SupplierRepository.cs" />

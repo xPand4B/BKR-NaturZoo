@@ -30,8 +30,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabÜbersicht = new System.Windows.Forms.TabPage();
+            this.groupÜbersichtFutter = new System.Windows.Forms.GroupBox();
+            this.labelÜbersichtFutterLastChanged_Value = new System.Windows.Forms.Label();
+            this.labelÜbersichtFutter_Count = new System.Windows.Forms.Label();
+            this.labelÜbersichtFutterLastChanged = new System.Windows.Forms.Label();
+            this.labelÜbersichtFutter = new System.Windows.Forms.Label();
+            this.groupÜbersichtFütterung = new System.Windows.Forms.GroupBox();
+            this.labelÜbersichtFütterungLastChanged_Value = new System.Windows.Forms.Label();
+            this.labelÜbersichtFütterung_Count = new System.Windows.Forms.Label();
+            this.labelÜbersichtFütterungLastChanged = new System.Windows.Forms.Label();
+            this.labelÜbersichtFütterung = new System.Windows.Forms.Label();
             this.groupÜbersichtGehege = new System.Windows.Forms.GroupBox();
             this.labelÜbersichtGehege_LastChanged = new System.Windows.Forms.Label();
             this.labelÜbersichtGehege_Count = new System.Windows.Forms.Label();
@@ -69,15 +81,17 @@
             this.gridPflegerAlle = new System.Windows.Forms.DataGridView();
             this.labelPflegerAlle_Pfleger = new System.Windows.Forms.Label();
             this.tabPflegerHinzufügen = new System.Windows.Forms.TabPage();
-            this.groupPflegerAdd_Straße = new System.Windows.Forms.GroupBox();
-            this.textPflegerAdd_Street = new System.Windows.Forms.TextBox();
+            this.buttonPflegerAdd_Add = new System.Windows.Forms.Button();
             this.groupPflegerAdd_Permission = new System.Windows.Forms.GroupBox();
             this.comboPflegerAdd_Permission = new System.Windows.Forms.ComboBox();
-            this.buttonPflegerAdd_Add = new System.Windows.Forms.Button();
             this.groupPflegerAdd_Revier = new System.Windows.Forms.GroupBox();
             this.comboPflegerAdd_Revier = new System.Windows.Forms.ComboBox();
             this.groupPflegerAdd_Phone = new System.Windows.Forms.GroupBox();
             this.textPflegerAdd_Phone = new System.Windows.Forms.TextBox();
+            this.groupPflegerAdd_Geb = new System.Windows.Forms.GroupBox();
+            this.dateTimePflegerAdd_Birthday = new System.Windows.Forms.DateTimePicker();
+            this.groupPflegerAdd_Straße = new System.Windows.Forms.GroupBox();
+            this.textPflegerAdd_Street = new System.Windows.Forms.TextBox();
             this.groupPflegerAdd_Stadt = new System.Windows.Forms.GroupBox();
             this.comboPflegerAdd_Stadt = new System.Windows.Forms.ComboBox();
             this.groupPflegerAdd_PLZ = new System.Windows.Forms.GroupBox();
@@ -86,8 +100,6 @@
             this.textPflegerAdd_Password = new System.Windows.Forms.TextBox();
             this.groupPflegerAdd_Email = new System.Windows.Forms.GroupBox();
             this.textPflegerAdd_Email = new System.Windows.Forms.TextBox();
-            this.groupPflegerAdd_Geb = new System.Windows.Forms.GroupBox();
-            this.dateTimePflegerAdd_Birthday = new System.Windows.Forms.DateTimePicker();
             this.groupPflegerAdd_Surname = new System.Windows.Forms.GroupBox();
             this.textPflegerAdd_Surname = new System.Windows.Forms.TextBox();
             this.groupPflegerAdd_Name = new System.Windows.Forms.GroupBox();
@@ -141,6 +153,7 @@
             this.groupTiereAdd_Birthday = new System.Windows.Forms.GroupBox();
             this.dateTimeTiereAdd_Birthday = new System.Windows.Forms.DateTimePicker();
             this.groupTiereAdd_Gender = new System.Windows.Forms.GroupBox();
+            this.textTiereAdd_Gender = new System.Windows.Forms.TextBox();
             this.groupTiereAdd_Species = new System.Windows.Forms.GroupBox();
             this.comboTiereAdd_Species = new System.Windows.Forms.ComboBox();
             this.groupTiereAdd_Name = new System.Windows.Forms.GroupBox();
@@ -152,10 +165,10 @@
             this.gridLieferantenAlle = new System.Windows.Forms.DataGridView();
             this.labelLieferantenAlle = new System.Windows.Forms.Label();
             this.tabLieferantenHinzufügen = new System.Windows.Forms.TabPage();
-            this.groupLieferantenAdd_ContactSurname = new System.Windows.Forms.GroupBox();
-            this.textLieferantenAdd_ContactSurname = new System.Windows.Forms.TextBox();
             this.groupLieferantenAdd_ContactName = new System.Windows.Forms.GroupBox();
             this.textLieferantenAdd_ContactName = new System.Windows.Forms.TextBox();
+            this.groupLieferantenAdd_ContactSurname = new System.Windows.Forms.GroupBox();
+            this.textLieferantenAdd_ContactSurname = new System.Windows.Forms.TextBox();
             this.groupLieferantenAdd_Phone = new System.Windows.Forms.GroupBox();
             this.textLieferantenAdd_Phone = new System.Windows.Forms.TextBox();
             this.groupLieferantenAdd_Street = new System.Windows.Forms.GroupBox();
@@ -167,13 +180,45 @@
             this.buttonLieferantenAdd_Add = new System.Windows.Forms.Button();
             this.groupLieferantenAdd_Name = new System.Windows.Forms.GroupBox();
             this.textLieferantenAdd_Name = new System.Windows.Forms.TextBox();
+            this.tabFutter = new System.Windows.Forms.TabPage();
+            this.tabControlFutter = new System.Windows.Forms.TabControl();
+            this.tabFutterAlle = new System.Windows.Forms.TabPage();
+            this.labelFutterAlle_Count = new System.Windows.Forms.Label();
+            this.gridFutterAlle = new System.Windows.Forms.DataGridView();
+            this.labelFutterAlle = new System.Windows.Forms.Label();
+            this.tabFutterHinzufügen = new System.Windows.Forms.TabPage();
+            this.buttonFutterAdd_Add = new System.Windows.Forms.Button();
+            this.groupFutterAdd_Supplier = new System.Windows.Forms.GroupBox();
+            this.comboFutterAdd_Lieferant = new System.Windows.Forms.ComboBox();
+            this.groupFutterAdd_Amount = new System.Windows.Forms.GroupBox();
+            this.numericFutterAdd_Amount = new System.Windows.Forms.NumericUpDown();
+            this.groupFutterAdd_Name = new System.Windows.Forms.GroupBox();
+            this.textFutterAdd_Name = new System.Windows.Forms.TextBox();
             this.tabFütterung = new System.Windows.Forms.TabPage();
+            this.tabControlFütterung = new System.Windows.Forms.TabControl();
+            this.tabFütterungAlle = new System.Windows.Forms.TabPage();
+            this.labelFütterungAlle_Count = new System.Windows.Forms.Label();
+            this.gridFütterungAlle = new System.Windows.Forms.DataGridView();
+            this.labelFütterungAlle = new System.Windows.Forms.Label();
+            this.tabFütterungHinzufügen = new System.Windows.Forms.TabPage();
+            this.buttonFütterungAdd_Add = new System.Windows.Forms.Button();
+            this.groupFütterungAdd_Amount = new System.Windows.Forms.GroupBox();
+            this.numericFütterungAdd_Amount = new System.Windows.Forms.NumericUpDown();
+            this.groupFütterungAdd_Weekday = new System.Windows.Forms.GroupBox();
+            this.textFütterungAdd_Weekday = new System.Windows.Forms.TextBox();
+            this.groupFütterungAdd_Time = new System.Windows.Forms.GroupBox();
+            this.dateTimeFütterungAdd_Time = new System.Windows.Forms.DateTimePicker();
+            this.groupFütterungAdd_Food = new System.Windows.Forms.GroupBox();
+            this.comboFütterungAdd_Food = new System.Windows.Forms.ComboBox();
+            this.groupFütterungAdd_Animal = new System.Windows.Forms.GroupBox();
+            this.comboFütterungAdd_Animal = new System.Windows.Forms.ComboBox();
             this.tabLog = new System.Windows.Forms.TabPage();
             this.listBoxLog = new System.Windows.Forms.ListBox();
             this.buttonChangePassword = new System.Windows.Forms.Button();
-            this.textTiereAdd_Gender = new System.Windows.Forms.TextBox();
             this.tabControlMain.SuspendLayout();
             this.tabÜbersicht.SuspendLayout();
+            this.groupÜbersichtFutter.SuspendLayout();
+            this.groupÜbersichtFütterung.SuspendLayout();
             this.groupÜbersichtGehege.SuspendLayout();
             this.groupÜbersichtGebäude.SuspendLayout();
             this.groupÜbersichtReviere.SuspendLayout();
@@ -185,15 +230,15 @@
             this.tabPflegerAlle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPflegerAlle)).BeginInit();
             this.tabPflegerHinzufügen.SuspendLayout();
-            this.groupPflegerAdd_Straße.SuspendLayout();
             this.groupPflegerAdd_Permission.SuspendLayout();
             this.groupPflegerAdd_Revier.SuspendLayout();
             this.groupPflegerAdd_Phone.SuspendLayout();
+            this.groupPflegerAdd_Geb.SuspendLayout();
+            this.groupPflegerAdd_Straße.SuspendLayout();
             this.groupPflegerAdd_Stadt.SuspendLayout();
             this.groupPflegerAdd_PLZ.SuspendLayout();
             this.groupPflegerAdd_Password.SuspendLayout();
             this.groupPflegerAdd_Email.SuspendLayout();
-            this.groupPflegerAdd_Geb.SuspendLayout();
             this.groupPflegerAdd_Surname.SuspendLayout();
             this.groupPflegerAdd_Name.SuspendLayout();
             this.tabReviere.SuspendLayout();
@@ -232,13 +277,33 @@
             this.tabLieferantenAlle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLieferantenAlle)).BeginInit();
             this.tabLieferantenHinzufügen.SuspendLayout();
-            this.groupLieferantenAdd_ContactSurname.SuspendLayout();
             this.groupLieferantenAdd_ContactName.SuspendLayout();
+            this.groupLieferantenAdd_ContactSurname.SuspendLayout();
             this.groupLieferantenAdd_Phone.SuspendLayout();
             this.groupLieferantenAdd_Street.SuspendLayout();
             this.groupLieferantenAdd_Stadt.SuspendLayout();
             this.groupLieferantenAdd_PLZ.SuspendLayout();
             this.groupLieferantenAdd_Name.SuspendLayout();
+            this.tabFutter.SuspendLayout();
+            this.tabControlFutter.SuspendLayout();
+            this.tabFutterAlle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridFutterAlle)).BeginInit();
+            this.tabFutterHinzufügen.SuspendLayout();
+            this.groupFutterAdd_Supplier.SuspendLayout();
+            this.groupFutterAdd_Amount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFutterAdd_Amount)).BeginInit();
+            this.groupFutterAdd_Name.SuspendLayout();
+            this.tabFütterung.SuspendLayout();
+            this.tabControlFütterung.SuspendLayout();
+            this.tabFütterungAlle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridFütterungAlle)).BeginInit();
+            this.tabFütterungHinzufügen.SuspendLayout();
+            this.groupFütterungAdd_Amount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFütterungAdd_Amount)).BeginInit();
+            this.groupFütterungAdd_Weekday.SuspendLayout();
+            this.groupFütterungAdd_Time.SuspendLayout();
+            this.groupFütterungAdd_Food.SuspendLayout();
+            this.groupFütterungAdd_Animal.SuspendLayout();
             this.tabLog.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -251,6 +316,7 @@
             this.tabControlMain.Controls.Add(this.tabGehege);
             this.tabControlMain.Controls.Add(this.tabTiere);
             this.tabControlMain.Controls.Add(this.tabLieferanten);
+            this.tabControlMain.Controls.Add(this.tabFutter);
             this.tabControlMain.Controls.Add(this.tabFütterung);
             this.tabControlMain.Controls.Add(this.tabLog);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
@@ -260,11 +326,14 @@
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(1137, 438);
             this.tabControlMain.TabIndex = 0;
+            this.tabControlMain.TabStop = false;
             this.tabControlMain.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControlMain_Selected);
             // 
             // tabÜbersicht
             // 
             this.tabÜbersicht.BackColor = System.Drawing.SystemColors.Window;
+            this.tabÜbersicht.Controls.Add(this.groupÜbersichtFutter);
+            this.tabÜbersicht.Controls.Add(this.groupÜbersichtFütterung);
             this.tabÜbersicht.Controls.Add(this.groupÜbersichtGehege);
             this.tabÜbersicht.Controls.Add(this.groupÜbersichtGebäude);
             this.tabÜbersicht.Controls.Add(this.groupÜbersichtReviere);
@@ -277,6 +346,114 @@
             this.tabÜbersicht.TabIndex = 2;
             this.tabÜbersicht.Text = "Übersicht";
             // 
+            // groupÜbersichtFutter
+            // 
+            this.groupÜbersichtFutter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(188)))));
+            this.groupÜbersichtFutter.Controls.Add(this.labelÜbersichtFutterLastChanged_Value);
+            this.groupÜbersichtFutter.Controls.Add(this.labelÜbersichtFutter_Count);
+            this.groupÜbersichtFutter.Controls.Add(this.labelÜbersichtFutterLastChanged);
+            this.groupÜbersichtFutter.Controls.Add(this.labelÜbersichtFutter);
+            this.groupÜbersichtFutter.Location = new System.Drawing.Point(396, 295);
+            this.groupÜbersichtFutter.Name = "groupÜbersichtFutter";
+            this.groupÜbersichtFutter.Size = new System.Drawing.Size(335, 94);
+            this.groupÜbersichtFutter.TabIndex = 15;
+            this.groupÜbersichtFutter.TabStop = false;
+            this.groupÜbersichtFutter.Text = "Futter";
+            // 
+            // labelÜbersichtFutterLastChanged_Value
+            // 
+            this.labelÜbersichtFutterLastChanged_Value.AutoSize = true;
+            this.labelÜbersichtFutterLastChanged_Value.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtFutterLastChanged_Value.Location = new System.Drawing.Point(110, 63);
+            this.labelÜbersichtFutterLastChanged_Value.Name = "labelÜbersichtFutterLastChanged_Value";
+            this.labelÜbersichtFutterLastChanged_Value.Size = new System.Drawing.Size(97, 17);
+            this.labelÜbersichtFutterLastChanged_Value.TabIndex = 8;
+            this.labelÜbersichtFutterLastChanged_Value.Text = "undefined";
+            // 
+            // labelÜbersichtFutter_Count
+            // 
+            this.labelÜbersichtFutter_Count.AutoSize = true;
+            this.labelÜbersichtFutter_Count.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtFutter_Count.Location = new System.Drawing.Point(110, 36);
+            this.labelÜbersichtFutter_Count.Name = "labelÜbersichtFutter_Count";
+            this.labelÜbersichtFutter_Count.Size = new System.Drawing.Size(97, 17);
+            this.labelÜbersichtFutter_Count.TabIndex = 7;
+            this.labelÜbersichtFutter_Count.Text = "undefined";
+            // 
+            // labelÜbersichtFutterLastChanged
+            // 
+            this.labelÜbersichtFutterLastChanged.AutoSize = true;
+            this.labelÜbersichtFutterLastChanged.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtFutterLastChanged.Location = new System.Drawing.Point(6, 63);
+            this.labelÜbersichtFutterLastChanged.Name = "labelÜbersichtFutterLastChanged";
+            this.labelÜbersichtFutterLastChanged.Size = new System.Drawing.Size(98, 17);
+            this.labelÜbersichtFutterLastChanged.TabIndex = 6;
+            this.labelÜbersichtFutterLastChanged.Text = "Geändert:";
+            // 
+            // labelÜbersichtFutter
+            // 
+            this.labelÜbersichtFutter.AutoSize = true;
+            this.labelÜbersichtFutter.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtFutter.Location = new System.Drawing.Point(6, 36);
+            this.labelÜbersichtFutter.Name = "labelÜbersichtFutter";
+            this.labelÜbersichtFutter.Size = new System.Drawing.Size(76, 17);
+            this.labelÜbersichtFutter.TabIndex = 2;
+            this.labelÜbersichtFutter.Text = "Anzahl:";
+            // 
+            // groupÜbersichtFütterung
+            // 
+            this.groupÜbersichtFütterung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(216)))), ((int)(((byte)(220)))));
+            this.groupÜbersichtFütterung.Controls.Add(this.labelÜbersichtFütterungLastChanged_Value);
+            this.groupÜbersichtFütterung.Controls.Add(this.labelÜbersichtFütterung_Count);
+            this.groupÜbersichtFütterung.Controls.Add(this.labelÜbersichtFütterungLastChanged);
+            this.groupÜbersichtFütterung.Controls.Add(this.labelÜbersichtFütterung);
+            this.groupÜbersichtFütterung.Location = new System.Drawing.Point(20, 295);
+            this.groupÜbersichtFütterung.Name = "groupÜbersichtFütterung";
+            this.groupÜbersichtFütterung.Size = new System.Drawing.Size(335, 94);
+            this.groupÜbersichtFütterung.TabIndex = 14;
+            this.groupÜbersichtFütterung.TabStop = false;
+            this.groupÜbersichtFütterung.Text = "Fütterungen";
+            // 
+            // labelÜbersichtFütterungLastChanged_Value
+            // 
+            this.labelÜbersichtFütterungLastChanged_Value.AutoSize = true;
+            this.labelÜbersichtFütterungLastChanged_Value.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtFütterungLastChanged_Value.Location = new System.Drawing.Point(110, 63);
+            this.labelÜbersichtFütterungLastChanged_Value.Name = "labelÜbersichtFütterungLastChanged_Value";
+            this.labelÜbersichtFütterungLastChanged_Value.Size = new System.Drawing.Size(97, 17);
+            this.labelÜbersichtFütterungLastChanged_Value.TabIndex = 8;
+            this.labelÜbersichtFütterungLastChanged_Value.Text = "undefined";
+            // 
+            // labelÜbersichtFütterung_Count
+            // 
+            this.labelÜbersichtFütterung_Count.AutoSize = true;
+            this.labelÜbersichtFütterung_Count.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtFütterung_Count.Location = new System.Drawing.Point(110, 36);
+            this.labelÜbersichtFütterung_Count.Name = "labelÜbersichtFütterung_Count";
+            this.labelÜbersichtFütterung_Count.Size = new System.Drawing.Size(97, 17);
+            this.labelÜbersichtFütterung_Count.TabIndex = 7;
+            this.labelÜbersichtFütterung_Count.Text = "undefined";
+            // 
+            // labelÜbersichtFütterungLastChanged
+            // 
+            this.labelÜbersichtFütterungLastChanged.AutoSize = true;
+            this.labelÜbersichtFütterungLastChanged.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtFütterungLastChanged.Location = new System.Drawing.Point(6, 63);
+            this.labelÜbersichtFütterungLastChanged.Name = "labelÜbersichtFütterungLastChanged";
+            this.labelÜbersichtFütterungLastChanged.Size = new System.Drawing.Size(98, 17);
+            this.labelÜbersichtFütterungLastChanged.TabIndex = 6;
+            this.labelÜbersichtFütterungLastChanged.Text = "Geändert:";
+            // 
+            // labelÜbersichtFütterung
+            // 
+            this.labelÜbersichtFütterung.AutoSize = true;
+            this.labelÜbersichtFütterung.Font = new System.Drawing.Font("BankGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelÜbersichtFütterung.Location = new System.Drawing.Point(6, 36);
+            this.labelÜbersichtFütterung.Name = "labelÜbersichtFütterung";
+            this.labelÜbersichtFütterung.Size = new System.Drawing.Size(76, 17);
+            this.labelÜbersichtFütterung.TabIndex = 2;
+            this.labelÜbersichtFütterung.Text = "Anzahl:";
+            // 
             // groupÜbersichtGehege
             // 
             this.groupÜbersichtGehege.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(179)))));
@@ -284,7 +461,7 @@
             this.groupÜbersichtGehege.Controls.Add(this.labelÜbersichtGehege_Count);
             this.groupÜbersichtGehege.Controls.Add(this.labelÜbersichtGehegeLastChanged);
             this.groupÜbersichtGehege.Controls.Add(this.labelÜbersichtGehege);
-            this.groupÜbersichtGehege.Location = new System.Drawing.Point(772, 161);
+            this.groupÜbersichtGehege.Location = new System.Drawing.Point(772, 160);
             this.groupÜbersichtGehege.Name = "groupÜbersichtGehege";
             this.groupÜbersichtGehege.Size = new System.Drawing.Size(335, 94);
             this.groupÜbersichtGehege.TabIndex = 13;
@@ -338,7 +515,7 @@
             this.groupÜbersichtGebäude.Controls.Add(this.labelÜbersichtGebäude_Count);
             this.groupÜbersichtGebäude.Controls.Add(this.labelÜbersichtGebäudeLastChanged);
             this.groupÜbersichtGebäude.Controls.Add(this.labelÜbersichtGebäude);
-            this.groupÜbersichtGebäude.Location = new System.Drawing.Point(396, 161);
+            this.groupÜbersichtGebäude.Location = new System.Drawing.Point(396, 160);
             this.groupÜbersichtGebäude.Name = "groupÜbersichtGebäude";
             this.groupÜbersichtGebäude.Size = new System.Drawing.Size(335, 94);
             this.groupÜbersichtGebäude.TabIndex = 12;
@@ -392,7 +569,7 @@
             this.groupÜbersichtReviere.Controls.Add(this.labelÜbersichtReviere_Count);
             this.groupÜbersichtReviere.Controls.Add(this.labelÜbersichtReviereLastChange);
             this.groupÜbersichtReviere.Controls.Add(this.labelÜbersichtReviere);
-            this.groupÜbersichtReviere.Location = new System.Drawing.Point(20, 161);
+            this.groupÜbersichtReviere.Location = new System.Drawing.Point(20, 160);
             this.groupÜbersichtReviere.Name = "groupÜbersichtReviere";
             this.groupÜbersichtReviere.Size = new System.Drawing.Size(335, 94);
             this.groupÜbersichtReviere.TabIndex = 11;
@@ -621,6 +798,7 @@
             this.tabControlPfleger.SelectedIndex = 0;
             this.tabControlPfleger.Size = new System.Drawing.Size(1137, 408);
             this.tabControlPfleger.TabIndex = 0;
+            this.tabControlPfleger.TabStop = false;
             // 
             // tabPflegerAlle
             // 
@@ -657,7 +835,7 @@
             this.gridPflegerAlle.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -684,16 +862,16 @@
             // 
             // tabPflegerHinzufügen
             // 
-            this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Straße);
-            this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Permission);
             this.tabPflegerHinzufügen.Controls.Add(this.buttonPflegerAdd_Add);
+            this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Permission);
             this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Revier);
             this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Phone);
+            this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Geb);
+            this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Straße);
             this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Stadt);
             this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_PLZ);
             this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Password);
             this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Email);
-            this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Geb);
             this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Surname);
             this.tabPflegerHinzufügen.Controls.Add(this.groupPflegerAdd_Name);
             this.tabPflegerHinzufügen.Location = new System.Drawing.Point(4, 28);
@@ -704,51 +882,6 @@
             this.tabPflegerHinzufügen.Text = "Hinzufügen";
             this.tabPflegerHinzufügen.UseVisualStyleBackColor = true;
             // 
-            // groupPflegerAdd_Straße
-            // 
-            this.groupPflegerAdd_Straße.Controls.Add(this.textPflegerAdd_Street);
-            this.groupPflegerAdd_Straße.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupPflegerAdd_Straße.Location = new System.Drawing.Point(435, 178);
-            this.groupPflegerAdd_Straße.Name = "groupPflegerAdd_Straße";
-            this.groupPflegerAdd_Straße.Size = new System.Drawing.Size(278, 66);
-            this.groupPflegerAdd_Straße.TabIndex = 24;
-            this.groupPflegerAdd_Straße.TabStop = false;
-            this.groupPflegerAdd_Straße.Text = "Straße incl. Nr.";
-            // 
-            // textPflegerAdd_Street
-            // 
-            this.textPflegerAdd_Street.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPflegerAdd_Street.Location = new System.Drawing.Point(6, 23);
-            this.textPflegerAdd_Street.MaxLength = 256;
-            this.textPflegerAdd_Street.Name = "textPflegerAdd_Street";
-            this.textPflegerAdd_Street.Size = new System.Drawing.Size(266, 26);
-            this.textPflegerAdd_Street.TabIndex = 1;
-            this.textPflegerAdd_Street.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
-            // 
-            // groupPflegerAdd_Permission
-            // 
-            this.groupPflegerAdd_Permission.Controls.Add(this.comboPflegerAdd_Permission);
-            this.groupPflegerAdd_Permission.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupPflegerAdd_Permission.Location = new System.Drawing.Point(818, 178);
-            this.groupPflegerAdd_Permission.Name = "groupPflegerAdd_Permission";
-            this.groupPflegerAdd_Permission.Size = new System.Drawing.Size(278, 66);
-            this.groupPflegerAdd_Permission.TabIndex = 23;
-            this.groupPflegerAdd_Permission.TabStop = false;
-            this.groupPflegerAdd_Permission.Text = "Zugriffsrechte";
-            this.groupPflegerAdd_Permission.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
-            // 
-            // comboPflegerAdd_Permission
-            // 
-            this.comboPflegerAdd_Permission.BackColor = System.Drawing.SystemColors.Window;
-            this.comboPflegerAdd_Permission.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboPflegerAdd_Permission.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboPflegerAdd_Permission.FormattingEnabled = true;
-            this.comboPflegerAdd_Permission.Location = new System.Drawing.Point(6, 23);
-            this.comboPflegerAdd_Permission.Name = "comboPflegerAdd_Permission";
-            this.comboPflegerAdd_Permission.Size = new System.Drawing.Size(266, 26);
-            this.comboPflegerAdd_Permission.TabIndex = 0;
-            this.comboPflegerAdd_Permission.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
-            // 
             // buttonPflegerAdd_Add
             // 
             this.buttonPflegerAdd_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
@@ -758,10 +891,34 @@
             this.buttonPflegerAdd_Add.Location = new System.Drawing.Point(818, 289);
             this.buttonPflegerAdd_Add.Name = "buttonPflegerAdd_Add";
             this.buttonPflegerAdd_Add.Size = new System.Drawing.Size(278, 33);
-            this.buttonPflegerAdd_Add.TabIndex = 16;
+            this.buttonPflegerAdd_Add.TabIndex = 42;
             this.buttonPflegerAdd_Add.Text = "Pfleger hinzufügen";
             this.buttonPflegerAdd_Add.UseVisualStyleBackColor = false;
             this.buttonPflegerAdd_Add.Click += new System.EventHandler(this.buttonPflegerAdd_Add_Click);
+            // 
+            // groupPflegerAdd_Permission
+            // 
+            this.groupPflegerAdd_Permission.Controls.Add(this.comboPflegerAdd_Permission);
+            this.groupPflegerAdd_Permission.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupPflegerAdd_Permission.Location = new System.Drawing.Point(818, 178);
+            this.groupPflegerAdd_Permission.Name = "groupPflegerAdd_Permission";
+            this.groupPflegerAdd_Permission.Size = new System.Drawing.Size(278, 66);
+            this.groupPflegerAdd_Permission.TabIndex = 41;
+            this.groupPflegerAdd_Permission.TabStop = false;
+            this.groupPflegerAdd_Permission.Text = "Zugriffsrechte";
+            // 
+            // comboPflegerAdd_Permission
+            // 
+            this.comboPflegerAdd_Permission.BackColor = System.Drawing.SystemColors.Window;
+            this.comboPflegerAdd_Permission.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboPflegerAdd_Permission.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboPflegerAdd_Permission.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboPflegerAdd_Permission.FormattingEnabled = true;
+            this.comboPflegerAdd_Permission.Location = new System.Drawing.Point(6, 23);
+            this.comboPflegerAdd_Permission.Name = "comboPflegerAdd_Permission";
+            this.comboPflegerAdd_Permission.Size = new System.Drawing.Size(266, 26);
+            this.comboPflegerAdd_Permission.TabIndex = 11;
+            this.comboPflegerAdd_Permission.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
             // 
             // groupPflegerAdd_Revier
             // 
@@ -770,21 +927,21 @@
             this.groupPflegerAdd_Revier.Location = new System.Drawing.Point(818, 91);
             this.groupPflegerAdd_Revier.Name = "groupPflegerAdd_Revier";
             this.groupPflegerAdd_Revier.Size = new System.Drawing.Size(278, 66);
-            this.groupPflegerAdd_Revier.TabIndex = 22;
+            this.groupPflegerAdd_Revier.TabIndex = 40;
             this.groupPflegerAdd_Revier.TabStop = false;
             this.groupPflegerAdd_Revier.Text = "Revier";
-            this.groupPflegerAdd_Revier.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
             // 
             // comboPflegerAdd_Revier
             // 
             this.comboPflegerAdd_Revier.BackColor = System.Drawing.SystemColors.Window;
+            this.comboPflegerAdd_Revier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboPflegerAdd_Revier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPflegerAdd_Revier.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPflegerAdd_Revier.FormattingEnabled = true;
             this.comboPflegerAdd_Revier.Location = new System.Drawing.Point(6, 23);
             this.comboPflegerAdd_Revier.Name = "comboPflegerAdd_Revier";
             this.comboPflegerAdd_Revier.Size = new System.Drawing.Size(266, 26);
-            this.comboPflegerAdd_Revier.TabIndex = 0;
+            this.comboPflegerAdd_Revier.TabIndex = 10;
             this.comboPflegerAdd_Revier.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
             // 
             // groupPflegerAdd_Phone
@@ -794,19 +951,67 @@
             this.groupPflegerAdd_Phone.Location = new System.Drawing.Point(818, 10);
             this.groupPflegerAdd_Phone.Name = "groupPflegerAdd_Phone";
             this.groupPflegerAdd_Phone.Size = new System.Drawing.Size(278, 66);
-            this.groupPflegerAdd_Phone.TabIndex = 21;
+            this.groupPflegerAdd_Phone.TabIndex = 39;
             this.groupPflegerAdd_Phone.TabStop = false;
             this.groupPflegerAdd_Phone.Text = "Tel.:";
             // 
             // textPflegerAdd_Phone
             // 
+            this.textPflegerAdd_Phone.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textPflegerAdd_Phone.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPflegerAdd_Phone.Location = new System.Drawing.Point(6, 20);
             this.textPflegerAdd_Phone.MaxLength = 11;
             this.textPflegerAdd_Phone.Name = "textPflegerAdd_Phone";
             this.textPflegerAdd_Phone.Size = new System.Drawing.Size(266, 26);
-            this.textPflegerAdd_Phone.TabIndex = 2;
+            this.textPflegerAdd_Phone.TabIndex = 9;
             this.textPflegerAdd_Phone.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
+            // 
+            // groupPflegerAdd_Geb
+            // 
+            this.groupPflegerAdd_Geb.Controls.Add(this.dateTimePflegerAdd_Birthday);
+            this.groupPflegerAdd_Geb.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupPflegerAdd_Geb.Location = new System.Drawing.Point(435, 271);
+            this.groupPflegerAdd_Geb.Name = "groupPflegerAdd_Geb";
+            this.groupPflegerAdd_Geb.Size = new System.Drawing.Size(278, 66);
+            this.groupPflegerAdd_Geb.TabIndex = 38;
+            this.groupPflegerAdd_Geb.TabStop = false;
+            this.groupPflegerAdd_Geb.Text = "Geburtstag";
+            // 
+            // dateTimePflegerAdd_Birthday
+            // 
+            this.dateTimePflegerAdd_Birthday.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateTimePflegerAdd_Birthday.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePflegerAdd_Birthday.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePflegerAdd_Birthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePflegerAdd_Birthday.Location = new System.Drawing.Point(6, 23);
+            this.dateTimePflegerAdd_Birthday.MaxDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dateTimePflegerAdd_Birthday.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
+            this.dateTimePflegerAdd_Birthday.Name = "dateTimePflegerAdd_Birthday";
+            this.dateTimePflegerAdd_Birthday.Size = new System.Drawing.Size(266, 26);
+            this.dateTimePflegerAdd_Birthday.TabIndex = 8;
+            this.dateTimePflegerAdd_Birthday.Value = new System.DateTime(1999, 1, 1, 0, 0, 0, 0);
+            // 
+            // groupPflegerAdd_Straße
+            // 
+            this.groupPflegerAdd_Straße.Controls.Add(this.textPflegerAdd_Street);
+            this.groupPflegerAdd_Straße.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupPflegerAdd_Straße.Location = new System.Drawing.Point(435, 178);
+            this.groupPflegerAdd_Straße.Name = "groupPflegerAdd_Straße";
+            this.groupPflegerAdd_Straße.Size = new System.Drawing.Size(278, 66);
+            this.groupPflegerAdd_Straße.TabIndex = 37;
+            this.groupPflegerAdd_Straße.TabStop = false;
+            this.groupPflegerAdd_Straße.Text = "Straße incl. Nr.";
+            // 
+            // textPflegerAdd_Street
+            // 
+            this.textPflegerAdd_Street.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textPflegerAdd_Street.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPflegerAdd_Street.Location = new System.Drawing.Point(6, 23);
+            this.textPflegerAdd_Street.MaxLength = 256;
+            this.textPflegerAdd_Street.Name = "textPflegerAdd_Street";
+            this.textPflegerAdd_Street.Size = new System.Drawing.Size(266, 26);
+            this.textPflegerAdd_Street.TabIndex = 7;
+            this.textPflegerAdd_Street.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
             // 
             // groupPflegerAdd_Stadt
             // 
@@ -815,20 +1020,20 @@
             this.groupPflegerAdd_Stadt.Location = new System.Drawing.Point(435, 91);
             this.groupPflegerAdd_Stadt.Name = "groupPflegerAdd_Stadt";
             this.groupPflegerAdd_Stadt.Size = new System.Drawing.Size(278, 66);
-            this.groupPflegerAdd_Stadt.TabIndex = 20;
+            this.groupPflegerAdd_Stadt.TabIndex = 33;
             this.groupPflegerAdd_Stadt.TabStop = false;
             this.groupPflegerAdd_Stadt.Text = "Stadt";
-            this.groupPflegerAdd_Stadt.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
             // 
             // comboPflegerAdd_Stadt
             // 
             this.comboPflegerAdd_Stadt.BackColor = System.Drawing.SystemColors.Window;
+            this.comboPflegerAdd_Stadt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.comboPflegerAdd_Stadt.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPflegerAdd_Stadt.FormattingEnabled = true;
             this.comboPflegerAdd_Stadt.Location = new System.Drawing.Point(6, 22);
             this.comboPflegerAdd_Stadt.Name = "comboPflegerAdd_Stadt";
             this.comboPflegerAdd_Stadt.Size = new System.Drawing.Size(266, 26);
-            this.comboPflegerAdd_Stadt.TabIndex = 1;
+            this.comboPflegerAdd_Stadt.TabIndex = 6;
             this.comboPflegerAdd_Stadt.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
             // 
             // groupPflegerAdd_PLZ
@@ -838,20 +1043,20 @@
             this.groupPflegerAdd_PLZ.Location = new System.Drawing.Point(435, 10);
             this.groupPflegerAdd_PLZ.Name = "groupPflegerAdd_PLZ";
             this.groupPflegerAdd_PLZ.Size = new System.Drawing.Size(278, 66);
-            this.groupPflegerAdd_PLZ.TabIndex = 19;
+            this.groupPflegerAdd_PLZ.TabIndex = 32;
             this.groupPflegerAdd_PLZ.TabStop = false;
             this.groupPflegerAdd_PLZ.Text = "PLZ";
-            this.groupPflegerAdd_PLZ.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
             // 
             // comboPflegerAdd_PLZ
             // 
             this.comboPflegerAdd_PLZ.BackColor = System.Drawing.SystemColors.Window;
+            this.comboPflegerAdd_PLZ.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.comboPflegerAdd_PLZ.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPflegerAdd_PLZ.FormattingEnabled = true;
             this.comboPflegerAdd_PLZ.Location = new System.Drawing.Point(6, 23);
             this.comboPflegerAdd_PLZ.Name = "comboPflegerAdd_PLZ";
             this.comboPflegerAdd_PLZ.Size = new System.Drawing.Size(266, 26);
-            this.comboPflegerAdd_PLZ.TabIndex = 1;
+            this.comboPflegerAdd_PLZ.TabIndex = 5;
             this.comboPflegerAdd_PLZ.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
             // 
             // groupPflegerAdd_Password
@@ -861,20 +1066,23 @@
             this.groupPflegerAdd_Password.Location = new System.Drawing.Point(20, 271);
             this.groupPflegerAdd_Password.Name = "groupPflegerAdd_Password";
             this.groupPflegerAdd_Password.Size = new System.Drawing.Size(278, 66);
-            this.groupPflegerAdd_Password.TabIndex = 18;
+            this.groupPflegerAdd_Password.TabIndex = 31;
             this.groupPflegerAdd_Password.TabStop = false;
             this.groupPflegerAdd_Password.Text = "Password";
             // 
             // textPflegerAdd_Password
             // 
+            this.textPflegerAdd_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textPflegerAdd_Password.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPflegerAdd_Password.Location = new System.Drawing.Point(6, 23);
             this.textPflegerAdd_Password.MaxLength = 256;
             this.textPflegerAdd_Password.Name = "textPflegerAdd_Password";
             this.textPflegerAdd_Password.ReadOnly = true;
             this.textPflegerAdd_Password.Size = new System.Drawing.Size(266, 26);
-            this.textPflegerAdd_Password.TabIndex = 1;
+            this.textPflegerAdd_Password.TabIndex = 4;
+            this.textPflegerAdd_Password.TabStop = false;
             this.textPflegerAdd_Password.Text = "Start1000";
+            this.textPflegerAdd_Password.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
             // 
             // groupPflegerAdd_Email
             // 
@@ -883,43 +1091,20 @@
             this.groupPflegerAdd_Email.Location = new System.Drawing.Point(20, 178);
             this.groupPflegerAdd_Email.Name = "groupPflegerAdd_Email";
             this.groupPflegerAdd_Email.Size = new System.Drawing.Size(278, 66);
-            this.groupPflegerAdd_Email.TabIndex = 17;
+            this.groupPflegerAdd_Email.TabIndex = 30;
             this.groupPflegerAdd_Email.TabStop = false;
             this.groupPflegerAdd_Email.Text = "E-Mail";
             // 
             // textPflegerAdd_Email
             // 
+            this.textPflegerAdd_Email.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textPflegerAdd_Email.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPflegerAdd_Email.Location = new System.Drawing.Point(6, 23);
             this.textPflegerAdd_Email.MaxLength = 256;
             this.textPflegerAdd_Email.Name = "textPflegerAdd_Email";
             this.textPflegerAdd_Email.Size = new System.Drawing.Size(266, 26);
-            this.textPflegerAdd_Email.TabIndex = 1;
+            this.textPflegerAdd_Email.TabIndex = 3;
             this.textPflegerAdd_Email.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
-            // 
-            // groupPflegerAdd_Geb
-            // 
-            this.groupPflegerAdd_Geb.Controls.Add(this.dateTimePflegerAdd_Birthday);
-            this.groupPflegerAdd_Geb.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupPflegerAdd_Geb.Location = new System.Drawing.Point(435, 271);
-            this.groupPflegerAdd_Geb.Name = "groupPflegerAdd_Geb";
-            this.groupPflegerAdd_Geb.Size = new System.Drawing.Size(278, 66);
-            this.groupPflegerAdd_Geb.TabIndex = 3;
-            this.groupPflegerAdd_Geb.TabStop = false;
-            this.groupPflegerAdd_Geb.Text = "Geburtstag";
-            // 
-            // dateTimePflegerAdd_Birthday
-            // 
-            this.dateTimePflegerAdd_Birthday.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePflegerAdd_Birthday.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePflegerAdd_Birthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePflegerAdd_Birthday.Location = new System.Drawing.Point(6, 23);
-            this.dateTimePflegerAdd_Birthday.MaxDate = new System.DateTime(2018, 11, 28, 0, 0, 0, 0);
-            this.dateTimePflegerAdd_Birthday.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
-            this.dateTimePflegerAdd_Birthday.Name = "dateTimePflegerAdd_Birthday";
-            this.dateTimePflegerAdd_Birthday.Size = new System.Drawing.Size(266, 26);
-            this.dateTimePflegerAdd_Birthday.TabIndex = 5;
-            this.dateTimePflegerAdd_Birthday.Value = new System.DateTime(2018, 11, 28, 0, 0, 0, 0);
             // 
             // groupPflegerAdd_Surname
             // 
@@ -928,18 +1113,19 @@
             this.groupPflegerAdd_Surname.Location = new System.Drawing.Point(20, 91);
             this.groupPflegerAdd_Surname.Name = "groupPflegerAdd_Surname";
             this.groupPflegerAdd_Surname.Size = new System.Drawing.Size(278, 66);
-            this.groupPflegerAdd_Surname.TabIndex = 2;
+            this.groupPflegerAdd_Surname.TabIndex = 27;
             this.groupPflegerAdd_Surname.TabStop = false;
             this.groupPflegerAdd_Surname.Text = "Nachname";
             // 
             // textPflegerAdd_Surname
             // 
+            this.textPflegerAdd_Surname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textPflegerAdd_Surname.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPflegerAdd_Surname.Location = new System.Drawing.Point(6, 23);
             this.textPflegerAdd_Surname.MaxLength = 256;
             this.textPflegerAdd_Surname.Name = "textPflegerAdd_Surname";
             this.textPflegerAdd_Surname.Size = new System.Drawing.Size(266, 26);
-            this.textPflegerAdd_Surname.TabIndex = 1;
+            this.textPflegerAdd_Surname.TabIndex = 2;
             this.textPflegerAdd_Surname.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
             // 
             // groupPflegerAdd_Name
@@ -949,12 +1135,13 @@
             this.groupPflegerAdd_Name.Location = new System.Drawing.Point(20, 10);
             this.groupPflegerAdd_Name.Name = "groupPflegerAdd_Name";
             this.groupPflegerAdd_Name.Size = new System.Drawing.Size(278, 66);
-            this.groupPflegerAdd_Name.TabIndex = 1;
+            this.groupPflegerAdd_Name.TabIndex = 26;
             this.groupPflegerAdd_Name.TabStop = false;
             this.groupPflegerAdd_Name.Text = "Name";
             // 
             // textPflegerAdd_Name
             // 
+            this.textPflegerAdd_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textPflegerAdd_Name.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPflegerAdd_Name.Location = new System.Drawing.Point(6, 23);
             this.textPflegerAdd_Name.MaxLength = 256;
@@ -983,6 +1170,7 @@
             this.tabControlReviere.SelectedIndex = 0;
             this.tabControlReviere.Size = new System.Drawing.Size(1137, 408);
             this.tabControlReviere.TabIndex = 3;
+            this.tabControlReviere.TabStop = false;
             // 
             // tabReviereAlle
             // 
@@ -1019,7 +1207,7 @@
             this.gridReviereAlle.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1065,7 +1253,7 @@
             this.buttonReviereAdd_Add.Location = new System.Drawing.Point(818, 289);
             this.buttonReviereAdd_Add.Name = "buttonReviereAdd_Add";
             this.buttonReviereAdd_Add.Size = new System.Drawing.Size(278, 33);
-            this.buttonReviereAdd_Add.TabIndex = 25;
+            this.buttonReviereAdd_Add.TabIndex = 22;
             this.buttonReviereAdd_Add.Text = "Revier hinzufügen";
             this.buttonReviereAdd_Add.UseVisualStyleBackColor = false;
             this.buttonReviereAdd_Add.Click += new System.EventHandler(this.buttonReviereAdd_Add_Click);
@@ -1088,7 +1276,7 @@
             this.textReviereAdd_Name.MaxLength = 256;
             this.textReviereAdd_Name.Name = "textReviereAdd_Name";
             this.textReviereAdd_Name.Size = new System.Drawing.Size(266, 26);
-            this.textReviereAdd_Name.TabIndex = 1;
+            this.textReviereAdd_Name.TabIndex = 21;
             this.textReviereAdd_Name.TextChanged += new System.EventHandler(this.ReviereInput_TextChanged);
             // 
             // tabGebäude
@@ -1111,6 +1299,7 @@
             this.tabControlGebäude.SelectedIndex = 0;
             this.tabControlGebäude.Size = new System.Drawing.Size(1137, 408);
             this.tabControlGebäude.TabIndex = 2;
+            this.tabControlGebäude.TabStop = false;
             // 
             // tabGebäudeAlle
             // 
@@ -1147,7 +1336,7 @@
             this.gridGebäudeAlle.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1206,7 +1395,7 @@
             this.comboGebäudeAdd_Revier.Location = new System.Drawing.Point(6, 23);
             this.comboGebäudeAdd_Revier.Name = "comboGebäudeAdd_Revier";
             this.comboGebäudeAdd_Revier.Size = new System.Drawing.Size(266, 26);
-            this.comboGebäudeAdd_Revier.TabIndex = 0;
+            this.comboGebäudeAdd_Revier.TabIndex = 32;
             this.comboGebäudeAdd_Revier.TextChanged += new System.EventHandler(this.GebäudeInput_TextChanged);
             // 
             // buttonGebäudeAdd_Add
@@ -1218,7 +1407,7 @@
             this.buttonGebäudeAdd_Add.Location = new System.Drawing.Point(818, 289);
             this.buttonGebäudeAdd_Add.Name = "buttonGebäudeAdd_Add";
             this.buttonGebäudeAdd_Add.Size = new System.Drawing.Size(278, 33);
-            this.buttonGebäudeAdd_Add.TabIndex = 25;
+            this.buttonGebäudeAdd_Add.TabIndex = 33;
             this.buttonGebäudeAdd_Add.Text = "Gebäude hinzufügen";
             this.buttonGebäudeAdd_Add.UseVisualStyleBackColor = false;
             this.buttonGebäudeAdd_Add.Click += new System.EventHandler(this.buttonGebäudeAdd_Add_Click);
@@ -1241,7 +1430,7 @@
             this.textGebäudeAdd_Name.MaxLength = 256;
             this.textGebäudeAdd_Name.Name = "textGebäudeAdd_Name";
             this.textGebäudeAdd_Name.Size = new System.Drawing.Size(266, 26);
-            this.textGebäudeAdd_Name.TabIndex = 1;
+            this.textGebäudeAdd_Name.TabIndex = 31;
             this.textGebäudeAdd_Name.TextChanged += new System.EventHandler(this.GebäudeInput_TextChanged);
             // 
             // tabGehege
@@ -1264,6 +1453,7 @@
             this.tabControlGehege.SelectedIndex = 0;
             this.tabControlGehege.Size = new System.Drawing.Size(1137, 408);
             this.tabControlGehege.TabIndex = 1;
+            this.tabControlGehege.TabStop = false;
             // 
             // tabGehegeAlle
             // 
@@ -1300,7 +1490,7 @@
             this.gridGehegeAlle.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1345,7 +1535,7 @@
             this.groupGehegeAdd_Gebäude.Location = new System.Drawing.Point(435, 10);
             this.groupGehegeAdd_Gebäude.Name = "groupGehegeAdd_Gebäude";
             this.groupGehegeAdd_Gebäude.Size = new System.Drawing.Size(278, 66);
-            this.groupGehegeAdd_Gebäude.TabIndex = 26;
+            this.groupGehegeAdd_Gebäude.TabIndex = 44;
             this.groupGehegeAdd_Gebäude.TabStop = false;
             this.groupGehegeAdd_Gebäude.Text = "Gebäude";
             // 
@@ -1359,7 +1549,7 @@
             this.comboGehegeAdd_Gebäude.Location = new System.Drawing.Point(6, 23);
             this.comboGehegeAdd_Gebäude.Name = "comboGehegeAdd_Gebäude";
             this.comboGehegeAdd_Gebäude.Size = new System.Drawing.Size(266, 26);
-            this.comboGehegeAdd_Gebäude.TabIndex = 0;
+            this.comboGehegeAdd_Gebäude.TabIndex = 32;
             this.comboGehegeAdd_Gebäude.TextChanged += new System.EventHandler(this.GehegeInput_TextChanged);
             // 
             // buttonGehegeAdd_Add
@@ -1371,7 +1561,7 @@
             this.buttonGehegeAdd_Add.Location = new System.Drawing.Point(818, 289);
             this.buttonGehegeAdd_Add.Name = "buttonGehegeAdd_Add";
             this.buttonGehegeAdd_Add.Size = new System.Drawing.Size(278, 33);
-            this.buttonGehegeAdd_Add.TabIndex = 25;
+            this.buttonGehegeAdd_Add.TabIndex = 43;
             this.buttonGehegeAdd_Add.Text = "Gehege hinzufügen";
             this.buttonGehegeAdd_Add.UseVisualStyleBackColor = false;
             this.buttonGehegeAdd_Add.Click += new System.EventHandler(this.buttonGehegeAdd_Add_Click);
@@ -1394,7 +1584,7 @@
             this.textGehegeAdd_Name.MaxLength = 256;
             this.textGehegeAdd_Name.Name = "textGehegeAdd_Name";
             this.textGehegeAdd_Name.Size = new System.Drawing.Size(266, 26);
-            this.textGehegeAdd_Name.TabIndex = 1;
+            this.textGehegeAdd_Name.TabIndex = 41;
             this.textGehegeAdd_Name.TextChanged += new System.EventHandler(this.GehegeInput_TextChanged);
             // 
             // tabTiere
@@ -1417,6 +1607,7 @@
             this.tabControlTiere.SelectedIndex = 0;
             this.tabControlTiere.Size = new System.Drawing.Size(1137, 408);
             this.tabControlTiere.TabIndex = 1;
+            this.tabControlTiere.TabStop = false;
             // 
             // tabTiereAlle
             // 
@@ -1453,7 +1644,7 @@
             this.gridTiereAlle.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1504,7 +1695,7 @@
             this.buttonTiereAdd_Add.Location = new System.Drawing.Point(818, 289);
             this.buttonTiereAdd_Add.Name = "buttonTiereAdd_Add";
             this.buttonTiereAdd_Add.Size = new System.Drawing.Size(278, 33);
-            this.buttonTiereAdd_Add.TabIndex = 18;
+            this.buttonTiereAdd_Add.TabIndex = 57;
             this.buttonTiereAdd_Add.Text = "Tier hinzufügen";
             this.buttonTiereAdd_Add.UseVisualStyleBackColor = false;
             this.buttonTiereAdd_Add.Click += new System.EventHandler(this.buttonTiereAdd_Add_Click);
@@ -1530,7 +1721,7 @@
             this.comboTiereAdd_Gehege.Location = new System.Drawing.Point(6, 22);
             this.comboTiereAdd_Gehege.Name = "comboTiereAdd_Gehege";
             this.comboTiereAdd_Gehege.Size = new System.Drawing.Size(266, 26);
-            this.comboTiereAdd_Gehege.TabIndex = 0;
+            this.comboTiereAdd_Gehege.TabIndex = 56;
             this.comboTiereAdd_Gehege.TextChanged += new System.EventHandler(this.TierInput_TextChanged);
             // 
             // groupTiereAdd_Revier
@@ -1554,7 +1745,7 @@
             this.comboTiereAdd_Revier.Location = new System.Drawing.Point(6, 22);
             this.comboTiereAdd_Revier.Name = "comboTiereAdd_Revier";
             this.comboTiereAdd_Revier.Size = new System.Drawing.Size(266, 26);
-            this.comboTiereAdd_Revier.TabIndex = 0;
+            this.comboTiereAdd_Revier.TabIndex = 55;
             this.comboTiereAdd_Revier.TextChanged += new System.EventHandler(this.TierInput_TextChanged);
             // 
             // groupTiereAdd_Birthday
@@ -1571,14 +1762,15 @@
             // dateTimeTiereAdd_Birthday
             // 
             this.dateTimeTiereAdd_Birthday.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateTimeTiereAdd_Birthday.CustomFormat = "dd.MM.yyyy";
             this.dateTimeTiereAdd_Birthday.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeTiereAdd_Birthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeTiereAdd_Birthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeTiereAdd_Birthday.Location = new System.Drawing.Point(6, 23);
             this.dateTimeTiereAdd_Birthday.MaxDate = new System.DateTime(2018, 11, 28, 0, 0, 0, 0);
             this.dateTimeTiereAdd_Birthday.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
             this.dateTimeTiereAdd_Birthday.Name = "dateTimeTiereAdd_Birthday";
             this.dateTimeTiereAdd_Birthday.Size = new System.Drawing.Size(266, 26);
-            this.dateTimeTiereAdd_Birthday.TabIndex = 5;
+            this.dateTimeTiereAdd_Birthday.TabIndex = 54;
             this.dateTimeTiereAdd_Birthday.Value = new System.DateTime(2018, 11, 28, 0, 0, 0, 0);
             // 
             // groupTiereAdd_Gender
@@ -1591,6 +1783,15 @@
             this.groupTiereAdd_Gender.TabIndex = 25;
             this.groupTiereAdd_Gender.TabStop = false;
             this.groupTiereAdd_Gender.Text = "Geschlecht";
+            // 
+            // textTiereAdd_Gender
+            // 
+            this.textTiereAdd_Gender.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textTiereAdd_Gender.Location = new System.Drawing.Point(6, 22);
+            this.textTiereAdd_Gender.Name = "textTiereAdd_Gender";
+            this.textTiereAdd_Gender.Size = new System.Drawing.Size(266, 26);
+            this.textTiereAdd_Gender.TabIndex = 53;
+            this.textTiereAdd_Gender.TextChanged += new System.EventHandler(this.TierInput_TextChanged);
             // 
             // groupTiereAdd_Species
             // 
@@ -1605,12 +1806,13 @@
             // 
             // comboTiereAdd_Species
             // 
+            this.comboTiereAdd_Species.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.comboTiereAdd_Species.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTiereAdd_Species.FormattingEnabled = true;
             this.comboTiereAdd_Species.Location = new System.Drawing.Point(6, 22);
             this.comboTiereAdd_Species.Name = "comboTiereAdd_Species";
             this.comboTiereAdd_Species.Size = new System.Drawing.Size(266, 26);
-            this.comboTiereAdd_Species.TabIndex = 1;
+            this.comboTiereAdd_Species.TabIndex = 52;
             this.comboTiereAdd_Species.TextChanged += new System.EventHandler(this.TierInput_TextChanged);
             // 
             // groupTiereAdd_Name
@@ -1630,7 +1832,7 @@
             this.textTiereAdd_Name.Location = new System.Drawing.Point(6, 23);
             this.textTiereAdd_Name.Name = "textTiereAdd_Name";
             this.textTiereAdd_Name.Size = new System.Drawing.Size(266, 26);
-            this.textTiereAdd_Name.TabIndex = 1;
+            this.textTiereAdd_Name.TabIndex = 51;
             this.textTiereAdd_Name.TextChanged += new System.EventHandler(this.TierInput_TextChanged);
             // 
             // tabLieferanten
@@ -1653,6 +1855,7 @@
             this.tabControlLieferanten.SelectedIndex = 0;
             this.tabControlLieferanten.Size = new System.Drawing.Size(1137, 402);
             this.tabControlLieferanten.TabIndex = 2;
+            this.tabControlLieferanten.TabStop = false;
             // 
             // tabLieferantenAlle
             // 
@@ -1688,7 +1891,7 @@
             this.gridLieferantenAlle.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1715,8 +1918,8 @@
             // 
             // tabLieferantenHinzufügen
             // 
-            this.tabLieferantenHinzufügen.Controls.Add(this.groupLieferantenAdd_ContactSurname);
             this.tabLieferantenHinzufügen.Controls.Add(this.groupLieferantenAdd_ContactName);
+            this.tabLieferantenHinzufügen.Controls.Add(this.groupLieferantenAdd_ContactSurname);
             this.tabLieferantenHinzufügen.Controls.Add(this.groupLieferantenAdd_Phone);
             this.tabLieferantenHinzufügen.Controls.Add(this.groupLieferantenAdd_Street);
             this.tabLieferantenHinzufügen.Controls.Add(this.groupLieferantenAdd_Stadt);
@@ -1731,32 +1934,11 @@
             this.tabLieferantenHinzufügen.Text = "Hinzufügen";
             this.tabLieferantenHinzufügen.UseVisualStyleBackColor = true;
             // 
-            // groupLieferantenAdd_ContactSurname
-            // 
-            this.groupLieferantenAdd_ContactSurname.Controls.Add(this.textLieferantenAdd_ContactSurname);
-            this.groupLieferantenAdd_ContactSurname.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupLieferantenAdd_ContactSurname.Location = new System.Drawing.Point(435, 169);
-            this.groupLieferantenAdd_ContactSurname.Name = "groupLieferantenAdd_ContactSurname";
-            this.groupLieferantenAdd_ContactSurname.Size = new System.Drawing.Size(278, 66);
-            this.groupLieferantenAdd_ContactSurname.TabIndex = 29;
-            this.groupLieferantenAdd_ContactSurname.TabStop = false;
-            this.groupLieferantenAdd_ContactSurname.Text = "Ansprechpartner (Nachname)";
-            // 
-            // textLieferantenAdd_ContactSurname
-            // 
-            this.textLieferantenAdd_ContactSurname.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textLieferantenAdd_ContactSurname.Location = new System.Drawing.Point(6, 20);
-            this.textLieferantenAdd_ContactSurname.MaxLength = 11;
-            this.textLieferantenAdd_ContactSurname.Name = "textLieferantenAdd_ContactSurname";
-            this.textLieferantenAdd_ContactSurname.Size = new System.Drawing.Size(266, 26);
-            this.textLieferantenAdd_ContactSurname.TabIndex = 2;
-            this.textLieferantenAdd_ContactSurname.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
-            // 
             // groupLieferantenAdd_ContactName
             // 
             this.groupLieferantenAdd_ContactName.Controls.Add(this.textLieferantenAdd_ContactName);
             this.groupLieferantenAdd_ContactName.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupLieferantenAdd_ContactName.Location = new System.Drawing.Point(435, 88);
+            this.groupLieferantenAdd_ContactName.Location = new System.Drawing.Point(435, 91);
             this.groupLieferantenAdd_ContactName.Name = "groupLieferantenAdd_ContactName";
             this.groupLieferantenAdd_ContactName.Size = new System.Drawing.Size(278, 66);
             this.groupLieferantenAdd_ContactName.TabIndex = 29;
@@ -1770,8 +1952,29 @@
             this.textLieferantenAdd_ContactName.MaxLength = 11;
             this.textLieferantenAdd_ContactName.Name = "textLieferantenAdd_ContactName";
             this.textLieferantenAdd_ContactName.Size = new System.Drawing.Size(266, 26);
-            this.textLieferantenAdd_ContactName.TabIndex = 2;
+            this.textLieferantenAdd_ContactName.TabIndex = 67;
             this.textLieferantenAdd_ContactName.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
+            // 
+            // groupLieferantenAdd_ContactSurname
+            // 
+            this.groupLieferantenAdd_ContactSurname.Controls.Add(this.textLieferantenAdd_ContactSurname);
+            this.groupLieferantenAdd_ContactSurname.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupLieferantenAdd_ContactSurname.Location = new System.Drawing.Point(435, 178);
+            this.groupLieferantenAdd_ContactSurname.Name = "groupLieferantenAdd_ContactSurname";
+            this.groupLieferantenAdd_ContactSurname.Size = new System.Drawing.Size(278, 66);
+            this.groupLieferantenAdd_ContactSurname.TabIndex = 29;
+            this.groupLieferantenAdd_ContactSurname.TabStop = false;
+            this.groupLieferantenAdd_ContactSurname.Text = "Ansprechpartner (Nachname)";
+            // 
+            // textLieferantenAdd_ContactSurname
+            // 
+            this.textLieferantenAdd_ContactSurname.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textLieferantenAdd_ContactSurname.Location = new System.Drawing.Point(6, 20);
+            this.textLieferantenAdd_ContactSurname.MaxLength = 11;
+            this.textLieferantenAdd_ContactSurname.Name = "textLieferantenAdd_ContactSurname";
+            this.textLieferantenAdd_ContactSurname.Size = new System.Drawing.Size(266, 26);
+            this.textLieferantenAdd_ContactSurname.TabIndex = 66;
+            this.textLieferantenAdd_ContactSurname.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
             // 
             // groupLieferantenAdd_Phone
             // 
@@ -1791,14 +1994,14 @@
             this.textLieferantenAdd_Phone.MaxLength = 11;
             this.textLieferantenAdd_Phone.Name = "textLieferantenAdd_Phone";
             this.textLieferantenAdd_Phone.Size = new System.Drawing.Size(266, 26);
-            this.textLieferantenAdd_Phone.TabIndex = 2;
+            this.textLieferantenAdd_Phone.TabIndex = 65;
             this.textLieferantenAdd_Phone.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
             // 
             // groupLieferantenAdd_Street
             // 
             this.groupLieferantenAdd_Street.Controls.Add(this.textLieferantenAdd_Street);
             this.groupLieferantenAdd_Street.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupLieferantenAdd_Street.Location = new System.Drawing.Point(20, 256);
+            this.groupLieferantenAdd_Street.Location = new System.Drawing.Point(20, 271);
             this.groupLieferantenAdd_Street.Name = "groupLieferantenAdd_Street";
             this.groupLieferantenAdd_Street.Size = new System.Drawing.Size(278, 66);
             this.groupLieferantenAdd_Street.TabIndex = 27;
@@ -1812,14 +2015,14 @@
             this.textLieferantenAdd_Street.MaxLength = 256;
             this.textLieferantenAdd_Street.Name = "textLieferantenAdd_Street";
             this.textLieferantenAdd_Street.Size = new System.Drawing.Size(266, 26);
-            this.textLieferantenAdd_Street.TabIndex = 1;
+            this.textLieferantenAdd_Street.TabIndex = 64;
             this.textLieferantenAdd_Street.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
             // 
             // groupLieferantenAdd_Stadt
             // 
             this.groupLieferantenAdd_Stadt.Controls.Add(this.comboLieferantenAdd_Stadt);
             this.groupLieferantenAdd_Stadt.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupLieferantenAdd_Stadt.Location = new System.Drawing.Point(20, 169);
+            this.groupLieferantenAdd_Stadt.Location = new System.Drawing.Point(20, 178);
             this.groupLieferantenAdd_Stadt.Name = "groupLieferantenAdd_Stadt";
             this.groupLieferantenAdd_Stadt.Size = new System.Drawing.Size(278, 66);
             this.groupLieferantenAdd_Stadt.TabIndex = 26;
@@ -1829,19 +2032,20 @@
             // comboLieferantenAdd_Stadt
             // 
             this.comboLieferantenAdd_Stadt.BackColor = System.Drawing.SystemColors.Window;
+            this.comboLieferantenAdd_Stadt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.comboLieferantenAdd_Stadt.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboLieferantenAdd_Stadt.FormattingEnabled = true;
             this.comboLieferantenAdd_Stadt.Location = new System.Drawing.Point(6, 22);
             this.comboLieferantenAdd_Stadt.Name = "comboLieferantenAdd_Stadt";
             this.comboLieferantenAdd_Stadt.Size = new System.Drawing.Size(266, 26);
-            this.comboLieferantenAdd_Stadt.TabIndex = 1;
+            this.comboLieferantenAdd_Stadt.TabIndex = 63;
             this.comboLieferantenAdd_Stadt.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
             // 
             // groupLieferantenAdd_PLZ
             // 
             this.groupLieferantenAdd_PLZ.Controls.Add(this.comboLieferantenAdd_PLZ);
             this.groupLieferantenAdd_PLZ.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupLieferantenAdd_PLZ.Location = new System.Drawing.Point(20, 88);
+            this.groupLieferantenAdd_PLZ.Location = new System.Drawing.Point(20, 91);
             this.groupLieferantenAdd_PLZ.Name = "groupLieferantenAdd_PLZ";
             this.groupLieferantenAdd_PLZ.Size = new System.Drawing.Size(278, 66);
             this.groupLieferantenAdd_PLZ.TabIndex = 25;
@@ -1851,12 +2055,13 @@
             // comboLieferantenAdd_PLZ
             // 
             this.comboLieferantenAdd_PLZ.BackColor = System.Drawing.SystemColors.Window;
+            this.comboLieferantenAdd_PLZ.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.comboLieferantenAdd_PLZ.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboLieferantenAdd_PLZ.FormattingEnabled = true;
             this.comboLieferantenAdd_PLZ.Location = new System.Drawing.Point(6, 23);
             this.comboLieferantenAdd_PLZ.Name = "comboLieferantenAdd_PLZ";
             this.comboLieferantenAdd_PLZ.Size = new System.Drawing.Size(266, 26);
-            this.comboLieferantenAdd_PLZ.TabIndex = 1;
+            this.comboLieferantenAdd_PLZ.TabIndex = 62;
             this.comboLieferantenAdd_PLZ.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
             // 
             // buttonLieferantenAdd_Add
@@ -1868,7 +2073,7 @@
             this.buttonLieferantenAdd_Add.Location = new System.Drawing.Point(818, 289);
             this.buttonLieferantenAdd_Add.Name = "buttonLieferantenAdd_Add";
             this.buttonLieferantenAdd_Add.Size = new System.Drawing.Size(278, 33);
-            this.buttonLieferantenAdd_Add.TabIndex = 17;
+            this.buttonLieferantenAdd_Add.TabIndex = 68;
             this.buttonLieferantenAdd_Add.Text = "Lieferant hinzufügen";
             this.buttonLieferantenAdd_Add.UseVisualStyleBackColor = false;
             this.buttonLieferantenAdd_Add.Click += new System.EventHandler(this.buttonLieferantenAdd_add_Click);
@@ -1890,17 +2095,437 @@
             this.textLieferantenAdd_Name.Location = new System.Drawing.Point(6, 23);
             this.textLieferantenAdd_Name.Name = "textLieferantenAdd_Name";
             this.textLieferantenAdd_Name.Size = new System.Drawing.Size(266, 26);
-            this.textLieferantenAdd_Name.TabIndex = 1;
+            this.textLieferantenAdd_Name.TabIndex = 61;
             this.textLieferantenAdd_Name.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
+            // 
+            // tabFutter
+            // 
+            this.tabFutter.Controls.Add(this.tabControlFutter);
+            this.tabFutter.Location = new System.Drawing.Point(4, 35);
+            this.tabFutter.Name = "tabFutter";
+            this.tabFutter.Size = new System.Drawing.Size(1129, 399);
+            this.tabFutter.TabIndex = 11;
+            this.tabFutter.Text = "Futter";
+            this.tabFutter.UseVisualStyleBackColor = true;
+            // 
+            // tabControlFutter
+            // 
+            this.tabControlFutter.Controls.Add(this.tabFutterAlle);
+            this.tabControlFutter.Controls.Add(this.tabFutterHinzufügen);
+            this.tabControlFutter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlFutter.Location = new System.Drawing.Point(-4, 5);
+            this.tabControlFutter.Name = "tabControlFutter";
+            this.tabControlFutter.SelectedIndex = 0;
+            this.tabControlFutter.Size = new System.Drawing.Size(1137, 402);
+            this.tabControlFutter.TabIndex = 3;
+            this.tabControlFutter.TabStop = false;
+            // 
+            // tabFutterAlle
+            // 
+            this.tabFutterAlle.Controls.Add(this.labelFutterAlle_Count);
+            this.tabFutterAlle.Controls.Add(this.gridFutterAlle);
+            this.tabFutterAlle.Controls.Add(this.labelFutterAlle);
+            this.tabFutterAlle.Location = new System.Drawing.Point(4, 28);
+            this.tabFutterAlle.Name = "tabFutterAlle";
+            this.tabFutterAlle.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFutterAlle.Size = new System.Drawing.Size(1129, 370);
+            this.tabFutterAlle.TabIndex = 0;
+            this.tabFutterAlle.Text = "Alle Anzeigen";
+            this.tabFutterAlle.UseVisualStyleBackColor = true;
+            // 
+            // labelFutterAlle_Count
+            // 
+            this.labelFutterAlle_Count.AutoSize = true;
+            this.labelFutterAlle_Count.Location = new System.Drawing.Point(131, 21);
+            this.labelFutterAlle_Count.Name = "labelFutterAlle_Count";
+            this.labelFutterAlle_Count.Size = new System.Drawing.Size(79, 19);
+            this.labelFutterAlle_Count.TabIndex = 2;
+            this.labelFutterAlle_Count.Text = "undefined";
+            // 
+            // gridFutterAlle
+            // 
+            this.gridFutterAlle.AllowUserToAddRows = false;
+            this.gridFutterAlle.AllowUserToDeleteRows = false;
+            this.gridFutterAlle.AllowUserToResizeRows = false;
+            this.gridFutterAlle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridFutterAlle.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.gridFutterAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridFutterAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridFutterAlle.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridFutterAlle.DefaultCellStyle = dataGridViewCellStyle7;
+            this.gridFutterAlle.GridColor = System.Drawing.SystemColors.Window;
+            this.gridFutterAlle.Location = new System.Drawing.Point(218, 0);
+            this.gridFutterAlle.Margin = new System.Windows.Forms.Padding(0);
+            this.gridFutterAlle.Name = "gridFutterAlle";
+            this.gridFutterAlle.ReadOnly = true;
+            this.gridFutterAlle.RowHeadersVisible = false;
+            this.gridFutterAlle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridFutterAlle.Size = new System.Drawing.Size(911, 375);
+            this.gridFutterAlle.TabIndex = 1;
+            // 
+            // labelFutterAlle
+            // 
+            this.labelFutterAlle.AutoSize = true;
+            this.labelFutterAlle.Location = new System.Drawing.Point(6, 21);
+            this.labelFutterAlle.Name = "labelFutterAlle";
+            this.labelFutterAlle.Size = new System.Drawing.Size(54, 19);
+            this.labelFutterAlle.TabIndex = 0;
+            this.labelFutterAlle.Text = "Futter:";
+            // 
+            // tabFutterHinzufügen
+            // 
+            this.tabFutterHinzufügen.Controls.Add(this.buttonFutterAdd_Add);
+            this.tabFutterHinzufügen.Controls.Add(this.groupFutterAdd_Supplier);
+            this.tabFutterHinzufügen.Controls.Add(this.groupFutterAdd_Amount);
+            this.tabFutterHinzufügen.Controls.Add(this.groupFutterAdd_Name);
+            this.tabFutterHinzufügen.Location = new System.Drawing.Point(4, 28);
+            this.tabFutterHinzufügen.Name = "tabFutterHinzufügen";
+            this.tabFutterHinzufügen.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFutterHinzufügen.Size = new System.Drawing.Size(1129, 370);
+            this.tabFutterHinzufügen.TabIndex = 1;
+            this.tabFutterHinzufügen.Text = "Hinzufügen";
+            this.tabFutterHinzufügen.UseVisualStyleBackColor = true;
+            // 
+            // buttonFutterAdd_Add
+            // 
+            this.buttonFutterAdd_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            this.buttonFutterAdd_Add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonFutterAdd_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFutterAdd_Add.Font = new System.Drawing.Font("BankGothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFutterAdd_Add.Location = new System.Drawing.Point(818, 289);
+            this.buttonFutterAdd_Add.Name = "buttonFutterAdd_Add";
+            this.buttonFutterAdd_Add.Size = new System.Drawing.Size(278, 33);
+            this.buttonFutterAdd_Add.TabIndex = 74;
+            this.buttonFutterAdd_Add.Text = "Futter hinzufügen";
+            this.buttonFutterAdd_Add.UseVisualStyleBackColor = false;
+            this.buttonFutterAdd_Add.Click += new System.EventHandler(this.buttonFutterAdd_Add_Click);
+            // 
+            // groupFutterAdd_Supplier
+            // 
+            this.groupFutterAdd_Supplier.Controls.Add(this.comboFutterAdd_Lieferant);
+            this.groupFutterAdd_Supplier.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupFutterAdd_Supplier.Location = new System.Drawing.Point(20, 178);
+            this.groupFutterAdd_Supplier.Name = "groupFutterAdd_Supplier";
+            this.groupFutterAdd_Supplier.Size = new System.Drawing.Size(278, 66);
+            this.groupFutterAdd_Supplier.TabIndex = 23;
+            this.groupFutterAdd_Supplier.TabStop = false;
+            this.groupFutterAdd_Supplier.Text = "Lieferant";
+            // 
+            // comboFutterAdd_Lieferant
+            // 
+            this.comboFutterAdd_Lieferant.BackColor = System.Drawing.SystemColors.Window;
+            this.comboFutterAdd_Lieferant.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboFutterAdd_Lieferant.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboFutterAdd_Lieferant.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboFutterAdd_Lieferant.FormattingEnabled = true;
+            this.comboFutterAdd_Lieferant.Location = new System.Drawing.Point(6, 23);
+            this.comboFutterAdd_Lieferant.Name = "comboFutterAdd_Lieferant";
+            this.comboFutterAdd_Lieferant.Size = new System.Drawing.Size(266, 26);
+            this.comboFutterAdd_Lieferant.TabIndex = 73;
+            this.comboFutterAdd_Lieferant.TextChanged += new System.EventHandler(this.FutterInput_TextChanged);
+            // 
+            // groupFutterAdd_Amount
+            // 
+            this.groupFutterAdd_Amount.Controls.Add(this.numericFutterAdd_Amount);
+            this.groupFutterAdd_Amount.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupFutterAdd_Amount.Location = new System.Drawing.Point(20, 91);
+            this.groupFutterAdd_Amount.Name = "groupFutterAdd_Amount";
+            this.groupFutterAdd_Amount.Size = new System.Drawing.Size(278, 66);
+            this.groupFutterAdd_Amount.TabIndex = 3;
+            this.groupFutterAdd_Amount.TabStop = false;
+            this.groupFutterAdd_Amount.Text = "Menge (in kg.)";
+            // 
+            // numericFutterAdd_Amount
+            // 
+            this.numericFutterAdd_Amount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numericFutterAdd_Amount.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.numericFutterAdd_Amount.Location = new System.Drawing.Point(6, 24);
+            this.numericFutterAdd_Amount.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericFutterAdd_Amount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericFutterAdd_Amount.Name = "numericFutterAdd_Amount";
+            this.numericFutterAdd_Amount.Size = new System.Drawing.Size(266, 26);
+            this.numericFutterAdd_Amount.TabIndex = 72;
+            this.numericFutterAdd_Amount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // groupFutterAdd_Name
+            // 
+            this.groupFutterAdd_Name.Controls.Add(this.textFutterAdd_Name);
+            this.groupFutterAdd_Name.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupFutterAdd_Name.Location = new System.Drawing.Point(20, 10);
+            this.groupFutterAdd_Name.Name = "groupFutterAdd_Name";
+            this.groupFutterAdd_Name.Size = new System.Drawing.Size(278, 66);
+            this.groupFutterAdd_Name.TabIndex = 2;
+            this.groupFutterAdd_Name.TabStop = false;
+            this.groupFutterAdd_Name.Text = "Name";
+            // 
+            // textFutterAdd_Name
+            // 
+            this.textFutterAdd_Name.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textFutterAdd_Name.Location = new System.Drawing.Point(6, 23);
+            this.textFutterAdd_Name.MaxLength = 256;
+            this.textFutterAdd_Name.Name = "textFutterAdd_Name";
+            this.textFutterAdd_Name.Size = new System.Drawing.Size(266, 26);
+            this.textFutterAdd_Name.TabIndex = 71;
+            this.textFutterAdd_Name.TextChanged += new System.EventHandler(this.FutterInput_TextChanged);
             // 
             // tabFütterung
             // 
+            this.tabFütterung.Controls.Add(this.tabControlFütterung);
             this.tabFütterung.Location = new System.Drawing.Point(4, 35);
             this.tabFütterung.Name = "tabFütterung";
             this.tabFütterung.Size = new System.Drawing.Size(1129, 399);
             this.tabFütterung.TabIndex = 1;
             this.tabFütterung.Text = "Fütterung";
             this.tabFütterung.UseVisualStyleBackColor = true;
+            // 
+            // tabControlFütterung
+            // 
+            this.tabControlFütterung.Controls.Add(this.tabFütterungAlle);
+            this.tabControlFütterung.Controls.Add(this.tabFütterungHinzufügen);
+            this.tabControlFütterung.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlFütterung.Location = new System.Drawing.Point(-4, 5);
+            this.tabControlFütterung.Name = "tabControlFütterung";
+            this.tabControlFütterung.SelectedIndex = 0;
+            this.tabControlFütterung.Size = new System.Drawing.Size(1137, 402);
+            this.tabControlFütterung.TabIndex = 4;
+            this.tabControlFütterung.TabStop = false;
+            // 
+            // tabFütterungAlle
+            // 
+            this.tabFütterungAlle.Controls.Add(this.labelFütterungAlle_Count);
+            this.tabFütterungAlle.Controls.Add(this.gridFütterungAlle);
+            this.tabFütterungAlle.Controls.Add(this.labelFütterungAlle);
+            this.tabFütterungAlle.Location = new System.Drawing.Point(4, 28);
+            this.tabFütterungAlle.Name = "tabFütterungAlle";
+            this.tabFütterungAlle.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFütterungAlle.Size = new System.Drawing.Size(1129, 370);
+            this.tabFütterungAlle.TabIndex = 0;
+            this.tabFütterungAlle.Text = "Alle Anzeigen";
+            this.tabFütterungAlle.UseVisualStyleBackColor = true;
+            // 
+            // labelFütterungAlle_Count
+            // 
+            this.labelFütterungAlle_Count.AutoSize = true;
+            this.labelFütterungAlle_Count.Location = new System.Drawing.Point(131, 21);
+            this.labelFütterungAlle_Count.Name = "labelFütterungAlle_Count";
+            this.labelFütterungAlle_Count.Size = new System.Drawing.Size(79, 19);
+            this.labelFütterungAlle_Count.TabIndex = 2;
+            this.labelFütterungAlle_Count.Text = "undefined";
+            // 
+            // gridFütterungAlle
+            // 
+            this.gridFütterungAlle.AllowUserToAddRows = false;
+            this.gridFütterungAlle.AllowUserToDeleteRows = false;
+            this.gridFütterungAlle.AllowUserToResizeRows = false;
+            this.gridFütterungAlle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridFütterungAlle.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.gridFütterungAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridFütterungAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridFütterungAlle.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridFütterungAlle.DefaultCellStyle = dataGridViewCellStyle8;
+            this.gridFütterungAlle.GridColor = System.Drawing.SystemColors.Window;
+            this.gridFütterungAlle.Location = new System.Drawing.Point(218, 0);
+            this.gridFütterungAlle.Margin = new System.Windows.Forms.Padding(0);
+            this.gridFütterungAlle.Name = "gridFütterungAlle";
+            this.gridFütterungAlle.ReadOnly = true;
+            this.gridFütterungAlle.RowHeadersVisible = false;
+            this.gridFütterungAlle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridFütterungAlle.Size = new System.Drawing.Size(911, 375);
+            this.gridFütterungAlle.TabIndex = 1;
+            // 
+            // labelFütterungAlle
+            // 
+            this.labelFütterungAlle.AutoSize = true;
+            this.labelFütterungAlle.Location = new System.Drawing.Point(6, 21);
+            this.labelFütterungAlle.Name = "labelFütterungAlle";
+            this.labelFütterungAlle.Size = new System.Drawing.Size(54, 19);
+            this.labelFütterungAlle.TabIndex = 0;
+            this.labelFütterungAlle.Text = "Futter:";
+            // 
+            // tabFütterungHinzufügen
+            // 
+            this.tabFütterungHinzufügen.Controls.Add(this.buttonFütterungAdd_Add);
+            this.tabFütterungHinzufügen.Controls.Add(this.groupFütterungAdd_Amount);
+            this.tabFütterungHinzufügen.Controls.Add(this.groupFütterungAdd_Weekday);
+            this.tabFütterungHinzufügen.Controls.Add(this.groupFütterungAdd_Time);
+            this.tabFütterungHinzufügen.Controls.Add(this.groupFütterungAdd_Food);
+            this.tabFütterungHinzufügen.Controls.Add(this.groupFütterungAdd_Animal);
+            this.tabFütterungHinzufügen.Location = new System.Drawing.Point(4, 28);
+            this.tabFütterungHinzufügen.Name = "tabFütterungHinzufügen";
+            this.tabFütterungHinzufügen.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFütterungHinzufügen.Size = new System.Drawing.Size(1129, 370);
+            this.tabFütterungHinzufügen.TabIndex = 1;
+            this.tabFütterungHinzufügen.Text = "Hinzufügen";
+            this.tabFütterungHinzufügen.UseVisualStyleBackColor = true;
+            // 
+            // buttonFütterungAdd_Add
+            // 
+            this.buttonFütterungAdd_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            this.buttonFütterungAdd_Add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonFütterungAdd_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFütterungAdd_Add.Font = new System.Drawing.Font("BankGothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFütterungAdd_Add.Location = new System.Drawing.Point(818, 289);
+            this.buttonFütterungAdd_Add.Name = "buttonFütterungAdd_Add";
+            this.buttonFütterungAdd_Add.Size = new System.Drawing.Size(278, 33);
+            this.buttonFütterungAdd_Add.TabIndex = 85;
+            this.buttonFütterungAdd_Add.Text = "Fütterung hinzufügen";
+            this.buttonFütterungAdd_Add.UseVisualStyleBackColor = false;
+            this.buttonFütterungAdd_Add.Click += new System.EventHandler(this.buttonFütterungAdd_Add_Click);
+            // 
+            // groupFütterungAdd_Amount
+            // 
+            this.groupFütterungAdd_Amount.Controls.Add(this.numericFütterungAdd_Amount);
+            this.groupFütterungAdd_Amount.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupFütterungAdd_Amount.Location = new System.Drawing.Point(435, 10);
+            this.groupFütterungAdd_Amount.Name = "groupFütterungAdd_Amount";
+            this.groupFütterungAdd_Amount.Size = new System.Drawing.Size(278, 66);
+            this.groupFütterungAdd_Amount.TabIndex = 29;
+            this.groupFütterungAdd_Amount.TabStop = false;
+            this.groupFütterungAdd_Amount.Text = "Menge (in kg.)";
+            // 
+            // numericFütterungAdd_Amount
+            // 
+            this.numericFütterungAdd_Amount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numericFütterungAdd_Amount.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.numericFütterungAdd_Amount.Location = new System.Drawing.Point(6, 24);
+            this.numericFütterungAdd_Amount.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericFütterungAdd_Amount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericFütterungAdd_Amount.Name = "numericFütterungAdd_Amount";
+            this.numericFütterungAdd_Amount.Size = new System.Drawing.Size(266, 26);
+            this.numericFütterungAdd_Amount.TabIndex = 84;
+            this.numericFütterungAdd_Amount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // groupFütterungAdd_Weekday
+            // 
+            this.groupFütterungAdd_Weekday.Controls.Add(this.textFütterungAdd_Weekday);
+            this.groupFütterungAdd_Weekday.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupFütterungAdd_Weekday.Location = new System.Drawing.Point(20, 271);
+            this.groupFütterungAdd_Weekday.Name = "groupFütterungAdd_Weekday";
+            this.groupFütterungAdd_Weekday.Size = new System.Drawing.Size(278, 66);
+            this.groupFütterungAdd_Weekday.TabIndex = 28;
+            this.groupFütterungAdd_Weekday.TabStop = false;
+            this.groupFütterungAdd_Weekday.Text = "Wochentag";
+            // 
+            // textFütterungAdd_Weekday
+            // 
+            this.textFütterungAdd_Weekday.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textFütterungAdd_Weekday.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textFütterungAdd_Weekday.Location = new System.Drawing.Point(6, 23);
+            this.textFütterungAdd_Weekday.MaxLength = 256;
+            this.textFütterungAdd_Weekday.Name = "textFütterungAdd_Weekday";
+            this.textFütterungAdd_Weekday.Size = new System.Drawing.Size(266, 26);
+            this.textFütterungAdd_Weekday.TabIndex = 83;
+            this.textFütterungAdd_Weekday.TextChanged += new System.EventHandler(this.FütterungInput_TextChanged);
+            // 
+            // groupFütterungAdd_Time
+            // 
+            this.groupFütterungAdd_Time.Controls.Add(this.dateTimeFütterungAdd_Time);
+            this.groupFütterungAdd_Time.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupFütterungAdd_Time.Location = new System.Drawing.Point(20, 178);
+            this.groupFütterungAdd_Time.Name = "groupFütterungAdd_Time";
+            this.groupFütterungAdd_Time.Size = new System.Drawing.Size(278, 66);
+            this.groupFütterungAdd_Time.TabIndex = 27;
+            this.groupFütterungAdd_Time.TabStop = false;
+            this.groupFütterungAdd_Time.Text = "Zeit";
+            // 
+            // dateTimeFütterungAdd_Time
+            // 
+            this.dateTimeFütterungAdd_Time.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.dateTimeFütterungAdd_Time.CustomFormat = "HH:mm";
+            this.dateTimeFütterungAdd_Time.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.dateTimeFütterungAdd_Time.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeFütterungAdd_Time.Location = new System.Drawing.Point(6, 23);
+            this.dateTimeFütterungAdd_Time.Name = "dateTimeFütterungAdd_Time";
+            this.dateTimeFütterungAdd_Time.ShowUpDown = true;
+            this.dateTimeFütterungAdd_Time.Size = new System.Drawing.Size(266, 26);
+            this.dateTimeFütterungAdd_Time.TabIndex = 82;
+            this.dateTimeFütterungAdd_Time.Value = new System.DateTime(2019, 1, 16, 12, 0, 0, 0);
+            // 
+            // groupFütterungAdd_Food
+            // 
+            this.groupFütterungAdd_Food.Controls.Add(this.comboFütterungAdd_Food);
+            this.groupFütterungAdd_Food.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupFütterungAdd_Food.Location = new System.Drawing.Point(20, 91);
+            this.groupFütterungAdd_Food.Name = "groupFütterungAdd_Food";
+            this.groupFütterungAdd_Food.Size = new System.Drawing.Size(278, 66);
+            this.groupFütterungAdd_Food.TabIndex = 25;
+            this.groupFütterungAdd_Food.TabStop = false;
+            this.groupFütterungAdd_Food.Text = "Futter";
+            // 
+            // comboFütterungAdd_Food
+            // 
+            this.comboFütterungAdd_Food.BackColor = System.Drawing.SystemColors.Window;
+            this.comboFütterungAdd_Food.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboFütterungAdd_Food.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboFütterungAdd_Food.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboFütterungAdd_Food.FormattingEnabled = true;
+            this.comboFütterungAdd_Food.Location = new System.Drawing.Point(6, 23);
+            this.comboFütterungAdd_Food.Name = "comboFütterungAdd_Food";
+            this.comboFütterungAdd_Food.Size = new System.Drawing.Size(266, 26);
+            this.comboFütterungAdd_Food.TabIndex = 81;
+            this.comboFütterungAdd_Food.TextChanged += new System.EventHandler(this.FütterungInput_TextChanged);
+            // 
+            // groupFütterungAdd_Animal
+            // 
+            this.groupFütterungAdd_Animal.Controls.Add(this.comboFütterungAdd_Animal);
+            this.groupFütterungAdd_Animal.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupFütterungAdd_Animal.Location = new System.Drawing.Point(20, 10);
+            this.groupFütterungAdd_Animal.Name = "groupFütterungAdd_Animal";
+            this.groupFütterungAdd_Animal.Size = new System.Drawing.Size(278, 66);
+            this.groupFütterungAdd_Animal.TabIndex = 24;
+            this.groupFütterungAdd_Animal.TabStop = false;
+            this.groupFütterungAdd_Animal.Text = "Tier";
+            // 
+            // comboFütterungAdd_Animal
+            // 
+            this.comboFütterungAdd_Animal.BackColor = System.Drawing.SystemColors.Window;
+            this.comboFütterungAdd_Animal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboFütterungAdd_Animal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboFütterungAdd_Animal.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboFütterungAdd_Animal.FormattingEnabled = true;
+            this.comboFütterungAdd_Animal.Location = new System.Drawing.Point(6, 23);
+            this.comboFütterungAdd_Animal.Name = "comboFütterungAdd_Animal";
+            this.comboFütterungAdd_Animal.Size = new System.Drawing.Size(266, 26);
+            this.comboFütterungAdd_Animal.TabIndex = 80;
+            this.comboFütterungAdd_Animal.TextChanged += new System.EventHandler(this.FütterungInput_TextChanged);
             // 
             // tabLog
             // 
@@ -1933,18 +2558,11 @@
             this.buttonChangePassword.Location = new System.Drawing.Point(23, 476);
             this.buttonChangePassword.Name = "buttonChangePassword";
             this.buttonChangePassword.Size = new System.Drawing.Size(238, 33);
-            this.buttonChangePassword.TabIndex = 17;
+            this.buttonChangePassword.TabIndex = 0;
+            this.buttonChangePassword.TabStop = false;
             this.buttonChangePassword.Text = "Kennwort ändern";
             this.buttonChangePassword.UseVisualStyleBackColor = false;
             this.buttonChangePassword.Click += new System.EventHandler(this.buttonChangePassword_Click);
-            // 
-            // textTiereAdd_Gender
-            // 
-            this.textTiereAdd_Gender.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTiereAdd_Gender.Location = new System.Drawing.Point(6, 22);
-            this.textTiereAdd_Gender.Name = "textTiereAdd_Gender";
-            this.textTiereAdd_Gender.Size = new System.Drawing.Size(266, 26);
-            this.textTiereAdd_Gender.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -1965,6 +2583,10 @@
             this.Text = "NaturZoo Rheine";
             this.tabControlMain.ResumeLayout(false);
             this.tabÜbersicht.ResumeLayout(false);
+            this.groupÜbersichtFutter.ResumeLayout(false);
+            this.groupÜbersichtFutter.PerformLayout();
+            this.groupÜbersichtFütterung.ResumeLayout(false);
+            this.groupÜbersichtFütterung.PerformLayout();
             this.groupÜbersichtGehege.ResumeLayout(false);
             this.groupÜbersichtGehege.PerformLayout();
             this.groupÜbersichtGebäude.ResumeLayout(false);
@@ -1983,19 +2605,19 @@
             this.tabPflegerAlle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPflegerAlle)).EndInit();
             this.tabPflegerHinzufügen.ResumeLayout(false);
-            this.groupPflegerAdd_Straße.ResumeLayout(false);
-            this.groupPflegerAdd_Straße.PerformLayout();
             this.groupPflegerAdd_Permission.ResumeLayout(false);
             this.groupPflegerAdd_Revier.ResumeLayout(false);
             this.groupPflegerAdd_Phone.ResumeLayout(false);
             this.groupPflegerAdd_Phone.PerformLayout();
+            this.groupPflegerAdd_Geb.ResumeLayout(false);
+            this.groupPflegerAdd_Straße.ResumeLayout(false);
+            this.groupPflegerAdd_Straße.PerformLayout();
             this.groupPflegerAdd_Stadt.ResumeLayout(false);
             this.groupPflegerAdd_PLZ.ResumeLayout(false);
             this.groupPflegerAdd_Password.ResumeLayout(false);
             this.groupPflegerAdd_Password.PerformLayout();
             this.groupPflegerAdd_Email.ResumeLayout(false);
             this.groupPflegerAdd_Email.PerformLayout();
-            this.groupPflegerAdd_Geb.ResumeLayout(false);
             this.groupPflegerAdd_Surname.ResumeLayout(false);
             this.groupPflegerAdd_Surname.PerformLayout();
             this.groupPflegerAdd_Name.ResumeLayout(false);
@@ -2046,10 +2668,10 @@
             this.tabLieferantenAlle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLieferantenAlle)).EndInit();
             this.tabLieferantenHinzufügen.ResumeLayout(false);
-            this.groupLieferantenAdd_ContactSurname.ResumeLayout(false);
-            this.groupLieferantenAdd_ContactSurname.PerformLayout();
             this.groupLieferantenAdd_ContactName.ResumeLayout(false);
             this.groupLieferantenAdd_ContactName.PerformLayout();
+            this.groupLieferantenAdd_ContactSurname.ResumeLayout(false);
+            this.groupLieferantenAdd_ContactSurname.PerformLayout();
             this.groupLieferantenAdd_Phone.ResumeLayout(false);
             this.groupLieferantenAdd_Phone.PerformLayout();
             this.groupLieferantenAdd_Street.ResumeLayout(false);
@@ -2058,6 +2680,30 @@
             this.groupLieferantenAdd_PLZ.ResumeLayout(false);
             this.groupLieferantenAdd_Name.ResumeLayout(false);
             this.groupLieferantenAdd_Name.PerformLayout();
+            this.tabFutter.ResumeLayout(false);
+            this.tabControlFutter.ResumeLayout(false);
+            this.tabFutterAlle.ResumeLayout(false);
+            this.tabFutterAlle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridFutterAlle)).EndInit();
+            this.tabFutterHinzufügen.ResumeLayout(false);
+            this.groupFutterAdd_Supplier.ResumeLayout(false);
+            this.groupFutterAdd_Amount.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericFutterAdd_Amount)).EndInit();
+            this.groupFutterAdd_Name.ResumeLayout(false);
+            this.groupFutterAdd_Name.PerformLayout();
+            this.tabFütterung.ResumeLayout(false);
+            this.tabControlFütterung.ResumeLayout(false);
+            this.tabFütterungAlle.ResumeLayout(false);
+            this.tabFütterungAlle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridFütterungAlle)).EndInit();
+            this.tabFütterungHinzufügen.ResumeLayout(false);
+            this.groupFütterungAdd_Amount.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericFütterungAdd_Amount)).EndInit();
+            this.groupFütterungAdd_Weekday.ResumeLayout(false);
+            this.groupFütterungAdd_Weekday.PerformLayout();
+            this.groupFütterungAdd_Time.ResumeLayout(false);
+            this.groupFütterungAdd_Food.ResumeLayout(false);
+            this.groupFütterungAdd_Animal.ResumeLayout(false);
             this.tabLog.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -2078,27 +2724,8 @@
         private System.Windows.Forms.DataGridView gridPflegerAlle;
         private System.Windows.Forms.Label labelPflegerAlle_Pfleger;
         private System.Windows.Forms.TabPage tabPflegerHinzufügen;
-        private System.Windows.Forms.Button buttonPflegerAdd_Add;
-        private System.Windows.Forms.GroupBox groupPflegerAdd_Surname;
-        private System.Windows.Forms.TextBox textPflegerAdd_Surname;
-        private System.Windows.Forms.GroupBox groupPflegerAdd_Name;
-        private System.Windows.Forms.TextBox textPflegerAdd_Name;
         private System.Windows.Forms.TabPage tabLog;
         private System.Windows.Forms.ListBox listBoxLog;
-        private System.Windows.Forms.GroupBox groupPflegerAdd_Email;
-        private System.Windows.Forms.TextBox textPflegerAdd_Email;
-        private System.Windows.Forms.GroupBox groupPflegerAdd_Geb;
-        private System.Windows.Forms.DateTimePicker dateTimePflegerAdd_Birthday;
-        private System.Windows.Forms.GroupBox groupPflegerAdd_Permission;
-        private System.Windows.Forms.ComboBox comboPflegerAdd_Permission;
-        private System.Windows.Forms.GroupBox groupPflegerAdd_Revier;
-        private System.Windows.Forms.ComboBox comboPflegerAdd_Revier;
-        private System.Windows.Forms.GroupBox groupPflegerAdd_Phone;
-        private System.Windows.Forms.TextBox textPflegerAdd_Phone;
-        private System.Windows.Forms.GroupBox groupPflegerAdd_Stadt;
-        private System.Windows.Forms.GroupBox groupPflegerAdd_PLZ;
-        private System.Windows.Forms.GroupBox groupPflegerAdd_Password;
-        private System.Windows.Forms.TextBox textPflegerAdd_Password;
         private System.Windows.Forms.TabControl tabControlTiere;
         private System.Windows.Forms.TabPage tabTiereAlle;
         private System.Windows.Forms.Label labelTiereAlle_Count;
@@ -2117,10 +2744,6 @@
         private System.Windows.Forms.GroupBox groupTiereAdd_Revier;
         private System.Windows.Forms.ComboBox comboTiereAdd_Revier;
         private System.Windows.Forms.Button buttonChangePassword;
-        private System.Windows.Forms.GroupBox groupPflegerAdd_Straße;
-        private System.Windows.Forms.TextBox textPflegerAdd_Street;
-        private System.Windows.Forms.ComboBox comboPflegerAdd_Stadt;
-        private System.Windows.Forms.ComboBox comboPflegerAdd_PLZ;
         private System.Windows.Forms.TabControl tabControlLieferanten;
         private System.Windows.Forms.TabPage tabLieferantenAlle;
         private System.Windows.Forms.Label labelLieferantenAlle_Count;
@@ -2173,16 +2796,14 @@
         private System.Windows.Forms.DataGridView gridGehegeAlle;
         private System.Windows.Forms.Label labelGehegeAlle;
         private System.Windows.Forms.TabPage tabGehegeHinzufügen;
-        private System.Windows.Forms.GroupBox groupGehegeAdd_Gebäude;
-        private System.Windows.Forms.ComboBox comboGehegeAdd_Gebäude;
         private System.Windows.Forms.Button buttonGehegeAdd_Add;
         private System.Windows.Forms.GroupBox groupGehegeAdd_Name;
         private System.Windows.Forms.TextBox textGehegeAdd_Name;
         private System.Windows.Forms.Button buttonTiereAdd_Add;
-        private System.Windows.Forms.GroupBox groupLieferantenAdd_ContactSurname;
-        private System.Windows.Forms.TextBox textLieferantenAdd_ContactSurname;
         private System.Windows.Forms.GroupBox groupLieferantenAdd_ContactName;
         private System.Windows.Forms.TextBox textLieferantenAdd_ContactName;
+        private System.Windows.Forms.GroupBox groupLieferantenAdd_ContactSurname;
+        private System.Windows.Forms.TextBox textLieferantenAdd_ContactSurname;
         private System.Windows.Forms.GroupBox groupLieferantenAdd_Phone;
         private System.Windows.Forms.TextBox textLieferantenAdd_Phone;
         private System.Windows.Forms.GroupBox groupLieferantenAdd_Street;
@@ -2207,6 +2828,72 @@
         private System.Windows.Forms.Label labelÜbersichtReviereLastChange;
         private System.Windows.Forms.Label labelÜbersichtReviere;
         private System.Windows.Forms.TextBox textTiereAdd_Gender;
+        private System.Windows.Forms.TabPage tabFutter;
+        private System.Windows.Forms.TabControl tabControlFutter;
+        private System.Windows.Forms.TabPage tabFutterAlle;
+        private System.Windows.Forms.Label labelFutterAlle_Count;
+        private System.Windows.Forms.DataGridView gridFutterAlle;
+        private System.Windows.Forms.Label labelFutterAlle;
+        private System.Windows.Forms.TabPage tabFutterHinzufügen;
+        private System.Windows.Forms.TabControl tabControlFütterung;
+        private System.Windows.Forms.TabPage tabFütterungAlle;
+        private System.Windows.Forms.Label labelFütterungAlle_Count;
+        private System.Windows.Forms.DataGridView gridFütterungAlle;
+        private System.Windows.Forms.Label labelFütterungAlle;
+        private System.Windows.Forms.TabPage tabFütterungHinzufügen;
+        private System.Windows.Forms.GroupBox groupÜbersichtFutter;
+        private System.Windows.Forms.Label labelÜbersichtFutterLastChanged_Value;
+        private System.Windows.Forms.Label labelÜbersichtFutter_Count;
+        private System.Windows.Forms.Label labelÜbersichtFutterLastChanged;
+        private System.Windows.Forms.Label labelÜbersichtFutter;
+        private System.Windows.Forms.GroupBox groupÜbersichtFütterung;
+        private System.Windows.Forms.Label labelÜbersichtFütterungLastChanged_Value;
+        private System.Windows.Forms.Label labelÜbersichtFütterung_Count;
+        private System.Windows.Forms.Label labelÜbersichtFütterungLastChanged;
+        private System.Windows.Forms.Label labelÜbersichtFütterung;
+        private System.Windows.Forms.Button buttonFutterAdd_Add;
+        private System.Windows.Forms.GroupBox groupFutterAdd_Supplier;
+        private System.Windows.Forms.ComboBox comboFutterAdd_Lieferant;
+        private System.Windows.Forms.GroupBox groupFutterAdd_Amount;
+        private System.Windows.Forms.NumericUpDown numericFutterAdd_Amount;
+        private System.Windows.Forms.GroupBox groupFutterAdd_Name;
+        private System.Windows.Forms.TextBox textFutterAdd_Name;
+        private System.Windows.Forms.GroupBox groupFütterungAdd_Time;
+        private System.Windows.Forms.DateTimePicker dateTimeFütterungAdd_Time;
+        private System.Windows.Forms.GroupBox groupFütterungAdd_Food;
+        private System.Windows.Forms.ComboBox comboFütterungAdd_Food;
+        private System.Windows.Forms.GroupBox groupFütterungAdd_Animal;
+        private System.Windows.Forms.ComboBox comboFütterungAdd_Animal;
+        private System.Windows.Forms.Button buttonFütterungAdd_Add;
+        private System.Windows.Forms.GroupBox groupFütterungAdd_Amount;
+        private System.Windows.Forms.NumericUpDown numericFütterungAdd_Amount;
+        private System.Windows.Forms.GroupBox groupFütterungAdd_Weekday;
+        private System.Windows.Forms.TextBox textFütterungAdd_Weekday;
+        private System.Windows.Forms.Button buttonPflegerAdd_Add;
+        private System.Windows.Forms.GroupBox groupPflegerAdd_Permission;
+        private System.Windows.Forms.ComboBox comboPflegerAdd_Permission;
+        private System.Windows.Forms.GroupBox groupPflegerAdd_Revier;
+        private System.Windows.Forms.ComboBox comboPflegerAdd_Revier;
+        private System.Windows.Forms.GroupBox groupPflegerAdd_Phone;
+        private System.Windows.Forms.TextBox textPflegerAdd_Phone;
+        private System.Windows.Forms.GroupBox groupPflegerAdd_Geb;
+        private System.Windows.Forms.DateTimePicker dateTimePflegerAdd_Birthday;
+        private System.Windows.Forms.GroupBox groupPflegerAdd_Straße;
+        private System.Windows.Forms.TextBox textPflegerAdd_Street;
+        private System.Windows.Forms.GroupBox groupPflegerAdd_Stadt;
+        private System.Windows.Forms.ComboBox comboPflegerAdd_Stadt;
+        private System.Windows.Forms.GroupBox groupPflegerAdd_PLZ;
+        private System.Windows.Forms.ComboBox comboPflegerAdd_PLZ;
+        private System.Windows.Forms.GroupBox groupPflegerAdd_Password;
+        private System.Windows.Forms.TextBox textPflegerAdd_Password;
+        private System.Windows.Forms.GroupBox groupPflegerAdd_Email;
+        private System.Windows.Forms.TextBox textPflegerAdd_Email;
+        private System.Windows.Forms.GroupBox groupPflegerAdd_Surname;
+        private System.Windows.Forms.TextBox textPflegerAdd_Surname;
+        private System.Windows.Forms.GroupBox groupPflegerAdd_Name;
+        private System.Windows.Forms.TextBox textPflegerAdd_Name;
+        private System.Windows.Forms.GroupBox groupGehegeAdd_Gebäude;
+        private System.Windows.Forms.ComboBox comboGehegeAdd_Gebäude;
     }
 }
 

@@ -35,10 +35,12 @@ namespace NaturZoo_Rheine.View {
             // Load all Data
             RefreshGuardian();
             RefreshTerritory();
-            RefreshAnimal();
-            RefreshSupplier();
             RefreshBuilding();
             RefreshEnclosure();
+            RefreshAnimal();
+            RefreshSupplier();
+            RefreshFood();
+            RefreshFoodplan();
         }
 
 
@@ -129,6 +131,7 @@ namespace NaturZoo_Rheine.View {
             if (textPflegerAdd_Name.Text == ""
                || textPflegerAdd_Surname.Text == ""
                || textPflegerAdd_Email.Text == ""
+               //|| textPflegerAdd_Password.Text == ""
                || comboPflegerAdd_PLZ.Text == ""
                || comboPflegerAdd_Stadt.Text == ""
                || textPflegerAdd_Street.Text == ""
@@ -163,6 +166,18 @@ namespace NaturZoo_Rheine.View {
                     fk_territoryID = (int)comboPflegerAdd_Revier.SelectedValue,
                     Permission     = 1
                 });
+
+                textPflegerAdd_Name.Text = string.Empty;
+                textPflegerAdd_Surname.Text = string.Empty;
+                textPflegerAdd_Email.Text = string.Empty;
+                //textPflegerAdd_Password.Text = string.Empty;
+                comboPflegerAdd_PLZ.Text = string.Empty;
+                comboPflegerAdd_Stadt.Text = string.Empty;
+                textPflegerAdd_Street.Text = string.Empty;
+                textPflegerAdd_Phone.Text = string.Empty;
+                comboPflegerAdd_Revier.SelectedIndex = -1;
+                //comboPflegerAdd_Permission.SelectedIndex = -1;
+
                 MessageBox.Show("Pfleger wurde hinzugefügt.", "Application update", MessageBoxButtons.OK);
 
                 RefreshGuardian();
@@ -225,6 +240,9 @@ namespace NaturZoo_Rheine.View {
                 Zoo.CreateTerritory(new Territory {
                     Name = textReviereAdd_Name.Text
                 });
+
+                textReviereAdd_Name.Text = string.Empty;
+
                 MessageBox.Show("Revier wurde hinzugefügt.", "Application update", MessageBoxButtons.OK);
 
                 RefreshTerritory();
@@ -276,10 +294,16 @@ namespace NaturZoo_Rheine.View {
             if (buttonGebäudeAdd_Add.BackColor == Color.FromArgb(158, 158, 158)) {
                 MessageBox.Show("Bitte alle Felder ausfüllen.", "Nutzer information", MessageBoxButtons.OK);
             } else {
+                MessageBox.Show(comboGebäudeAdd_Revier.SelectedValue.ToString());
+
                 Zoo.CreateBuilding(new Building {
                     Name           = textGebäudeAdd_Name.Text,
                     fk_territoryID = (int)comboGebäudeAdd_Revier.SelectedValue
                 });
+
+                textGebäudeAdd_Name.Text = string.Empty;
+                comboGebäudeAdd_Revier.SelectedIndex = -1;
+
                 MessageBox.Show("Gebäude wurde hinzugefügt.", "Application update", MessageBoxButtons.OK);
 
                 RefreshBuilding();
@@ -333,8 +357,12 @@ namespace NaturZoo_Rheine.View {
             } else {
                 Zoo.CreateEnclosure(new Enclosure {
                     Name          = textGehegeAdd_Name.Text,
-                    fk_buildingID = (int)comboGebäudeAdd_Revier.SelectedValue
+                    fk_buildingID = comboGehegeAdd_Gebäude.SelectedIndex
                 });
+
+                textGehegeAdd_Name.Text = string.Empty;
+                comboGehegeAdd_Gebäude.SelectedIndex = -1;
+
                 MessageBox.Show("Gehege wurde hinzugefügt.", "Application update", MessageBoxButtons.OK);
 
                 RefreshEnclosure();
@@ -352,10 +380,14 @@ namespace NaturZoo_Rheine.View {
             // Animal Card
             labelÜbersichtTiere_Count.Text           = Zoo.GetAnimalCount;
             labelÜbersichtTiereLastChange_Value.Text = Zoo.GetAnimalLastChange;
-
             // Animal Tab
             labelTiereAlle_Count.Text = Zoo.GetAnimalCount;
             gridTiereAlle.DataSource  = Zoo.GetAnimalGrid;
+            // Foodplan Tab
+            comboFütterungAdd_Animal.DataSource = Zoo.GetAnimalDropdown;
+            comboFütterungAdd_Animal.DisplayMember = "name";
+            comboFütterungAdd_Animal.ValueMember = "Id";
+            comboFütterungAdd_Animal.SelectedIndex = -1;
         }
 
         /// <summary>
@@ -382,7 +414,7 @@ namespace NaturZoo_Rheine.View {
         /// </summary>
         private void buttonTiereAdd_Add_Click(object sender, EventArgs e)
         {
-            if (buttonPflegerAdd_Add.BackColor == Color.FromArgb(158, 158, 158)) {
+            if (buttonTiereAdd_Add.BackColor == Color.FromArgb(158, 158, 158)) {
                 MessageBox.Show("Bitte alle Felder ausfüllen.", "Nutzer information", MessageBoxButtons.OK);
             } else {
                 Zoo.CreateAnimal(new Animal {
@@ -394,6 +426,13 @@ namespace NaturZoo_Rheine.View {
                     fk_enclosureID  = (int)comboTiereAdd_Gehege.SelectedValue,
                     away_since      = null
                 });
+
+                textTiereAdd_Name.Text = string.Empty;
+                comboTiereAdd_Species.Text = string.Empty;
+                textTiereAdd_Gender.Text = string.Empty;
+                comboTiereAdd_Revier.SelectedIndex = -1;
+                comboTiereAdd_Gehege.SelectedIndex = -1;
+
                 MessageBox.Show("Tier wurde hinzugefügt.", "Application update", MessageBoxButtons.OK);
 
                 RefreshAnimal();
@@ -408,13 +447,17 @@ namespace NaturZoo_Rheine.View {
         /// </summary>
         private void RefreshSupplier()
         {
-            // Supllier Card
+            // Suplier Card
             labelÜbersichtLieferanten_Count.Text           = Zoo.GetSupplierCount;
             labelÜbersichtLieferantenLastChange_Value.Text = Zoo.GetSupplierLastChange;
-
             // Supplier Tab
             labelLieferantenAlle_Count.Text = Zoo.GetSupplierCount;
             gridLieferantenAlle.DataSource  = Zoo.GetSupplierGrid;
+            // Food Tab
+            comboFutterAdd_Lieferant.DataSource = Zoo.GetSupplierDropdown;
+            comboFutterAdd_Lieferant.DisplayMember = "name";
+            comboFutterAdd_Lieferant.ValueMember = "Id";
+            comboFutterAdd_Lieferant.SelectedIndex = -1;
         }
 
         /// <summary>
@@ -428,8 +471,8 @@ namespace NaturZoo_Rheine.View {
                 || comboLieferantenAdd_Stadt.Text == ""
                 || textLieferantenAdd_Street.Text == ""
                 || textLieferantenAdd_Phone.Text == ""
-                || textLieferantenAdd_ContactName.Text == ""
                 || textLieferantenAdd_ContactSurname.Text == ""
+                || textLieferantenAdd_ContactName.Text == ""
                 ) {
                 buttonLieferantenAdd_Add.BackColor = Color.FromArgb(158, 158, 158);
             } else {
@@ -451,9 +494,18 @@ namespace NaturZoo_Rheine.View {
                     fk_addressID            = 1,
                     Street                  = textLieferantenAdd_Street.Text,
                     telephone               = textLieferantenAdd_Phone.Text,
-                    Contact_Person_Name     = textLieferantenAdd_ContactName.Text,
-                    Contact_Person_Surname  = textLieferantenAdd_ContactSurname.Text
+                    Contact_Person_Name     = textLieferantenAdd_ContactSurname.Text,
+                    Contact_Person_Surname  = textLieferantenAdd_ContactName.Text
                 });
+
+                textLieferantenAdd_Name.Text = string.Empty;
+                comboLieferantenAdd_PLZ.Text = string.Empty;
+                comboLieferantenAdd_Stadt.Text = string.Empty;
+                textLieferantenAdd_Street.Text = string.Empty;
+                textLieferantenAdd_Phone.Text = string.Empty;
+                textLieferantenAdd_ContactSurname.Text = string.Empty;
+                textLieferantenAdd_ContactName.Text = string.Empty;
+
                 MessageBox.Show("Lieferant wurde hinzugefügt.", "Application update", MessageBoxButtons.OK);
 
                 RefreshSupplier();
@@ -462,7 +514,135 @@ namespace NaturZoo_Rheine.View {
         #endregion
 
 
+        #region tabControl Futter
+        /// <summary>
+        /// Refresh food data
+        /// </summary>
+        private void RefreshFood()
+        {
+            // Food Card
+            labelÜbersichtFutter_Count.Text             = Zoo.GetFoodCount;
+            labelÜbersichtFutterLastChanged_Value.Text  = Zoo.GetFoodLastChange;
+            // Food Tab
+            labelFutterAlle_Count.Text  = Zoo.GetFoodCount;
+            gridFutterAlle.DataSource   = Zoo.GetFoodGrid;
+            // Foodplan Tab
+            comboFütterungAdd_Food.DataSource = Zoo.GetFoodDropdown;
+            comboFütterungAdd_Food.DisplayMember = "name";
+            comboFütterungAdd_Food.ValueMember = "Id";
+            comboFütterungAdd_Food.SelectedIndex = -1;
+        }
+
+        /// <summary>
+        /// <para>Futter Tab</para>
+        /// Text Change
+        /// </summary>
+        private void FutterInput_TextChanged(object sender, EventArgs e)
+        {
+            if(textFutterAdd_Name.Text == ""
+                || comboFutterAdd_Lieferant.Text == ""
+                ){
+                buttonFutterAdd_Add.BackColor = Color.FromArgb(158, 158, 158);
+            }
+            else
+            {
+                buttonFutterAdd_Add.BackColor = Color.FromArgb(0, 200, 83);
+            }
+        }
+
+        /// <summary>
+        /// <para>Futter Tab</para>
+        /// Adds <see cref="Food"/>.
+        /// </summary>
+        private void buttonFutterAdd_Add_Click(object sender, EventArgs e)
+        {
+            if(buttonFutterAdd_Add.BackColor == Color.FromArgb(158, 158, 158))
+            {
+                MessageBox.Show("Bitte alle Felder ausfüllen.", "Nutzer information", MessageBoxButtons.OK);
+            }
+            else
+            {
+                Zoo.CreateFood(new Food {
+                    Name = textFutterAdd_Name.Text,
+                    Amount = (int)numericFutterAdd_Amount.Value,
+                    fk_supplierID = (int)comboFutterAdd_Lieferant.SelectedValue,
+                });
+
+                textFutterAdd_Name.Text = string.Empty;
+                numericFutterAdd_Amount.Value = 1;
+                comboFutterAdd_Lieferant.SelectedIndex = -1;
+
+                MessageBox.Show("Futter wurde hinzugefügt.", "Application update", MessageBoxButtons.OK);
+
+                RefreshFood();
+            }
+        }
+        #endregion
+
+
         #region tabControl Fütterung
+        /// <summary>
+        /// Refresh foodplan data
+        /// </summary>
+        private void RefreshFoodplan()
+        {
+            // Foodplan Card
+            labelÜbersichtFütterung_Count.Text = Zoo.GetFoodplanCount;
+            labelÜbersichtFütterungLastChanged_Value.Text = Zoo.GetFoodplanLastChange;
+
+            // Foodplan Tab
+            labelFütterungAlle_Count.Text = Zoo.GetFoodplanCount;
+            gridFütterungAlle.DataSource = Zoo.GetFoodplanGrid;
+        }
+
+        /// <summary>
+        /// <para>Fütterung Tab</para>
+        /// Text Change
+        /// </summary>
+        private void FütterungInput_TextChanged(object sender, EventArgs e)
+        {
+            if(comboFütterungAdd_Animal.Text == ""
+                || comboFütterungAdd_Food.Text == ""
+                || textFütterungAdd_Weekday.Text == ""
+                ){
+                buttonFütterungAdd_Add.BackColor = Color.FromArgb(158, 158, 158);
+            }
+            else
+            {
+                buttonFütterungAdd_Add.BackColor = Color.FromArgb(0, 200, 83);
+            }
+        }
+
+        /// <summary>
+        /// <para>Fütterung Tab</para>
+        /// Adds <see cref="Food"/>.
+        /// </summary>
+        private void buttonFütterungAdd_Add_Click(object sender, EventArgs e)
+        {
+            if(buttonFütterungAdd_Add.BackColor == Color.FromArgb(158, 158, 158))
+            {
+                MessageBox.Show("Bitte alle Felder ausfüllen.", "Nutzer information", MessageBoxButtons.OK);
+            }
+            else
+            {
+                Zoo.CreateFoodplan(new Foodplan {
+                    fk_animalID = (int)comboFütterungAdd_Animal.SelectedValue,
+                    fk_foodID = (int)comboFütterungAdd_Food.SelectedValue,
+                    Time = dateTimeFütterungAdd_Time.Value.ToString("HH:mm"),
+                    Weekday = textFütterungAdd_Weekday.Text,
+                    Amount = (int)numericFütterungAdd_Amount.Value
+                });
+
+                comboFütterungAdd_Animal.SelectedIndex = -1;
+                comboFütterungAdd_Food.SelectedIndex = -1;
+                textFütterungAdd_Weekday.Text = string.Empty;
+                numericFütterungAdd_Amount.Value = 1;
+
+                MessageBox.Show("Fütterung wurde hinzugefügt.", "Application update", MessageBoxButtons.OK);
+                
+                RefreshFoodplan();
+            }
+        }
         #endregion
     }
 }
