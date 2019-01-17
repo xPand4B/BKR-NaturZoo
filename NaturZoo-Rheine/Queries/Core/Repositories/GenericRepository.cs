@@ -56,7 +56,7 @@ namespace NaturZoo_Rheine.Queries.Core.Repositories
                                .ToList();
 
             
-            for (int i = 0; i < fields.Count - 4; i++) {
+            for (int i = 0; i < fields.Count - 5; i++) {
 
                 fillable.Add(fields[i].Name.ToLower());
 
