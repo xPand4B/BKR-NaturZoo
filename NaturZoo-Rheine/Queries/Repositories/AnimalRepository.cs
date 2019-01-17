@@ -14,7 +14,7 @@ namespace NaturZoo_Rheine.Queries.Repositories
         private readonly NaturZoo_Rheine.Database.Database _context;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GuardianRepository"/> class.
+        /// Initializes a new instance of the <see cref="AnimalRepository"/> class.
         /// </summary>
         /// <exception cref="ArgumentNullException"> if <paramref name="context"/> is null</exception>
         public AnimalRepository(Database.Database context) : base(context)
