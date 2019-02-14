@@ -121,19 +121,6 @@ namespace NaturZoo_Rheine.Queries.Core.Repositories
         }
 
         /// <summary>
-        /// Get a entity matching an id.
-        /// </summary>
-        /// <param name="id">Entity id.</param>
-        /// <exception cref="ArgumentNullException"> if <paramref name="id"/> is null</exception>
-        public TEntity GetById(int id)
-        {
-            if (id == default(Int32))
-                throw new ArgumentNullException("id");
-
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// Update data for the specified entity.
         /// </summary>
         /// <param name="entity">Entity to update.</param>

@@ -36,13 +36,6 @@ namespace NaturZoo_Rheine.Queries.Core.Repositories
         DataTable GetAll(List<string> showable, List<string> foreignTable);
 
         /// <summary>
-        /// Get a entity matching an id.
-        /// </summary>
-        /// <param name="id">Entity id.</param>
-        /// <exception cref="ArgumentNullException"> if <paramref name="id"/> is null</exception>
-        TEntity GetById(Int32 id);
-
-        /// <summary>
         /// Update data for the specified entity.
         /// </summary>
         /// <param name="entity">Entity to update.</param>
