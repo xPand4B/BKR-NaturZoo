@@ -10,6 +10,7 @@ namespace NaturZoo_Rheine.Queries.Repositories
     /// </summary>
     class ZooRepository
     {
+        private readonly AddressRepository      addressRepository;
         private readonly AnimalRepository       animalRepository;
         private readonly BuildingRepository     buildingRepository;
         private readonly EnclosureRepository    enclosureRepository;
@@ -19,7 +20,6 @@ namespace NaturZoo_Rheine.Queries.Repositories
         private readonly LogRepository          logRepository;
         private readonly SupplierRepository     supplierRepository;
         private readonly TerritoryRepository    territoryRepository;
-
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ZooRepository"/> class.
@@ -31,6 +31,7 @@ namespace NaturZoo_Rheine.Queries.Repositories
                 throw new ArgumentNullException("context");
 
             // Repository initialization
+            addressRepository   = new AddressRepository(context);
             animalRepository    = new AnimalRepository(context);
             buildingRepository  = new BuildingRepository(context);
             enclosureRepository = new EnclosureRepository(context);
@@ -41,6 +42,29 @@ namespace NaturZoo_Rheine.Queries.Repositories
             supplierRepository  = new SupplierRepository(context);
             territoryRepository = new TerritoryRepository(context);
         }
+
+
+        #region Address
+        /// <summary>
+        /// Get address dropdown data.
+        /// </summary>
+        public DataTable GetAddressDropdown {
+            get { return addressRepository.GetDropdown(); }
+        }
+
+        /// <summary>
+        /// Creates a <see cref="Address"/> entity.
+        /// </summary>
+        /// <param name="address"></param>
+        /// <exception cref="ArgumentNullException"> if <paramref name="address"/> is null</exception>
+        public void CreateAddress(Address address)
+        {
+            if(address == null)
+                throw new ArgumentNullException("address");
+
+            addressRepository.Add(address);
+        }
+        #endregion
 
 
         #region Animal
@@ -270,6 +294,13 @@ namespace NaturZoo_Rheine.Queries.Repositories
         /// </summary>
         public DataTable GetGuardianGrid {
             get { return guardianRepository.GetAll(); }
+        }
+
+        /// <summary>
+        /// Get guardian dropdown data.
+        /// </summary>
+        public DataTable GetGuardianDropdown {
+            get { return guardianRepository.GetDropdown(); }
         }
 
         /// <summary>
