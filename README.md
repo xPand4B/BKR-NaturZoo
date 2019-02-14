@@ -12,5 +12,6 @@ Dabei wurde versucht das Projekt nach dem vereinfachten __[Repository Design Pat
 ## ToDo
 * Create Log Services + Event
 	* Push Log to DB and file
-* Create Generic method __GetDropdownData()__
-* Add possibility for join in query (EntityBase, Database, GenericRepository)
+* Add hybrid dropdown for postcode, city, species
+* Enable login
+* Include Hasher
