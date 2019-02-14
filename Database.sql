@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 17, 2019 at 08:26 AM
+-- Generation Time: Feb 14, 2019 at 12:46 PM
 -- Server version: 10.3.7-MariaDB
 -- PHP Version: 7.2.4
 
@@ -33,15 +33,21 @@ USE `bkr_zoo_eric_heinzl`;
 CREATE TABLE `address` (
   `id` int(11) NOT NULL,
   `postcode` int(5) NOT NULL,
-  `city` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL
+  `city` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `address`
 --
 
-INSERT INTO `address` (`id`, `postcode`, `city`) VALUES
-(1, 48465, 'Schüttorf');
+INSERT INTO `address` (`id`, `postcode`, `city`, `created_at`, `updated_at`) VALUES
+(1, 48465, 'Schüttorf', '2019-02-13 00:38:57', NULL),
+(2, 48282, 'Emsdetten', '2019-02-13 00:48:17', NULL),
+(3, 00000, 'Adlertown', '2019-02-13 00:49:09', NULL),
+(4, 01234, 'Bottown', '2019-02-13 00:49:58', NULL),
+(5, 01234, 'Adlertown', '2019-02-14 12:39:42', NULL);
 
 -- --------------------------------------------------------
 
@@ -67,7 +73,11 @@ CREATE TABLE `animal` (
 --
 
 INSERT INTO `animal` (`id`, `name`, `species`, `gender`, `birthday`, `fk_territoryid`, `fk_enclosureid`, `away_since`, `created_at`, `updated_at`) VALUES
-(1, 'Alfred', 'Clownfisch', 'Männlich', '2018-11-28', 1, 1, NULL, '2019-01-17 07:40:36', NULL);
+(1, 'Venum', 'Elefant', 'Männlich', '2018-11-06', 3, 2, NULL, '2019-02-14 12:10:24', NULL),
+(2, 'Theo', 'Tiger', 'Weiblich', '2018-11-28', 1, 3, NULL, '2019-02-14 12:35:19', NULL),
+(3, 'Saskia', 'Eule', 'Männlich', '2018-11-28', 4, 7, NULL, '2019-02-14 12:43:24', NULL),
+(4, 'Norbert', 'Eule', 'Weiblich', '2018-11-28', 4, 7, NULL, '2019-02-14 12:43:46', NULL),
+(5, 'Gutruhn', 'Spatz', 'Weiblich', '2018-11-02', 4, 6, NULL, '2019-02-14 12:44:12', NULL);
 
 -- --------------------------------------------------------
 
@@ -88,7 +98,12 @@ CREATE TABLE `building` (
 --
 
 INSERT INTO `building` (`id`, `name`, `fk_territoryid`, `created_At`, `updated_At`) VALUES
-(1, 'Seeworld', 1, '2019-01-17 00:31:26', NULL);
+(1, 'Elefanten-Haus', 3, '2019-02-13 00:24:46', NULL),
+(2, 'Antilopen-Wiese', 3, '2019-02-13 00:27:30', NULL),
+(3, 'Seelöwen-Planschbecken', 8, '2019-02-13 00:28:36', NULL),
+(4, 'Löwen-Haus', 1, '2019-02-13 00:37:03', NULL),
+(5, 'Affen-Haus', 3, '2019-02-13 00:37:32', NULL),
+(6, 'Vogel-Haus', 4, '2019-02-14 12:42:03', NULL);
 
 -- --------------------------------------------------------
 
@@ -109,7 +124,13 @@ CREATE TABLE `enclosure` (
 --
 
 INSERT INTO `enclosure` (`id`, `name`, `fk_buildingid`, `created_at`, `updated_at`) VALUES
-(1, 'Aquarium', 1, '2019-01-17 00:57:52', NULL);
+(1, 'Orangutan-Gehege', 5, '2019-02-13 00:38:03', NULL),
+(2, 'Elefanten-Babies', 1, '2019-02-13 00:51:50', NULL),
+(3, 'Löwen-Gehege', 4, '2019-02-14 12:35:12', NULL),
+(4, 'Seelöwen-Gehege', 3, '2019-02-14 12:40:47', NULL),
+(5, 'Antilopen-Gehege', 2, '2019-02-14 12:40:59', NULL),
+(6, 'Spatzen-Gehege', 6, '2019-02-14 12:42:47', NULL),
+(7, 'Eulen-Gehege', 6, '2019-02-14 12:43:01', NULL);
 
 -- --------------------------------------------------------
 
@@ -131,7 +152,11 @@ CREATE TABLE `food` (
 --
 
 INSERT INTO `food` (`id`, `name`, `amount`, `fk_supplierid`, `created_at`, `updated_at`) VALUES
-(1, 'Getreide', 10, 1, '2019-01-17 00:40:14', NULL);
+(1, 'Getreide', 10, 2, '2019-02-14 12:32:15', NULL),
+(2, 'Fleisch', 50, 2, '2019-02-14 12:32:27', NULL),
+(3, 'Vitamine', 8, 1, '2019-02-14 12:32:50', NULL),
+(4, 'Brot', 20, 1, '2019-02-14 12:33:04', NULL),
+(5, 'Bananen', 40, 2, '2019-02-14 12:33:28', NULL);
 
 -- --------------------------------------------------------
 
@@ -155,7 +180,11 @@ CREATE TABLE `foodplan` (
 --
 
 INSERT INTO `foodplan` (`id`, `fk_animalid`, `fk_foodid`, `time`, `weekday`, `amount`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '13:00', 'Montag', '42', '2019-01-17 07:41:39', NULL);
+(1, 1, 5, '09:00', 'Montag', '1', '2019-02-14 12:34:17', NULL),
+(2, 2, 2, '15:00', 'Freitag', '2', '2019-02-14 12:35:37', NULL),
+(3, 2, 3, '12:00', 'Dienstag', '1', '2019-02-14 12:37:50', NULL),
+(4, 5, 4, '18:00', 'Mittwoch', '5', '2019-02-14 12:44:36', NULL),
+(5, 4, 2, '07:00', 'Montag', '10', '2019-02-14 12:45:04', NULL);
 
 -- --------------------------------------------------------
 
@@ -184,7 +213,12 @@ CREATE TABLE `guardian` (
 --
 
 INSERT INTO `guardian` (`id`, `name`, `surname`, `email`, `password`, `fk_addressid`, `street`, `telephone`, `birthday`, `fk_territoryid`, `permission`, `created_at`, `updated_at`) VALUES
-(1, 'Eric', 'Heinzl', 'eric.heinzl@gmail.com', 'Start1000', 1, 'Samernsche Straße 1', '05923994390', '1998-08-24', 1, 1, '2019-01-16 23:47:20', NULL);
+(1, 'Eric', 'Heinzl', 'eric.heinzl@gmail.com', 'Start1000', 1, 'Samernschestraße 1', '05923994390', '1998-08-24', 4, 1, '2019-02-12 23:38:57', NULL),
+(2, 'Henning', 'Holthaus', 'h.holthaus@gmail.com', 'Start1000', 1, 'Holzhausweg 69', '0123456789', '1998-08-24', 5, 1, '2019-02-12 23:40:26', NULL),
+(3, 'Vural', 'Corapci', 'v.corapci@gmail.com', 'Start1000', 1, 'Keine-Ahnung-999', '0123456789', '1999-01-01', 1, 1, '2019-02-12 23:47:28', NULL),
+(4, 'Stuart', 'Lux', 's.lux@gmail.com', 'Start1000', 2, 'Badjoke-Straße 1337', '0123456789', '1999-01-01', 3, 1, '2019-02-12 23:48:17', NULL),
+(5, 'Justin', 'Adler', 'j.adler@gmail.com', 'Start1000', 3, 'Adlerweg', '0123456789', '1999-01-01', 8, 1, '2019-02-12 23:49:09', NULL),
+(6, 'Sven', 'König', 's.koenig@gmail.com', 'Start1000', 4, 'Xovs-Avenue 009', '0123456789', '1999-01-01', 4, 1, '2019-02-12 23:49:58', NULL);
 
 -- --------------------------------------------------------
 
@@ -198,72 +232,6 @@ CREATE TABLE `log` (
   `message` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `log`
---
-
-INSERT INTO `log` (`id`, `status`, `message`, `created_at`) VALUES
-(1, 'Info', 'Database connection successfully established.', '2019-01-16 22:55:32'),
-(2, 'Info', 'Database connection successfully established.', '2019-01-16 22:56:58'),
-(3, 'Info', 'Database connection successfully established.', '2019-01-16 22:57:12'),
-(4, 'Info', 'Database connection successfully established.', '2019-01-16 23:02:40'),
-(5, 'Info', 'Database connection successfully established.', '2019-01-16 23:04:57'),
-(6, 'Info', 'Database connection successfully established.', '2019-01-16 23:08:05'),
-(7, 'Info', 'Database connection successfully established.', '2019-01-16 23:11:41'),
-(8, 'Info', 'Database connection successfully established.', '2019-01-16 23:12:03'),
-(9, 'Info', 'Database connection successfully established.', '2019-01-16 23:12:55'),
-(10, 'Info', 'Database connection successfully established.', '2019-01-16 23:15:26'),
-(11, 'Info', 'Database connection successfully established.', '2019-01-16 23:18:11'),
-(12, 'Info', 'Database connection successfully established.', '2019-01-16 23:20:05'),
-(13, 'Info', 'Database connection successfully established.', '2019-01-16 23:25:49'),
-(14, 'Update', 'New entry has been added to the territory table.', '2019-01-16 23:26:58'),
-(15, 'Info', 'Database connection successfully established.', '2019-01-16 23:30:32'),
-(16, 'Info', 'Database connection successfully established.', '2019-01-16 23:31:05'),
-(17, 'Update', 'New entry has been added to the building table.', '2019-01-16 23:31:26'),
-(18, 'Info', 'Database connection successfully established.', '2019-01-16 23:33:20'),
-(19, 'Update', 'New entry has been added to the supplier table.', '2019-01-16 23:34:24'),
-(20, 'Info', 'Database connection successfully established.', '2019-01-16 23:35:15'),
-(21, 'Info', 'Database connection successfully established.', '2019-01-16 23:35:47'),
-(22, 'Info', 'Database connection successfully established.', '2019-01-16 23:36:08'),
-(23, 'Info', 'Database connection successfully established.', '2019-01-16 23:36:29'),
-(24, 'Info', 'Database connection successfully established.', '2019-01-16 23:38:22'),
-(25, 'Info', 'Database connection successfully established.', '2019-01-16 23:39:59'),
-(26, 'Update', 'New entry has been added to the food table.', '2019-01-16 23:40:14'),
-(27, 'Info', 'Database connection successfully established.', '2019-01-16 23:42:46'),
-(28, 'Info', 'Database connection successfully established.', '2019-01-16 23:43:59'),
-(29, 'Info', 'Database connection successfully established.', '2019-01-16 23:44:56'),
-(30, 'Info', 'Database connection successfully established.', '2019-01-16 23:45:19'),
-(31, 'Info', 'Database connection successfully established.', '2019-01-16 23:46:36'),
-(32, 'Update', 'New entry has been added to the guardian table.', '2019-01-16 23:47:20'),
-(33, 'Info', 'Database connection successfully established.', '2019-01-16 23:51:06'),
-(34, 'Info', 'Database connection successfully established.', '2019-01-16 23:52:54'),
-(35, 'Info', 'Database connection successfully established.', '2019-01-16 23:53:25'),
-(36, 'Update', 'New entry has been added to the enclosure table.', '2019-01-16 23:53:35'),
-(37, 'Info', 'Database connection successfully established.', '2019-01-16 23:56:14'),
-(38, 'Update', 'New entry has been added to the enclosure table.', '2019-01-16 23:56:19'),
-(39, 'Info', 'Database connection successfully established.', '2019-01-16 23:57:25'),
-(40, 'Info', 'Database connection successfully established.', '2019-01-16 23:57:43'),
-(41, 'Update', 'New entry has been added to the enclosure table.', '2019-01-16 23:57:52'),
-(42, 'Info', 'Database connection successfully established.', '2019-01-16 23:58:51'),
-(43, 'Update', 'New entry has been added to the building table.', '2019-01-16 23:58:57'),
-(44, 'Info', 'Database connection successfully established.', '2019-01-17 00:00:06'),
-(45, 'Info', 'Database connection successfully established.', '2019-01-17 00:00:42'),
-(46, 'Update', 'New entry has been added to the enclosure table.', '2019-01-17 00:00:47'),
-(47, 'Info', 'Database connection successfully established.', '2019-01-17 06:25:30'),
-(48, 'Update', 'New entry has been added to the enclosure table.', '2019-01-17 06:25:55'),
-(49, 'Update', 'New entry has been added to the enclosure table.', '2019-01-17 06:26:30'),
-(50, 'Info', 'Database connection successfully established.', '2019-01-17 06:32:23'),
-(51, 'Update', 'New entry has been added to the enclosure table.', '2019-01-17 06:32:36'),
-(52, 'Info', 'Database connection successfully established.', '2019-01-17 06:34:07'),
-(53, 'Info', 'Database connection successfully established.', '2019-01-17 06:38:09'),
-(54, 'Info', 'Database connection successfully established.', '2019-01-17 06:38:26'),
-(55, 'Info', 'Database connection successfully established.', '2019-01-17 06:40:01'),
-(56, 'Update', 'New entry has been added to the animal table.', '2019-01-17 06:40:36'),
-(57, 'Update', 'New entry has been added to the foodplan table.', '2019-01-17 06:41:39'),
-(58, 'Info', 'Database connection successfully established.', '2019-01-17 07:17:03'),
-(59, 'Info', 'Database connection successfully established.', '2019-01-17 07:19:02'),
-(60, 'Info', 'Database connection successfully established.', '2019-01-17 07:19:28');
 
 -- --------------------------------------------------------
 
@@ -300,7 +268,11 @@ CREATE TABLE `supplier` (
 --
 
 INSERT INTO `supplier` (`id`, `name`, `fk_addressid`, `street`, `telephone`, `contact_person_name`, `contact_person_surname`, `created_at`, `updated_at`) VALUES
-(1, 'Test Lieferant', 1, 'Teststraße 1337', '0123456789', 'Musterman', 'Max', '2019-01-17 00:34:24', NULL);
+(1, 'Futter GmbH', 4, 'Teststraße 34', '0123456789', 'Mustermann', 'Max', '2019-02-14 12:30:06', NULL),
+(2, 'Food-Supplier Corp', 2, 'Bird Avenue 45', '0123456789', 'Trump', 'Donald', '2019-02-14 12:31:54', NULL),
+(3, 'Arnold Lammering', 1, 'Industriestraße 85', '012345789', 'Lammering', 'Arnold', '2019-02-14 12:39:00', NULL),
+(4, 'Retard Supply', 5, 'Yuki 88', '0123456789', 'Adler', 'Justin', '2019-02-14 12:39:42', NULL),
+(5, 'xPand', 1, 'Samernschestraße 1', '0123456789', 'Heinzl', 'Eric', '2019-02-14 12:40:22', NULL);
 
 -- --------------------------------------------------------
 
@@ -320,7 +292,14 @@ CREATE TABLE `territory` (
 --
 
 INSERT INTO `territory` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'Hummer', '2019-01-17 00:26:58', NULL);
+(1, 'Großtiere', '2019-02-13 00:18:50', NULL),
+(2, 'Kleintiere', '2019-02-13 00:18:55', NULL),
+(3, 'Afrika-Revier', '2019-02-13 00:19:26', NULL),
+(4, 'Vogel-Haus', '2019-02-13 00:19:35', NULL),
+(5, 'Raubtier-Revier', '2019-02-13 00:20:01', NULL),
+(6, 'Giraffen-Haus', '2019-02-13 00:20:30', NULL),
+(7, 'Huftier-Revier', '2019-02-13 00:20:55', NULL),
+(8, 'Robbenklippen', '2019-02-13 00:21:07', NULL);
 
 --
 -- Indexes for dumped tables
@@ -400,49 +379,49 @@ ALTER TABLE `territory`
 -- AUTO_INCREMENT for table `address`
 --
 ALTER TABLE `address`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `animal`
 --
 ALTER TABLE `animal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `building`
 --
 ALTER TABLE `building`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `enclosure`
 --
 ALTER TABLE `enclosure`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `foodplan`
 --
 ALTER TABLE `foodplan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `guardian`
 --
 ALTER TABLE `guardian`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `permission`
@@ -454,13 +433,13 @@ ALTER TABLE `permission`
 -- AUTO_INCREMENT for table `supplier`
 --
 ALTER TABLE `supplier`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `territory`
 --
 ALTER TABLE `territory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
