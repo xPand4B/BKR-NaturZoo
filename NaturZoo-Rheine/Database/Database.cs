@@ -270,19 +270,6 @@ namespace NaturZoo_Rheine.Database
         }
 
         /// <summary>
-        /// Get a entity matching an id.
-        /// </summary>
-        /// <param name="id">Entity id.</param>
-        /// <exception cref="ArgumentNullException"> if <paramref name="id"/> is null</exception>
-        public Object GetById(int id)
-        {
-            if(id == default(Int32))
-                throw new ArgumentNullException("id");
-
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// Get dropdown items.
         /// </summary>
         /// <param name="tableName">The tablename</param>
@@ -295,7 +282,7 @@ namespace NaturZoo_Rheine.Database
             try
             {
                 String query = "SELECT * FROM " + tableName + " ORDER BY created_at desc";
-
+                
                 Console.WriteLine(tableName + " :: Database.GetDropdown query:\n" + query + Environment.NewLine);
 
                 this.Connect();
@@ -439,6 +426,39 @@ namespace NaturZoo_Rheine.Database
             } catch (Exception ex) {
                 MessageBox.Show(ex.Message, "MySql Connection Error");
                 this.Close();
+            }
+        }
+
+        /// <summary>
+        /// Runs a specified query.
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="query">The tablename</param>
+        /// <exception cref="ArgumentNullException"> if <paramref name="query"/> is null</exception>
+        public DataTable Query(String query)
+        {
+            if(string.IsNullOrEmpty(query))
+                throw new ArgumentNullException("query");
+
+            try
+            {
+                Console.WriteLine("Custom :: Database.Query query:\n" + query + Environment.NewLine);
+
+                this.Connect();
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, this._conn);
+                DataSet ds = new DataSet();
+                adapter.FillAsync(ds, "special");
+
+                this.Close();
+
+                return ds.Tables["special"];
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "MySql Connection Error");
+                this.Close();
+                return null;
             }
         }
     }
