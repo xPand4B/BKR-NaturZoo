@@ -32,6 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabÜbersicht = new System.Windows.Forms.TabPage();
@@ -216,6 +223,40 @@
             this.tabLog = new System.Windows.Forms.TabPage();
             this.listBoxLog = new System.Windows.Forms.ListBox();
             this.buttonChangePassword = new System.Windows.Forms.Button();
+            this.tabSpecial = new System.Windows.Forms.TabPage();
+            this.tabControlSpecial = new System.Windows.Forms.TabControl();
+            this.tabSpecial01 = new System.Windows.Forms.TabPage();
+            this.tabSpecial02 = new System.Windows.Forms.TabPage();
+            this.tabSpecial03 = new System.Windows.Forms.TabPage();
+            this.tabSpecial04 = new System.Windows.Forms.TabPage();
+            this.tabSpecial05 = new System.Windows.Forms.TabPage();
+            this.tabSpecial06 = new System.Windows.Forms.TabPage();
+            this.tabSpecial07 = new System.Windows.Forms.TabPage();
+            this.tabSpecial08 = new System.Windows.Forms.TabPage();
+            this.gridSpecial02 = new System.Windows.Forms.DataGridView();
+            this.labelSpecial02 = new System.Windows.Forms.Label();
+            this.gridSpecial03 = new System.Windows.Forms.DataGridView();
+            this.labelSpecial03 = new System.Windows.Forms.Label();
+            this.gridSpecial04 = new System.Windows.Forms.DataGridView();
+            this.labelSpecial04 = new System.Windows.Forms.Label();
+            this.gridSpecial05 = new System.Windows.Forms.DataGridView();
+            this.labelSpecial05 = new System.Windows.Forms.Label();
+            this.gridSpecial06 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.gridSpecial07 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.gridSpecial08 = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.gridSpecial01 = new System.Windows.Forms.DataGridView();
+            this.labelSpecial01 = new System.Windows.Forms.Label();
+            this.groupSpecial03 = new System.Windows.Forms.GroupBox();
+            this.comboSpecial03 = new System.Windows.Forms.ComboBox();
+            this.groupSpecial04 = new System.Windows.Forms.GroupBox();
+            this.comboSpecial04 = new System.Windows.Forms.ComboBox();
+            this.groupSpecial05 = new System.Windows.Forms.GroupBox();
+            this.comboSpecial05 = new System.Windows.Forms.ComboBox();
+            this.groupSpecial07 = new System.Windows.Forms.GroupBox();
+            this.comboSpecial07 = new System.Windows.Forms.ComboBox();
             this.tabControlMain.SuspendLayout();
             this.tabÜbersicht.SuspendLayout();
             this.groupÜbersichtFutter.SuspendLayout();
@@ -306,6 +347,28 @@
             this.groupFütterungAdd_Food.SuspendLayout();
             this.groupFütterungAdd_Animal.SuspendLayout();
             this.tabLog.SuspendLayout();
+            this.tabSpecial.SuspendLayout();
+            this.tabControlSpecial.SuspendLayout();
+            this.tabSpecial01.SuspendLayout();
+            this.tabSpecial02.SuspendLayout();
+            this.tabSpecial03.SuspendLayout();
+            this.tabSpecial04.SuspendLayout();
+            this.tabSpecial05.SuspendLayout();
+            this.tabSpecial06.SuspendLayout();
+            this.tabSpecial07.SuspendLayout();
+            this.tabSpecial08.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial02)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial03)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial04)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial05)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial06)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial07)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial08)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial01)).BeginInit();
+            this.groupSpecial03.SuspendLayout();
+            this.groupSpecial04.SuspendLayout();
+            this.groupSpecial05.SuspendLayout();
+            this.groupSpecial07.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -320,6 +383,7 @@
             this.tabControlMain.Controls.Add(this.tabFutter);
             this.tabControlMain.Controls.Add(this.tabFütterung);
             this.tabControlMain.Controls.Add(this.tabLog);
+            this.tabControlMain.Controls.Add(this.tabSpecial);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabControlMain.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlMain.Location = new System.Drawing.Point(-1, 26);
@@ -832,24 +896,16 @@
             this.gridPflegerAlle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridPflegerAlle.BackgroundColor = System.Drawing.SystemColors.Window;
             this.gridPflegerAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPflegerAlle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridPflegerAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPflegerAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridPflegerAlle.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPflegerAlle.DefaultCellStyle = dataGridViewCellStyle1;
             this.gridPflegerAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridPflegerAlle.Location = new System.Drawing.Point(218, 0);
             this.gridPflegerAlle.Margin = new System.Windows.Forms.Padding(0);
@@ -1040,6 +1096,7 @@
             this.comboPflegerAdd_Stadt.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPflegerAdd_Stadt.FormattingEnabled = true;
             this.comboPflegerAdd_Stadt.Location = new System.Drawing.Point(6, 22);
+            this.comboPflegerAdd_Stadt.MaxLength = 256;
             this.comboPflegerAdd_Stadt.Name = "comboPflegerAdd_Stadt";
             this.comboPflegerAdd_Stadt.Size = new System.Drawing.Size(266, 26);
             this.comboPflegerAdd_Stadt.TabIndex = 6;
@@ -1063,10 +1120,12 @@
             this.comboPflegerAdd_PLZ.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPflegerAdd_PLZ.FormattingEnabled = true;
             this.comboPflegerAdd_PLZ.Location = new System.Drawing.Point(6, 23);
+            this.comboPflegerAdd_PLZ.MaxLength = 5;
             this.comboPflegerAdd_PLZ.Name = "comboPflegerAdd_PLZ";
             this.comboPflegerAdd_PLZ.Size = new System.Drawing.Size(266, 26);
             this.comboPflegerAdd_PLZ.TabIndex = 5;
             this.comboPflegerAdd_PLZ.TextChanged += new System.EventHandler(this.PflegerInput_TextChanged);
+            this.comboPflegerAdd_PLZ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboPflegerAdd_PLZ_KeyPress);
             // 
             // groupPflegerAdd_Password
             // 
@@ -1214,14 +1273,14 @@
             this.gridReviereAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridReviereAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridReviereAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridReviereAlle.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridReviereAlle.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridReviereAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridReviereAlle.Location = new System.Drawing.Point(218, 0);
             this.gridReviereAlle.Margin = new System.Windows.Forms.Padding(0);
@@ -1343,14 +1402,14 @@
             this.gridGebäudeAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridGebäudeAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridGebäudeAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridGebäudeAlle.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridGebäudeAlle.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridGebäudeAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridGebäudeAlle.Location = new System.Drawing.Point(218, 0);
             this.gridGebäudeAlle.Margin = new System.Windows.Forms.Padding(0);
@@ -1497,14 +1556,14 @@
             this.gridGehegeAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridGehegeAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridGehegeAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridGehegeAlle.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridGehegeAlle.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridGehegeAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridGehegeAlle.Location = new System.Drawing.Point(218, 0);
             this.gridGehegeAlle.Margin = new System.Windows.Forms.Padding(0);
@@ -1651,14 +1710,14 @@
             this.gridTiereAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridTiereAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridTiereAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 12F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridTiereAlle.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridTiereAlle.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridTiereAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridTiereAlle.Location = new System.Drawing.Point(218, 0);
             this.gridTiereAlle.Margin = new System.Windows.Forms.Padding(0);
@@ -1797,6 +1856,7 @@
             // 
             this.textTiereAdd_Gender.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTiereAdd_Gender.Location = new System.Drawing.Point(6, 22);
+            this.textTiereAdd_Gender.MaxLength = 24;
             this.textTiereAdd_Gender.Name = "textTiereAdd_Gender";
             this.textTiereAdd_Gender.Size = new System.Drawing.Size(266, 26);
             this.textTiereAdd_Gender.TabIndex = 53;
@@ -1819,6 +1879,7 @@
             this.comboTiereAdd_Species.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTiereAdd_Species.FormattingEnabled = true;
             this.comboTiereAdd_Species.Location = new System.Drawing.Point(6, 22);
+            this.comboTiereAdd_Species.MaxLength = 256;
             this.comboTiereAdd_Species.Name = "comboTiereAdd_Species";
             this.comboTiereAdd_Species.Size = new System.Drawing.Size(266, 26);
             this.comboTiereAdd_Species.TabIndex = 52;
@@ -1839,6 +1900,7 @@
             // 
             this.textTiereAdd_Name.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTiereAdd_Name.Location = new System.Drawing.Point(6, 23);
+            this.textTiereAdd_Name.MaxLength = 256;
             this.textTiereAdd_Name.Name = "textTiereAdd_Name";
             this.textTiereAdd_Name.Size = new System.Drawing.Size(266, 26);
             this.textTiereAdd_Name.TabIndex = 51;
@@ -1898,14 +1960,14 @@
             this.gridLieferantenAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridLieferantenAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridLieferantenAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 12F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridLieferantenAlle.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridLieferantenAlle.DefaultCellStyle = dataGridViewCellStyle6;
             this.gridLieferantenAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridLieferantenAlle.Location = new System.Drawing.Point(218, 0);
             this.gridLieferantenAlle.Margin = new System.Windows.Forms.Padding(0);
@@ -1958,7 +2020,7 @@
             // 
             this.textLieferantenAdd_ContactName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textLieferantenAdd_ContactName.Location = new System.Drawing.Point(6, 20);
-            this.textLieferantenAdd_ContactName.MaxLength = 11;
+            this.textLieferantenAdd_ContactName.MaxLength = 256;
             this.textLieferantenAdd_ContactName.Name = "textLieferantenAdd_ContactName";
             this.textLieferantenAdd_ContactName.Size = new System.Drawing.Size(266, 26);
             this.textLieferantenAdd_ContactName.TabIndex = 67;
@@ -1979,7 +2041,7 @@
             // 
             this.textLieferantenAdd_ContactSurname.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textLieferantenAdd_ContactSurname.Location = new System.Drawing.Point(6, 20);
-            this.textLieferantenAdd_ContactSurname.MaxLength = 11;
+            this.textLieferantenAdd_ContactSurname.MaxLength = 256;
             this.textLieferantenAdd_ContactSurname.Name = "textLieferantenAdd_ContactSurname";
             this.textLieferantenAdd_ContactSurname.Size = new System.Drawing.Size(266, 26);
             this.textLieferantenAdd_ContactSurname.TabIndex = 66;
@@ -2045,6 +2107,7 @@
             this.comboLieferantenAdd_Stadt.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboLieferantenAdd_Stadt.FormattingEnabled = true;
             this.comboLieferantenAdd_Stadt.Location = new System.Drawing.Point(6, 22);
+            this.comboLieferantenAdd_Stadt.MaxLength = 256;
             this.comboLieferantenAdd_Stadt.Name = "comboLieferantenAdd_Stadt";
             this.comboLieferantenAdd_Stadt.Size = new System.Drawing.Size(266, 26);
             this.comboLieferantenAdd_Stadt.TabIndex = 63;
@@ -2068,10 +2131,12 @@
             this.comboLieferantenAdd_PLZ.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboLieferantenAdd_PLZ.FormattingEnabled = true;
             this.comboLieferantenAdd_PLZ.Location = new System.Drawing.Point(6, 23);
+            this.comboLieferantenAdd_PLZ.MaxLength = 5;
             this.comboLieferantenAdd_PLZ.Name = "comboLieferantenAdd_PLZ";
             this.comboLieferantenAdd_PLZ.Size = new System.Drawing.Size(266, 26);
             this.comboLieferantenAdd_PLZ.TabIndex = 62;
             this.comboLieferantenAdd_PLZ.TextChanged += new System.EventHandler(this.LieferantenInput_TextChanged);
+            this.comboLieferantenAdd_PLZ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboLieferantenAdd_PLZ_KeyPress);
             // 
             // buttonLieferantenAdd_Add
             // 
@@ -2161,14 +2226,14 @@
             this.gridFutterAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridFutterAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridFutterAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridFutterAlle.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridFutterAlle.DefaultCellStyle = dataGridViewCellStyle7;
             this.gridFutterAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridFutterAlle.Location = new System.Drawing.Point(218, 0);
             this.gridFutterAlle.Margin = new System.Windows.Forms.Padding(0);
@@ -2350,14 +2415,14 @@
             this.gridFütterungAlle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridFütterungAlle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridFütterungAlle.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 12F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridFütterungAlle.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridFütterungAlle.DefaultCellStyle = dataGridViewCellStyle8;
             this.gridFütterungAlle.GridColor = System.Drawing.SystemColors.Window;
             this.gridFütterungAlle.Location = new System.Drawing.Point(218, 0);
             this.gridFütterungAlle.Margin = new System.Windows.Forms.Padding(0);
@@ -2573,6 +2638,518 @@
             this.buttonChangePassword.UseVisualStyleBackColor = false;
             this.buttonChangePassword.Click += new System.EventHandler(this.buttonChangePassword_Click);
             // 
+            // tabSpecial
+            // 
+            this.tabSpecial.Controls.Add(this.tabControlSpecial);
+            this.tabSpecial.Location = new System.Drawing.Point(4, 35);
+            this.tabSpecial.Name = "tabSpecial";
+            this.tabSpecial.Size = new System.Drawing.Size(1129, 399);
+            this.tabSpecial.TabIndex = 12;
+            this.tabSpecial.Text = "Special";
+            this.tabSpecial.UseVisualStyleBackColor = true;
+            // 
+            // tabControlSpecial
+            // 
+            this.tabControlSpecial.Controls.Add(this.tabSpecial01);
+            this.tabControlSpecial.Controls.Add(this.tabSpecial02);
+            this.tabControlSpecial.Controls.Add(this.tabSpecial03);
+            this.tabControlSpecial.Controls.Add(this.tabSpecial04);
+            this.tabControlSpecial.Controls.Add(this.tabSpecial05);
+            this.tabControlSpecial.Controls.Add(this.tabSpecial06);
+            this.tabControlSpecial.Controls.Add(this.tabSpecial07);
+            this.tabControlSpecial.Controls.Add(this.tabSpecial08);
+            this.tabControlSpecial.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlSpecial.Location = new System.Drawing.Point(-4, 5);
+            this.tabControlSpecial.Name = "tabControlSpecial";
+            this.tabControlSpecial.SelectedIndex = 0;
+            this.tabControlSpecial.Size = new System.Drawing.Size(1137, 402);
+            this.tabControlSpecial.TabIndex = 5;
+            this.tabControlSpecial.TabStop = false;
+            // 
+            // tabSpecial01
+            // 
+            this.tabSpecial01.Controls.Add(this.gridSpecial01);
+            this.tabSpecial01.Controls.Add(this.labelSpecial01);
+            this.tabSpecial01.Location = new System.Drawing.Point(4, 28);
+            this.tabSpecial01.Name = "tabSpecial01";
+            this.tabSpecial01.Size = new System.Drawing.Size(1129, 370);
+            this.tabSpecial01.TabIndex = 0;
+            this.tabSpecial01.Text = "Aufgabe 01";
+            this.tabSpecial01.UseVisualStyleBackColor = true;
+            // 
+            // tabSpecial02
+            // 
+            this.tabSpecial02.Controls.Add(this.gridSpecial02);
+            this.tabSpecial02.Controls.Add(this.labelSpecial02);
+            this.tabSpecial02.Location = new System.Drawing.Point(4, 28);
+            this.tabSpecial02.Name = "tabSpecial02";
+            this.tabSpecial02.Size = new System.Drawing.Size(1129, 370);
+            this.tabSpecial02.TabIndex = 1;
+            this.tabSpecial02.Text = "Aufgabe 02";
+            this.tabSpecial02.UseVisualStyleBackColor = true;
+            // 
+            // tabSpecial03
+            // 
+            this.tabSpecial03.Controls.Add(this.groupSpecial03);
+            this.tabSpecial03.Controls.Add(this.gridSpecial03);
+            this.tabSpecial03.Controls.Add(this.labelSpecial03);
+            this.tabSpecial03.Location = new System.Drawing.Point(4, 28);
+            this.tabSpecial03.Name = "tabSpecial03";
+            this.tabSpecial03.Size = new System.Drawing.Size(1129, 370);
+            this.tabSpecial03.TabIndex = 2;
+            this.tabSpecial03.Text = "Aufgabe 03";
+            this.tabSpecial03.UseVisualStyleBackColor = true;
+            // 
+            // tabSpecial04
+            // 
+            this.tabSpecial04.Controls.Add(this.groupSpecial04);
+            this.tabSpecial04.Controls.Add(this.gridSpecial04);
+            this.tabSpecial04.Controls.Add(this.labelSpecial04);
+            this.tabSpecial04.Location = new System.Drawing.Point(4, 28);
+            this.tabSpecial04.Name = "tabSpecial04";
+            this.tabSpecial04.Size = new System.Drawing.Size(1129, 370);
+            this.tabSpecial04.TabIndex = 3;
+            this.tabSpecial04.Text = "Aufgabe 04";
+            this.tabSpecial04.UseVisualStyleBackColor = true;
+            // 
+            // tabSpecial05
+            // 
+            this.tabSpecial05.Controls.Add(this.groupSpecial05);
+            this.tabSpecial05.Controls.Add(this.gridSpecial05);
+            this.tabSpecial05.Controls.Add(this.labelSpecial05);
+            this.tabSpecial05.Location = new System.Drawing.Point(4, 28);
+            this.tabSpecial05.Name = "tabSpecial05";
+            this.tabSpecial05.Size = new System.Drawing.Size(1129, 370);
+            this.tabSpecial05.TabIndex = 4;
+            this.tabSpecial05.Text = "Aufgabe 05";
+            this.tabSpecial05.UseVisualStyleBackColor = true;
+            // 
+            // tabSpecial06
+            // 
+            this.tabSpecial06.Controls.Add(this.gridSpecial06);
+            this.tabSpecial06.Controls.Add(this.label5);
+            this.tabSpecial06.Location = new System.Drawing.Point(4, 28);
+            this.tabSpecial06.Name = "tabSpecial06";
+            this.tabSpecial06.Size = new System.Drawing.Size(1129, 370);
+            this.tabSpecial06.TabIndex = 5;
+            this.tabSpecial06.Text = "Aufgabe 06";
+            this.tabSpecial06.UseVisualStyleBackColor = true;
+            // 
+            // tabSpecial07
+            // 
+            this.tabSpecial07.Controls.Add(this.groupSpecial07);
+            this.tabSpecial07.Controls.Add(this.gridSpecial07);
+            this.tabSpecial07.Controls.Add(this.label6);
+            this.tabSpecial07.Location = new System.Drawing.Point(4, 28);
+            this.tabSpecial07.Name = "tabSpecial07";
+            this.tabSpecial07.Size = new System.Drawing.Size(1129, 370);
+            this.tabSpecial07.TabIndex = 6;
+            this.tabSpecial07.Text = "Aufgabe 07";
+            this.tabSpecial07.UseVisualStyleBackColor = true;
+            // 
+            // tabSpecial08
+            // 
+            this.tabSpecial08.Controls.Add(this.gridSpecial08);
+            this.tabSpecial08.Controls.Add(this.label7);
+            this.tabSpecial08.Location = new System.Drawing.Point(4, 28);
+            this.tabSpecial08.Name = "tabSpecial08";
+            this.tabSpecial08.Size = new System.Drawing.Size(1129, 370);
+            this.tabSpecial08.TabIndex = 7;
+            this.tabSpecial08.Text = "Aufgabe08";
+            this.tabSpecial08.UseVisualStyleBackColor = true;
+            // 
+            // gridSpecial02
+            // 
+            this.gridSpecial02.AllowUserToAddRows = false;
+            this.gridSpecial02.AllowUserToDeleteRows = false;
+            this.gridSpecial02.AllowUserToResizeRows = false;
+            this.gridSpecial02.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSpecial02.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial02.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSpecial02.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridSpecial02.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSpecial02.DefaultCellStyle = dataGridViewCellStyle10;
+            this.gridSpecial02.GridColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial02.Location = new System.Drawing.Point(292, 0);
+            this.gridSpecial02.Margin = new System.Windows.Forms.Padding(0);
+            this.gridSpecial02.Name = "gridSpecial02";
+            this.gridSpecial02.ReadOnly = true;
+            this.gridSpecial02.RowHeadersVisible = false;
+            this.gridSpecial02.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridSpecial02.Size = new System.Drawing.Size(841, 375);
+            this.gridSpecial02.TabIndex = 4;
+            // 
+            // labelSpecial02
+            // 
+            this.labelSpecial02.AutoSize = true;
+            this.labelSpecial02.Location = new System.Drawing.Point(6, 21);
+            this.labelSpecial02.Name = "labelSpecial02";
+            this.labelSpecial02.Size = new System.Drawing.Size(240, 38);
+            this.labelSpecial02.TabIndex = 3;
+            this.labelSpecial02.Text = "Welches Tier bekommt mehrmals \r\nam Tag Futter und welches?";
+            // 
+            // gridSpecial03
+            // 
+            this.gridSpecial03.AllowUserToAddRows = false;
+            this.gridSpecial03.AllowUserToDeleteRows = false;
+            this.gridSpecial03.AllowUserToResizeRows = false;
+            this.gridSpecial03.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSpecial03.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial03.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSpecial03.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridSpecial03.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSpecial03.DefaultCellStyle = dataGridViewCellStyle11;
+            this.gridSpecial03.GridColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial03.Location = new System.Drawing.Point(292, 0);
+            this.gridSpecial03.Margin = new System.Windows.Forms.Padding(0);
+            this.gridSpecial03.Name = "gridSpecial03";
+            this.gridSpecial03.ReadOnly = true;
+            this.gridSpecial03.RowHeadersVisible = false;
+            this.gridSpecial03.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridSpecial03.Size = new System.Drawing.Size(841, 375);
+            this.gridSpecial03.TabIndex = 4;
+            // 
+            // labelSpecial03
+            // 
+            this.labelSpecial03.AutoSize = true;
+            this.labelSpecial03.Location = new System.Drawing.Point(6, 21);
+            this.labelSpecial03.Name = "labelSpecial03";
+            this.labelSpecial03.Size = new System.Drawing.Size(232, 19);
+            this.labelSpecial03.TabIndex = 3;
+            this.labelSpecial03.Text = "Wie viele Tiere sind in Gehege x?";
+            // 
+            // gridSpecial04
+            // 
+            this.gridSpecial04.AllowUserToAddRows = false;
+            this.gridSpecial04.AllowUserToDeleteRows = false;
+            this.gridSpecial04.AllowUserToResizeRows = false;
+            this.gridSpecial04.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSpecial04.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial04.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSpecial04.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridSpecial04.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSpecial04.DefaultCellStyle = dataGridViewCellStyle12;
+            this.gridSpecial04.GridColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial04.Location = new System.Drawing.Point(292, 0);
+            this.gridSpecial04.Margin = new System.Windows.Forms.Padding(0);
+            this.gridSpecial04.Name = "gridSpecial04";
+            this.gridSpecial04.ReadOnly = true;
+            this.gridSpecial04.RowHeadersVisible = false;
+            this.gridSpecial04.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridSpecial04.Size = new System.Drawing.Size(841, 375);
+            this.gridSpecial04.TabIndex = 4;
+            // 
+            // labelSpecial04
+            // 
+            this.labelSpecial04.AutoSize = true;
+            this.labelSpecial04.Location = new System.Drawing.Point(6, 21);
+            this.labelSpecial04.Name = "labelSpecial04";
+            this.labelSpecial04.Size = new System.Drawing.Size(242, 38);
+            this.labelSpecial04.TabIndex = 3;
+            this.labelSpecial04.Text = "Wie viel Futter muss ins Gehege x \r\nfür mindestens 2 Tage im Vorraus?";
+            // 
+            // gridSpecial05
+            // 
+            this.gridSpecial05.AllowUserToAddRows = false;
+            this.gridSpecial05.AllowUserToDeleteRows = false;
+            this.gridSpecial05.AllowUserToResizeRows = false;
+            this.gridSpecial05.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSpecial05.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial05.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSpecial05.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridSpecial05.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSpecial05.DefaultCellStyle = dataGridViewCellStyle13;
+            this.gridSpecial05.GridColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial05.Location = new System.Drawing.Point(292, 0);
+            this.gridSpecial05.Margin = new System.Windows.Forms.Padding(0);
+            this.gridSpecial05.Name = "gridSpecial05";
+            this.gridSpecial05.ReadOnly = true;
+            this.gridSpecial05.RowHeadersVisible = false;
+            this.gridSpecial05.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridSpecial05.Size = new System.Drawing.Size(841, 375);
+            this.gridSpecial05.TabIndex = 4;
+            // 
+            // labelSpecial05
+            // 
+            this.labelSpecial05.AutoSize = true;
+            this.labelSpecial05.Location = new System.Drawing.Point(6, 21);
+            this.labelSpecial05.Name = "labelSpecial05";
+            this.labelSpecial05.Size = new System.Drawing.Size(223, 19);
+            this.labelSpecial05.TabIndex = 3;
+            this.labelSpecial05.Text = "Welche Tiere betreut Pfleger x?";
+            // 
+            // gridSpecial06
+            // 
+            this.gridSpecial06.AllowUserToAddRows = false;
+            this.gridSpecial06.AllowUserToDeleteRows = false;
+            this.gridSpecial06.AllowUserToResizeRows = false;
+            this.gridSpecial06.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSpecial06.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial06.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSpecial06.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridSpecial06.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSpecial06.DefaultCellStyle = dataGridViewCellStyle14;
+            this.gridSpecial06.GridColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial06.Location = new System.Drawing.Point(292, 0);
+            this.gridSpecial06.Margin = new System.Windows.Forms.Padding(0);
+            this.gridSpecial06.Name = "gridSpecial06";
+            this.gridSpecial06.ReadOnly = true;
+            this.gridSpecial06.RowHeadersVisible = false;
+            this.gridSpecial06.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridSpecial06.Size = new System.Drawing.Size(841, 375);
+            this.gridSpecial06.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(244, 19);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Welche Tiere erhalten kein Futter?";
+            // 
+            // gridSpecial07
+            // 
+            this.gridSpecial07.AllowUserToAddRows = false;
+            this.gridSpecial07.AllowUserToDeleteRows = false;
+            this.gridSpecial07.AllowUserToResizeRows = false;
+            this.gridSpecial07.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSpecial07.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial07.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSpecial07.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridSpecial07.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSpecial07.DefaultCellStyle = dataGridViewCellStyle15;
+            this.gridSpecial07.GridColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial07.Location = new System.Drawing.Point(292, 0);
+            this.gridSpecial07.Margin = new System.Windows.Forms.Padding(0);
+            this.gridSpecial07.Name = "gridSpecial07";
+            this.gridSpecial07.ReadOnly = true;
+            this.gridSpecial07.RowHeadersVisible = false;
+            this.gridSpecial07.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridSpecial07.Size = new System.Drawing.Size(841, 375);
+            this.gridSpecial07.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(246, 19);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Welches Gehege betreut Pfleger x?";
+            // 
+            // gridSpecial08
+            // 
+            this.gridSpecial08.AllowUserToAddRows = false;
+            this.gridSpecial08.AllowUserToDeleteRows = false;
+            this.gridSpecial08.AllowUserToResizeRows = false;
+            this.gridSpecial08.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSpecial08.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial08.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSpecial08.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridSpecial08.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSpecial08.DefaultCellStyle = dataGridViewCellStyle16;
+            this.gridSpecial08.GridColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial08.Location = new System.Drawing.Point(292, 0);
+            this.gridSpecial08.Margin = new System.Windows.Forms.Padding(0);
+            this.gridSpecial08.Name = "gridSpecial08";
+            this.gridSpecial08.ReadOnly = true;
+            this.gridSpecial08.RowHeadersVisible = false;
+            this.gridSpecial08.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridSpecial08.Size = new System.Drawing.Size(841, 375);
+            this.gridSpecial08.TabIndex = 4;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(179, 38);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Wie sieht der Futterplan \r\nfür Tiger Theo aus?";
+            // 
+            // gridSpecial01
+            // 
+            this.gridSpecial01.AllowUserToAddRows = false;
+            this.gridSpecial01.AllowUserToDeleteRows = false;
+            this.gridSpecial01.AllowUserToResizeRows = false;
+            this.gridSpecial01.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSpecial01.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial01.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSpecial01.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridSpecial01.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 12F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSpecial01.DefaultCellStyle = dataGridViewCellStyle9;
+            this.gridSpecial01.GridColor = System.Drawing.SystemColors.Window;
+            this.gridSpecial01.Location = new System.Drawing.Point(292, 0);
+            this.gridSpecial01.Margin = new System.Windows.Forms.Padding(0);
+            this.gridSpecial01.Name = "gridSpecial01";
+            this.gridSpecial01.ReadOnly = true;
+            this.gridSpecial01.RowHeadersVisible = false;
+            this.gridSpecial01.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridSpecial01.Size = new System.Drawing.Size(841, 375);
+            this.gridSpecial01.TabIndex = 4;
+            // 
+            // labelSpecial01
+            // 
+            this.labelSpecial01.AutoSize = true;
+            this.labelSpecial01.Location = new System.Drawing.Point(6, 21);
+            this.labelSpecial01.Name = "labelSpecial01";
+            this.labelSpecial01.Size = new System.Drawing.Size(279, 19);
+            this.labelSpecial01.TabIndex = 3;
+            this.labelSpecial01.Text = "Welches Tier erhält um 9:00 Uhr Futter?";
+            // 
+            // groupSpecial03
+            // 
+            this.groupSpecial03.Controls.Add(this.comboSpecial03);
+            this.groupSpecial03.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupSpecial03.Location = new System.Drawing.Point(6, 91);
+            this.groupSpecial03.Name = "groupSpecial03";
+            this.groupSpecial03.Size = new System.Drawing.Size(278, 66);
+            this.groupSpecial03.TabIndex = 29;
+            this.groupSpecial03.TabStop = false;
+            this.groupSpecial03.Text = "Gehege";
+            // 
+            // comboSpecial03
+            // 
+            this.comboSpecial03.BackColor = System.Drawing.SystemColors.Window;
+            this.comboSpecial03.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboSpecial03.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboSpecial03.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboSpecial03.FormattingEnabled = true;
+            this.comboSpecial03.Location = new System.Drawing.Point(6, 22);
+            this.comboSpecial03.Name = "comboSpecial03";
+            this.comboSpecial03.Size = new System.Drawing.Size(266, 26);
+            this.comboSpecial03.TabIndex = 56;
+            this.comboSpecial03.TextChanged += new System.EventHandler(this.comboSpecial03_TextChanged);
+            // 
+            // groupSpecial04
+            // 
+            this.groupSpecial04.Controls.Add(this.comboSpecial04);
+            this.groupSpecial04.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupSpecial04.Location = new System.Drawing.Point(6, 91);
+            this.groupSpecial04.Name = "groupSpecial04";
+            this.groupSpecial04.Size = new System.Drawing.Size(278, 66);
+            this.groupSpecial04.TabIndex = 30;
+            this.groupSpecial04.TabStop = false;
+            this.groupSpecial04.Text = "Gehege";
+            // 
+            // comboSpecial04
+            // 
+            this.comboSpecial04.BackColor = System.Drawing.SystemColors.Window;
+            this.comboSpecial04.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboSpecial04.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboSpecial04.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboSpecial04.FormattingEnabled = true;
+            this.comboSpecial04.Location = new System.Drawing.Point(6, 22);
+            this.comboSpecial04.Name = "comboSpecial04";
+            this.comboSpecial04.Size = new System.Drawing.Size(266, 26);
+            this.comboSpecial04.TabIndex = 56;
+            this.comboSpecial04.TextChanged += new System.EventHandler(this.comboSpecial04_TextChanged);
+            // 
+            // groupSpecial05
+            // 
+            this.groupSpecial05.Controls.Add(this.comboSpecial05);
+            this.groupSpecial05.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupSpecial05.Location = new System.Drawing.Point(6, 91);
+            this.groupSpecial05.Name = "groupSpecial05";
+            this.groupSpecial05.Size = new System.Drawing.Size(278, 66);
+            this.groupSpecial05.TabIndex = 31;
+            this.groupSpecial05.TabStop = false;
+            this.groupSpecial05.Text = "Pfleger";
+            // 
+            // comboSpecial05
+            // 
+            this.comboSpecial05.BackColor = System.Drawing.SystemColors.Window;
+            this.comboSpecial05.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboSpecial05.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboSpecial05.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboSpecial05.FormattingEnabled = true;
+            this.comboSpecial05.Location = new System.Drawing.Point(6, 22);
+            this.comboSpecial05.Name = "comboSpecial05";
+            this.comboSpecial05.Size = new System.Drawing.Size(266, 26);
+            this.comboSpecial05.TabIndex = 56;
+            this.comboSpecial05.TextChanged += new System.EventHandler(this.comboSpecial05_TextChanged);
+            // 
+            // groupSpecial07
+            // 
+            this.groupSpecial07.Controls.Add(this.comboSpecial07);
+            this.groupSpecial07.Font = new System.Drawing.Font("BankGothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupSpecial07.Location = new System.Drawing.Point(6, 91);
+            this.groupSpecial07.Name = "groupSpecial07";
+            this.groupSpecial07.Size = new System.Drawing.Size(278, 66);
+            this.groupSpecial07.TabIndex = 32;
+            this.groupSpecial07.TabStop = false;
+            this.groupSpecial07.Text = "Pfleger";
+            // 
+            // comboSpecial07
+            // 
+            this.comboSpecial07.BackColor = System.Drawing.SystemColors.Window;
+            this.comboSpecial07.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboSpecial07.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboSpecial07.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboSpecial07.FormattingEnabled = true;
+            this.comboSpecial07.Location = new System.Drawing.Point(6, 22);
+            this.comboSpecial07.Name = "comboSpecial07";
+            this.comboSpecial07.Size = new System.Drawing.Size(266, 26);
+            this.comboSpecial07.TabIndex = 56;
+            this.comboSpecial07.TextChanged += new System.EventHandler(this.comboSpecial07_TextChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 12F);
@@ -2714,6 +3291,36 @@
             this.groupFütterungAdd_Food.ResumeLayout(false);
             this.groupFütterungAdd_Animal.ResumeLayout(false);
             this.tabLog.ResumeLayout(false);
+            this.tabSpecial.ResumeLayout(false);
+            this.tabControlSpecial.ResumeLayout(false);
+            this.tabSpecial01.ResumeLayout(false);
+            this.tabSpecial01.PerformLayout();
+            this.tabSpecial02.ResumeLayout(false);
+            this.tabSpecial02.PerformLayout();
+            this.tabSpecial03.ResumeLayout(false);
+            this.tabSpecial03.PerformLayout();
+            this.tabSpecial04.ResumeLayout(false);
+            this.tabSpecial04.PerformLayout();
+            this.tabSpecial05.ResumeLayout(false);
+            this.tabSpecial05.PerformLayout();
+            this.tabSpecial06.ResumeLayout(false);
+            this.tabSpecial06.PerformLayout();
+            this.tabSpecial07.ResumeLayout(false);
+            this.tabSpecial07.PerformLayout();
+            this.tabSpecial08.ResumeLayout(false);
+            this.tabSpecial08.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial02)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial03)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial04)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial05)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial06)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial07)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial08)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSpecial01)).EndInit();
+            this.groupSpecial03.ResumeLayout(false);
+            this.groupSpecial04.ResumeLayout(false);
+            this.groupSpecial05.ResumeLayout(false);
+            this.groupSpecial07.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2903,6 +3510,40 @@
         private System.Windows.Forms.TextBox textPflegerAdd_Name;
         private System.Windows.Forms.GroupBox groupGehegeAdd_Gebäude;
         private System.Windows.Forms.ComboBox comboGehegeAdd_Gebäude;
+        private System.Windows.Forms.TabPage tabSpecial;
+        private System.Windows.Forms.TabControl tabControlSpecial;
+        private System.Windows.Forms.TabPage tabSpecial01;
+        private System.Windows.Forms.DataGridView gridSpecial01;
+        private System.Windows.Forms.Label labelSpecial01;
+        private System.Windows.Forms.TabPage tabSpecial02;
+        private System.Windows.Forms.DataGridView gridSpecial02;
+        private System.Windows.Forms.Label labelSpecial02;
+        private System.Windows.Forms.TabPage tabSpecial03;
+        private System.Windows.Forms.GroupBox groupSpecial03;
+        private System.Windows.Forms.ComboBox comboSpecial03;
+        private System.Windows.Forms.DataGridView gridSpecial03;
+        private System.Windows.Forms.Label labelSpecial03;
+        private System.Windows.Forms.TabPage tabSpecial04;
+        private System.Windows.Forms.GroupBox groupSpecial04;
+        private System.Windows.Forms.ComboBox comboSpecial04;
+        private System.Windows.Forms.DataGridView gridSpecial04;
+        private System.Windows.Forms.Label labelSpecial04;
+        private System.Windows.Forms.TabPage tabSpecial05;
+        private System.Windows.Forms.GroupBox groupSpecial05;
+        private System.Windows.Forms.ComboBox comboSpecial05;
+        private System.Windows.Forms.DataGridView gridSpecial05;
+        private System.Windows.Forms.Label labelSpecial05;
+        private System.Windows.Forms.TabPage tabSpecial06;
+        private System.Windows.Forms.DataGridView gridSpecial06;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TabPage tabSpecial07;
+        private System.Windows.Forms.GroupBox groupSpecial07;
+        private System.Windows.Forms.ComboBox comboSpecial07;
+        private System.Windows.Forms.DataGridView gridSpecial07;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TabPage tabSpecial08;
+        private System.Windows.Forms.DataGridView gridSpecial08;
+        private System.Windows.Forms.Label label7;
     }
 }
 

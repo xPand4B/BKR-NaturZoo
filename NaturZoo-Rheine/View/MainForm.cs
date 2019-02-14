@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Data;
+using System.Linq;
 using System.Drawing;
 using System.Windows.Forms;
 using NaturZoo_Rheine.Models;
+using System.Collections.Generic;
 
 namespace NaturZoo_Rheine.View {
     /// <summary>
@@ -11,6 +13,7 @@ namespace NaturZoo_Rheine.View {
     public partial class MainForm : MetroFramework.Forms.MetroForm
     {
         private NaturZoo_Rheine.Queries.Repositories.ZooRepository Zoo;
+        private readonly NaturZoo_Rheine.Queries.Repositories.SpecialRepository specialRepository;
         private readonly String _defaultPassword;
 
         /// <summary>
@@ -28,6 +31,7 @@ namespace NaturZoo_Rheine.View {
 
             // Zoo initialization
             Zoo = new NaturZoo_Rheine.Queries.Repositories.ZooRepository(context);
+            specialRepository = new NaturZoo_Rheine.Queries.Repositories.SpecialRepository(context);
 
             // Set start values
             this.tabControlMain_Selected(this, null);
@@ -41,6 +45,8 @@ namespace NaturZoo_Rheine.View {
             RefreshSupplier();
             RefreshFood();
             RefreshFoodplan();
+            RefreshSpecial();
+            RefreshAddress();
         }
 
 
@@ -89,8 +95,12 @@ namespace NaturZoo_Rheine.View {
                     this.tabControlLieferanten.SelectedIndex = 0;
                     break;
 
+                case "tabFutter":
+                    this.tabControlFutter.SelectedIndex = 0;
+                    break;
+
                 case "tabFütterung":
-                    //
+                    this.tabControlFütterung.SelectedIndex = 0;
                     break;
 
                 case "tabLog":
@@ -108,6 +118,29 @@ namespace NaturZoo_Rheine.View {
         #endregion
 
 
+        public void RefreshAddress()
+        {
+            comboPflegerAdd_PLZ.DataSource = Zoo.GetAddressDropdown;
+            comboPflegerAdd_PLZ.DisplayMember = "postcode";
+            comboPflegerAdd_PLZ.ValueMember = "Id";
+            comboPflegerAdd_PLZ.SelectedIndex = -1;
+
+            comboPflegerAdd_Stadt.DataSource = Zoo.GetAddressDropdown;
+            comboPflegerAdd_Stadt.DisplayMember = "city";
+            comboPflegerAdd_Stadt.ValueMember = "Id";
+            comboPflegerAdd_Stadt.SelectedIndex = -1;
+
+            comboLieferantenAdd_PLZ.DataSource = Zoo.GetAddressDropdown;
+            comboLieferantenAdd_PLZ.DisplayMember = "postcode";
+            comboLieferantenAdd_PLZ.ValueMember = "Id";
+            comboLieferantenAdd_PLZ.SelectedIndex = -1;
+
+            comboLieferantenAdd_Stadt.DataSource = Zoo.GetAddressDropdown;
+            comboLieferantenAdd_Stadt.DisplayMember = "city";
+            comboLieferantenAdd_Stadt.ValueMember = "Id";
+            comboLieferantenAdd_Stadt.SelectedIndex = -1;
+        }
+
         #region tabControl Pfleger
         /// <summary>
         /// Refresh Guardian Data
@@ -120,6 +153,27 @@ namespace NaturZoo_Rheine.View {
             // Guardian Tab
             labelPflegerAlle_Count.Text = Zoo.GetGuardianCount;
             gridPflegerAlle.DataSource  = Zoo.GetGuardianGrid;
+
+            // Special Tab
+            comboSpecial05.DataSource = Zoo.GetGuardianDropdown;
+            comboSpecial05.DisplayMember = "name";
+            comboSpecial05.ValueMember = "Id";
+
+            comboSpecial07.DataSource = Zoo.GetGuardianDropdown;
+            comboSpecial07.DisplayMember = "name";
+            comboSpecial07.ValueMember = "Id";
+        }
+
+        /// <summary>
+        /// Guardian Tab
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void comboPflegerAdd_PLZ_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.')){
+                e.Handled = true;
+            }
         }
 
         /// <summary>
@@ -154,12 +208,43 @@ namespace NaturZoo_Rheine.View {
             if (buttonPflegerAdd_Add.BackColor == Color.FromArgb(158, 158, 158)) {
                 MessageBox.Show("Bitte alle Felder ausfüllen.", "Nutzer information", MessageBoxButtons.OK);
             } else {
+
+                int addressID = default(int);
+
+                // Existing Entries
+                try{
+                    // Selected values are from one entry
+                    if((int)comboPflegerAdd_PLZ.SelectedValue == (int)comboPflegerAdd_Stadt.SelectedValue){
+                        addressID = (int)comboPflegerAdd_PLZ.SelectedValue;
+
+                    // Selcted values are from different entries
+                    }else{
+                        addressID = comboPflegerAdd_PLZ.Items.Count + 1;
+
+                        Zoo.CreateAddress(new Address {
+                            postcode = Convert.ToInt32(comboPflegerAdd_PLZ.Text),
+                            city = comboPflegerAdd_Stadt.Text
+                        });
+                        RefreshAddress();
+                    }
+
+                // Non-existing entries
+                }catch{
+                    addressID = comboPflegerAdd_PLZ.Items.Count + 1;
+
+                    Zoo.CreateAddress(new Address {
+                        postcode = Convert.ToInt32(comboPflegerAdd_PLZ.Text),
+                        city = comboPflegerAdd_Stadt.Text
+                    });
+                    RefreshAddress();
+                }
+
                 Zoo.CreateGuardian(new Guardian {
                     Name           = textPflegerAdd_Name.Text,
                     Surname        = textPflegerAdd_Surname.Text,
                     Email          = textPflegerAdd_Email.Text,
                     Password       = _defaultPassword,
-                    fk_addressID   = 1,
+                    fk_addressID   = addressID,
                     Street         = textPflegerAdd_Street.Text,
                     Telephone      = textPflegerAdd_Phone.Text,
                     Birthday       = Convert.ToDateTime(dateTimePflegerAdd_Birthday.Value).ToString("yyyy-MM-dd").ToString(),
@@ -167,14 +252,14 @@ namespace NaturZoo_Rheine.View {
                     Permission     = 1
                 });
 
-                textPflegerAdd_Name.Text = string.Empty;
-                textPflegerAdd_Surname.Text = string.Empty;
-                textPflegerAdd_Email.Text = string.Empty;
+                textPflegerAdd_Name.Text             = string.Empty;
+                textPflegerAdd_Surname.Text          = string.Empty;
+                textPflegerAdd_Email.Text            = string.Empty;
                 //textPflegerAdd_Password.Text = string.Empty;
-                comboPflegerAdd_PLZ.Text = string.Empty;
-                comboPflegerAdd_Stadt.Text = string.Empty;
-                textPflegerAdd_Street.Text = string.Empty;
-                textPflegerAdd_Phone.Text = string.Empty;
+                comboPflegerAdd_PLZ.Text             = string.Empty;
+                comboPflegerAdd_Stadt.Text           = string.Empty;
+                textPflegerAdd_Street.Text           = string.Empty;
+                textPflegerAdd_Phone.Text            = string.Empty;
                 comboPflegerAdd_Revier.SelectedIndex = -1;
                 //comboPflegerAdd_Permission.SelectedIndex = -1;
 
@@ -294,8 +379,6 @@ namespace NaturZoo_Rheine.View {
             if (buttonGebäudeAdd_Add.BackColor == Color.FromArgb(158, 158, 158)) {
                 MessageBox.Show("Bitte alle Felder ausfüllen.", "Nutzer information", MessageBoxButtons.OK);
             } else {
-                MessageBox.Show(comboGebäudeAdd_Revier.SelectedValue.ToString());
-
                 Zoo.CreateBuilding(new Building {
                     Name           = textGebäudeAdd_Name.Text,
                     fk_territoryID = (int)comboGebäudeAdd_Revier.SelectedValue
@@ -329,6 +412,14 @@ namespace NaturZoo_Rheine.View {
             comboTiereAdd_Gehege.DisplayMember = "name";
             comboTiereAdd_Gehege.ValueMember = "Id";
             comboTiereAdd_Gehege.SelectedIndex = -1;
+            // Special Tab
+            comboSpecial03.DataSource = Zoo.GetEnclosureDropdown;
+            comboSpecial03.DisplayMember = "name";
+            comboSpecial03.ValueMember = "Id";
+
+            comboSpecial04.DataSource = Zoo.GetEnclosureDropdown;
+            comboSpecial04.DisplayMember = "name";
+            comboSpecial04.ValueMember = "Id";
         }
 
         /// <summary>
@@ -357,7 +448,7 @@ namespace NaturZoo_Rheine.View {
             } else {
                 Zoo.CreateEnclosure(new Enclosure {
                     Name          = textGehegeAdd_Name.Text,
-                    fk_buildingID = comboGehegeAdd_Gebäude.SelectedIndex
+                    fk_buildingID = (int)comboGehegeAdd_Gebäude.SelectedValue
                 });
 
                 textGehegeAdd_Name.Text = string.Empty;
@@ -383,11 +474,19 @@ namespace NaturZoo_Rheine.View {
             // Animal Tab
             labelTiereAlle_Count.Text = Zoo.GetAnimalCount;
             gridTiereAlle.DataSource  = Zoo.GetAnimalGrid;
+
+            comboTiereAdd_Species.DataSource    = Zoo.GetAnimalDropdown;
+            comboTiereAdd_Species.DisplayMember = "species";
+            comboTiereAdd_Species.ValueMember   = "Id";
+            comboTiereAdd_Species.SelectedIndex = -1;
+
             // Foodplan Tab
-            comboFütterungAdd_Animal.DataSource = Zoo.GetAnimalDropdown;
+            comboFütterungAdd_Animal.DataSource    = Zoo.GetAnimalDropdown;
             comboFütterungAdd_Animal.DisplayMember = "name";
-            comboFütterungAdd_Animal.ValueMember = "Id";
+            comboFütterungAdd_Animal.ValueMember   = "Id";
             comboFütterungAdd_Animal.SelectedIndex = -1;
+
+            gridSpecial06.DataSource = specialRepository.Aufgabe06();
         }
 
         /// <summary>
@@ -447,7 +546,7 @@ namespace NaturZoo_Rheine.View {
         /// </summary>
         private void RefreshSupplier()
         {
-            // Suplier Card
+            // Supplier Card
             labelÜbersichtLieferanten_Count.Text           = Zoo.GetSupplierCount;
             labelÜbersichtLieferantenLastChange_Value.Text = Zoo.GetSupplierLastChange;
             // Supplier Tab
@@ -481,6 +580,18 @@ namespace NaturZoo_Rheine.View {
         }
 
         /// <summary>
+        /// Lieferanten Tab
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void comboLieferantenAdd_PLZ_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.')){
+                e.Handled = true;
+            }
+        }
+
+        /// <summary>
         /// <para>Supplier Tab</para>
         /// Adds a <see cref="Supplier"/>.
         /// </summary>
@@ -488,23 +599,56 @@ namespace NaturZoo_Rheine.View {
         {
             if (buttonLieferantenAdd_Add.BackColor == Color.FromArgb(158, 158, 158)) {
                 MessageBox.Show("Bitte alle Felder ausfüllen.", "Nutzer information", MessageBoxButtons.OK);
+
             } else {
+                int addressID = default(int);
+
+                // Existing Entries
+                try
+                {
+                    // Selected values are from one entry
+                    if((int)comboLieferantenAdd_PLZ.SelectedValue == (int)comboLieferantenAdd_Stadt.SelectedValue){
+                        addressID = (int)comboLieferantenAdd_PLZ.SelectedValue;
+
+                    // Selcted values are from different entries
+                    }else{
+                        addressID = comboLieferantenAdd_PLZ.Items.Count + 1;
+
+                        Zoo.CreateAddress(new Address {
+                            postcode = Convert.ToInt32(comboLieferantenAdd_PLZ.Text),
+                            city = comboLieferantenAdd_Stadt.Text
+                        });
+                        RefreshAddress();
+                    }
+
+                // Non-existing entries
+                }catch{
+                    addressID = comboPflegerAdd_PLZ.Items.Count + 1;
+
+                    Zoo.CreateAddress(new Address {
+                        postcode = Convert.ToInt32(comboPflegerAdd_PLZ.Text),
+                        city = comboPflegerAdd_Stadt.Text
+                    });
+                    RefreshAddress();
+                }
+
+
                 Zoo.CreateSupplier(new Supplier {
                     Name                    = textLieferantenAdd_Name.Text,
-                    fk_addressID            = 1,
+                    fk_addressID            = addressID,
                     Street                  = textLieferantenAdd_Street.Text,
                     telephone               = textLieferantenAdd_Phone.Text,
                     Contact_Person_Name     = textLieferantenAdd_ContactSurname.Text,
                     Contact_Person_Surname  = textLieferantenAdd_ContactName.Text
                 });
 
-                textLieferantenAdd_Name.Text = string.Empty;
-                comboLieferantenAdd_PLZ.Text = string.Empty;
-                comboLieferantenAdd_Stadt.Text = string.Empty;
-                textLieferantenAdd_Street.Text = string.Empty;
-                textLieferantenAdd_Phone.Text = string.Empty;
-                textLieferantenAdd_ContactSurname.Text = string.Empty;
-                textLieferantenAdd_ContactName.Text = string.Empty;
+                textLieferantenAdd_Name.Text            = string.Empty;
+                comboLieferantenAdd_PLZ.Text            = string.Empty;
+                comboLieferantenAdd_Stadt.Text          = string.Empty;
+                textLieferantenAdd_Street.Text          = string.Empty;
+                textLieferantenAdd_Phone.Text           = string.Empty;
+                textLieferantenAdd_ContactSurname.Text  = string.Empty;
+                textLieferantenAdd_ContactName.Text     = string.Empty;
 
                 MessageBox.Show("Lieferant wurde hinzugefügt.", "Application update", MessageBoxButtons.OK);
 
@@ -531,6 +675,8 @@ namespace NaturZoo_Rheine.View {
             comboFütterungAdd_Food.DisplayMember = "name";
             comboFütterungAdd_Food.ValueMember = "Id";
             comboFütterungAdd_Food.SelectedIndex = -1;
+
+            gridSpecial06.DataSource = specialRepository.Aufgabe06();
         }
 
         /// <summary>
@@ -593,6 +739,8 @@ namespace NaturZoo_Rheine.View {
             // Foodplan Tab
             labelFütterungAlle_Count.Text = Zoo.GetFoodplanCount;
             gridFütterungAlle.DataSource = Zoo.GetFoodplanGrid;
+
+            gridSpecial06.DataSource = specialRepository.Aufgabe06();
         }
 
         /// <summary>
@@ -644,5 +792,44 @@ namespace NaturZoo_Rheine.View {
             }
         }
         #endregion
+
+
+        #region tabControlSpecial
+        public void RefreshSpecial()
+        {
+            try{
+                gridSpecial01.DataSource = specialRepository.Aufgabe01();
+                //gridSpecial02.DataSource = specialRepository.Aufgabe02();
+                gridSpecial03.DataSource = specialRepository.Aufgabe03(comboSpecial03.SelectedValue.ToString());
+                //gridSpecial04.DataSource = specialRepository.Aufgabe04(comboSpecial04.SelectedValue.ToString());
+                gridSpecial05.DataSource = specialRepository.Aufgabe05(comboSpecial05.SelectedValue.ToString());
+                gridSpecial06.DataSource = specialRepository.Aufgabe06();
+                gridSpecial07.DataSource = specialRepository.Aufgabe07(comboSpecial07.SelectedValue.ToString());
+                gridSpecial08.DataSource = specialRepository.Aufgabe08();
+            }
+            catch { }
+        }
+
+        private void comboSpecial03_TextChanged(object sender, EventArgs e)
+        {
+            gridSpecial03.DataSource = specialRepository.Aufgabe03(comboSpecial03.SelectedValue.ToString());
+        }
+
+        private void comboSpecial04_TextChanged(object sender, EventArgs e)
+        {
+            //gridSpecial04.DataSource = specialRepository.Aufgabe04(comboSpecial04.SelectedValue.ToString());
+        }
+
+        private void comboSpecial05_TextChanged(object sender, EventArgs e)
+        {
+            gridSpecial05.DataSource = specialRepository.Aufgabe05(comboSpecial05.SelectedValue.ToString());
+        }
+
+        private void comboSpecial07_TextChanged(object sender, EventArgs e)
+        {
+            gridSpecial07.DataSource = specialRepository.Aufgabe07(comboSpecial07.SelectedValue.ToString());
+        }
+        #endregion
+
     }
 }
