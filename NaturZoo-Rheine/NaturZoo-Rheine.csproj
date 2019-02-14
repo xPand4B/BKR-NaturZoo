@@ -95,6 +95,7 @@
     <Compile Include="Queries\Repositories\FoodRepository.cs" />
     <Compile Include="Queries\Repositories\GuardianRepository.cs" />
     <Compile Include="Queries\Repositories\LogRepository.cs" />
+    <Compile Include="Queries\Repositories\SpecialRepository.cs" />
     <Compile Include="Queries\Repositories\SupplierRepository.cs" />
     <Compile Include="Queries\Repositories\TerritoryRepository.cs" />
     <Compile Include="Queries\Repositories\ZooRepository.cs" />
