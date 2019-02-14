@@ -12,6 +12,5 @@ Dabei wurde versucht das Projekt nach dem vereinfachten __[Repository Design Pat
 ## ToDo
 * Create Log Services + Event
 	* Push Log to DB and file
-* Add hybrid dropdown for postcode, city, species
 * Enable login
 * Include Hasher
