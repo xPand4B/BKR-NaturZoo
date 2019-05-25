@@ -8,9 +8,3 @@ Dabei wurde versucht das Projekt nach dem vereinfachten __[Repository Design Pat
 ## General Information
 * Sobald man das Programm unter Visual Studio öffnet bekommt man jede Query innerhalb der __Debug Console__ angezeigt.
 	* So lässt sich einfacher nachvollziehen, welche Daten geholt oder gesetzt werden.
-
-## ToDo
-* Create Log Services + Event
-	* Push Log to DB and file
-* Enable login
-* Include Hasher
